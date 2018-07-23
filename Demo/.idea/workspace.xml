@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="" />
+    <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m" beforeDir="false" afterPath="$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UIImage+ImageEffects.m" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UIImage+ImageEffects.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3390">
-              <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
+            <state relative-caret-position="353">
+              <caret line="170" column="83" selection-start-line="170" selection-start-column="83" selection-end-line="170" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -81,17 +84,17 @@
       <file leaf-file-name="MomentsViewController.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MomentsViewController.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MomentsViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -161,11 +164,11 @@
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWImageItem.m" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWProgeressHUD.h" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWProgeressHUD.m" />
-        <option value="$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" />
-        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h" />
+        <option value="$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m" />
       </list>
     </option>
   </component>
@@ -247,7 +250,7 @@
       <workItem from="1532345860110" duration="1817000" />
       <workItem from="1532348036386" duration="333000" />
       <workItem from="1532348443746" duration="126000" />
-      <workItem from="1532348575319" duration="472000" />
+      <workItem from="1532348575319" duration="677000" />
     </task>
     <task id="LOCAL-00001" summary="修复图片网络访问超时崩溃，格式化代码">
       <created>1532346887254</created>
@@ -277,11 +280,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532349117785</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修复图片网络访问超时崩溃，格式化代码">
+      <created>1532349325568</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532349325568</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4250000" />
+    <option name="totallyTimeSpent" value="4455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1239" height="777" extended-state="6" />
@@ -614,13 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3390">
-          <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pods/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounter.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -648,17 +651,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h">
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="170" column="83" selection-start-line="170" selection-start-column="83" selection-end-line="170" selection-end-column="83" />
         </state>
       </provider>
     </entry>
