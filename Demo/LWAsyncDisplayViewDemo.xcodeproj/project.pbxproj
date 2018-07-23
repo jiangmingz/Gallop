@@ -935,6 +935,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WayneInc.Gallop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/FLAnimatedImage/FLAnimatedImage \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
 			};
 			name = Debug;
 		};
@@ -953,6 +954,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WayneInc.Gallop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/FLAnimatedImage/FLAnimatedImage \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
 			};
 			name = Release;
 		};

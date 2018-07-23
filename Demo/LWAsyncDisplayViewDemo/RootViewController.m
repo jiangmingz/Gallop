@@ -3,24 +3,17 @@
 /******************** 正在不断完善中，谢谢~  Enjoy ******************************************************/
 
 
-
-
 #import "RootViewController.h"
+
 #import "RichTextDemo1ViewController.h"
 #import "MomentsViewController.h"
 #import "ArticleListViewController.h"
 #import "ImageDemoViewController.h"
+#import "KMCGeigerCounter.h"
 
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 
-
-
-
-
-@interface RootViewController ()
-
-<UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic,strong) UITableView* tableView;
+@property(nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -28,16 +21,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    NSDictionary* attributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    NSDictionary *attributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.navigationController.navigationBar.titleTextAttributes = attributes;
-    
+
     self.title = @"Gallop";
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+
+    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
 }
 
 #pragma mark -
@@ -48,8 +43,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString* cellID = @"cell";
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    static NSString *cellID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
@@ -70,27 +65,27 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+
     switch (indexPath.row) {
-        case 0:{
-            RichTextDemo1ViewController* vc = [[RichTextDemo1ViewController alloc] init];
+        case 0: {
+            RichTextDemo1ViewController *vc = [[RichTextDemo1ViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 1:{
-            ImageDemoViewController* vc = [[ImageDemoViewController alloc] init];
+        case 1: {
+            ImageDemoViewController *vc = [[ImageDemoViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 2:{
-            MomentsViewController* vc = [[MomentsViewController alloc] init];
+        case 2: {
+            MomentsViewController *vc = [[MomentsViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 3:{
-            ArticleListViewController* vc = [[ArticleListViewController alloc] init];
+        case 3: {
+            ArticleListViewController *vc = [[ArticleListViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

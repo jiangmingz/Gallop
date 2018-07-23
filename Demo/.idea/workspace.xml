@@ -1,51 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Launch Screen.storyboard" afterDir="false" />
+    <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="修复图片网络访问超时崩溃，格式化代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/xcode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/MKAnnotationView+WebCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/MKAnnotationView+WebCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/NSData+ImageContentType.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/NSData+ImageContentType.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/NSImage+WebCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/NSImage+WebCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDImageCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDImageCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDImageCacheConfig.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDImageCacheConfig.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageCompat.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageCompat.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageDecoder.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageDecoder.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageDownloader.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageDownloader.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageDownloaderOperation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageDownloaderOperation.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageManager.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageManager.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImageOperation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImagePrefetcher.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/SDWebImagePrefetcher.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIButton+WebCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIButton+WebCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImage+GIF.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImage+GIF.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImage+MultiFormat.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImage+MultiFormat.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImage+WebP.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImage+WebP.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImageView+HighlightedWebCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImageView+HighlightedWebCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImageView+WebCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIImageView+WebCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIView+WebCache.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIView+WebCache.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIView+WebCacheOperation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Others/SDWebImage/UIView+WebCacheOperation.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,52 +19,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_9d66ec6c4d21eeb1eec54e40768eee427902f691" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LWImageBrowserFlowLayout.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/LWImageBrowserFlowLayout.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWImageBrowserFlowLayout.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/LWImageBrowserFlowLayout.m">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="LWImageBrowserModel.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/LWImageBrowserModel.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWImageBrowserModel.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/LWImageBrowserModel.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWImageItem.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/LWImageItem.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWImageItem.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/LWImageItem.m">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="LWProgeressHUD.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/LWProgeressHUD.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -130,13 +46,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UIImage+ImageEffects.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UIImage+ImageEffects.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="211" column="11" selection-start-line="211" selection-start-column="11" selection-end-line="211" selection-end-column="11" />
+            <state relative-caret-position="3390">
+              <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+              <folding>
+                <element signature="e#286#309#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MomentsViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MomentsViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="419" column="79" selection-start-line="419" selection-start-column="79" selection-end-line="419" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KMCGeigerCounter.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pods/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounter.h">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -152,10 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Gallop/CALayer+WebCacheOperation.h" />
-        <option value="$PROJECT_DIR$/../Gallop/CALayer+WebCacheOperation.m" />
-        <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCacheOperation.h" />
-        <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCacheOperation.m" />
         <option value="$PROJECT_DIR$/../Gallop/SDImageCache+Gallop.h" />
         <option value="$PROJECT_DIR$/../Gallop/SDImageCache+Gallop.m" />
         <option value="$PROJECT_DIR$/../Gallop/SDWebImageManager+Gallop.h" />
@@ -203,6 +168,10 @@
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWProgeressHUD.h" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWProgeressHUD.m" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" />
       </list>
     </option>
   </component>
@@ -215,10 +184,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-51" />
-    <option name="y" value="-875" />
-    <option name="width" value="1239" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="16" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -227,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
@@ -244,6 +212,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,7 +251,9 @@
       <updated>1532341527226</updated>
       <workItem from="1532341532263" duration="1502000" />
       <workItem from="1532345860110" duration="1817000" />
-      <workItem from="1532348036386" duration="231000" />
+      <workItem from="1532348036386" duration="333000" />
+      <workItem from="1532348443746" duration="126000" />
+      <workItem from="1532348575319" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="修复图片网络访问超时崩溃，格式化代码">
       <created>1532346887254</created>
@@ -291,25 +262,32 @@
       <option name="project" value="LOCAL" />
       <updated>1532346887254</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修复图片网络访问超时崩溃，格式化代码">
+      <created>1532348370679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1532348370679</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3550000" />
+    <option name="totallyTimeSpent" value="3995000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-51" y="-875" width="1239" height="777" extended-state="0" />
+    <frame x="41" y="23" width="1239" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958949" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1592775" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -352,48 +330,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修复图片网络访问超时崩溃，格式化代码" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Gallop/SDWebImageManager+Gallop.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/CALayer+WebCache.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWCGRectTransform.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWCGRectTransform.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173">
-          <caret line="76" column="56" selection-start-line="76" selection-start-column="56" selection-end-line="76" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWTextAttachment.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -558,9 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#1136#1159#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,8 +608,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="211" column="11" selection-start-line="211" selection-start-column="11" selection-end-line="211" selection-end-column="11" />
+        <state relative-caret-position="3390">
+          <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounter.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <element signature="e#286#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="419" column="79" selection-start-line="419" selection-start-column="79" selection-end-line="419" selection-end-column="79" />
         </state>
       </provider>
     </entry>
