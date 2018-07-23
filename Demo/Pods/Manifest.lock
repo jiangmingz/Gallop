@@ -1,0 +1,26 @@
+PODS:
+  - FLAnimatedImage (1.0.12)
+  - KMCGeigerCounter (0.2.2)
+  - SDWebImage/Core (4.4.1)
+  - SDWebImage/GIF (4.4.1):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
+
+DEPENDENCIES:
+  - KMCGeigerCounter
+  - SDWebImage/GIF
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FLAnimatedImage
+    - KMCGeigerCounter
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  KMCGeigerCounter: f8cc3c4aa19fc6f8cec168fb03b364b84c118a7a
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+
+PODFILE CHECKSUM: 591486a5764879a08428fc6a6ea1865959c42970
+
+COCOAPODS: 1.5.0
