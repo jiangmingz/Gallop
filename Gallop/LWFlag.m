@@ -28,8 +28,6 @@
 #import "objc/runtime.h"
 
 
-
-
 @implementation LWFlag {
     int32_t _value;
 }

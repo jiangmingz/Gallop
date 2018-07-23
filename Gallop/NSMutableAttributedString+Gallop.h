@@ -30,7 +30,7 @@
  *  Gallop对NSMutableAttributedString的扩展
  */
 
-@interface NSMutableAttributedString(Gallop)
+@interface NSMutableAttributedString (Gallop)
 
 
 /**
@@ -122,8 +122,8 @@
 - (void)setLineBreakMode:(NSLineBreakMode)lineBreakMode range:(NSRange)range;
 
 
-
 #pragma mark - Link & Attachment
+
 /**
  *  添加一个点击链接事件
  *
@@ -133,7 +133,7 @@
  *  @param highLightColor 链接点击时的高亮颜色
  */
 - (void)addLinkWithData:(id)data
-                   range:(NSRange)range
+                  range:(NSRange)range
               linkColor:(UIColor *)linkColor
          highLightColor:(UIColor *)highLightColor;
 

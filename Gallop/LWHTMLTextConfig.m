@@ -32,7 +32,7 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWTextStorage* one = [[LWTextStorage alloc] init];
+    LWTextStorage *one = [[LWTextStorage alloc] init];
     one.textColor = [self.textColor copy];
     one.textBackgroundColor = [self.textBackgroundColor copy];
     one.font = [self.font copy];
@@ -93,7 +93,7 @@
 }
 
 + (LWHTMLTextConfig *)defaultsTextConfig {
-    static LWHTMLTextConfig* config;
+    static LWHTMLTextConfig *config;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         config = [[LWHTMLTextConfig alloc] init];
@@ -124,53 +124,52 @@
 }
 
 
-
 + (LWHTMLTextConfig *)defaultsH1TextConfig {
-    LWHTMLTextConfig* config = [[LWHTMLTextConfig alloc] init];
+    LWHTMLTextConfig *config = [[LWHTMLTextConfig alloc] init];
     config.font = [UIFont boldSystemFontOfSize:20.0f];
     return config;
 }
 
 + (LWHTMLTextConfig *)defaultsH2TextConfig {
-    LWHTMLTextConfig* config = [[LWHTMLTextConfig alloc] init];
+    LWHTMLTextConfig *config = [[LWHTMLTextConfig alloc] init];
     config.font = [UIFont boldSystemFontOfSize:18.0f];
     return config;
 }
 
 
 + (LWHTMLTextConfig *)defaultsH3TextConfig {
-    LWHTMLTextConfig* config = [[LWHTMLTextConfig alloc] init];
+    LWHTMLTextConfig *config = [[LWHTMLTextConfig alloc] init];
     config.font = [UIFont boldSystemFontOfSize:16.0f];
     return config;
 }
 
 
 + (LWHTMLTextConfig *)defaultsH4TextConfig {
-    LWHTMLTextConfig* config = [[LWHTMLTextConfig alloc] init];
+    LWHTMLTextConfig *config = [[LWHTMLTextConfig alloc] init];
     config.font = [UIFont boldSystemFontOfSize:14.0f];
     return config;
 }
 
 
 + (LWHTMLTextConfig *)defaultsH5TextConfig {
-    LWHTMLTextConfig* config = [[LWHTMLTextConfig alloc] init];
+    LWHTMLTextConfig *config = [[LWHTMLTextConfig alloc] init];
     config.font = [UIFont boldSystemFontOfSize:12.0f];
     return config;
 }
 
 + (LWHTMLTextConfig *)defaultsH6TextConfig {
-    LWHTMLTextConfig* config = [[LWHTMLTextConfig alloc] init];
+    LWHTMLTextConfig *config = [[LWHTMLTextConfig alloc] init];
     config.font = [UIFont boldSystemFontOfSize:10.0f];
     return config;
 }
 
 + (LWHTMLTextConfig *)defaultsParagraphTextConfig {
-    LWHTMLTextConfig* config = [[LWHTMLTextConfig alloc] init];
+    LWHTMLTextConfig *config = [[LWHTMLTextConfig alloc] init];
     return config;
 }
 
 + (LWHTMLTextConfig *)defaultsQuoteTextConfig {
-    LWHTMLTextConfig* config = [[LWHTMLTextConfig alloc] init];
+    LWHTMLTextConfig *config = [[LWHTMLTextConfig alloc] init];
     config.textColor = [UIColor grayColor];
     return config;
 }

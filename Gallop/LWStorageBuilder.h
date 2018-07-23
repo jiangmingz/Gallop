@@ -29,11 +29,11 @@
 #import "LWHTMLImageConfig.h"
 #import "LWHTMLNode.h"
 
-typedef void(^LWStorageBuildingCompletion)(NSArray* storages);
+typedef void(^LWStorageBuildingCompletion)(NSArray *storages);
 
 @interface LWStorageBuilder : NSObject
 
-@property (nonatomic,strong,readonly) LWHTMLNode* tree;
+@property(nonatomic, strong, readonly) LWHTMLNode *tree;
 
 
 /**
@@ -70,7 +70,7 @@ typedef void(^LWStorageBuildingCompletion)(NSArray* storages);
  *
  *  @return 一个包含所有的LWStorage对象的数组
  */
-- (NSArray<LWStorage *>*)storages;
+- (NSArray<LWStorage *> *)storages;
 
 /**
  *  获取生成的LWstorage实例数组中的第一个元素
@@ -91,7 +91,7 @@ typedef void(^LWStorageBuildingCompletion)(NSArray* storages);
  *
  *  @return 一个包含了加入图片浏览器回调列表LWImageStorage对象的数组
  */
-- (NSArray<LWImageStorage *>*)imageCallbacks;
+- (NSArray<LWImageStorage *> *)imageCallbacks;
 
 /**
  *  获取文本内容

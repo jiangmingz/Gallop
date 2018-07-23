@@ -44,30 +44,30 @@ typedef NS_ENUM(NSUInteger, LWTextDrawMode) {
 /**
  *  文本绘制的数据模型
  */
-@interface LWTextStorage : LWStorage<NSCoding>
+@interface LWTextStorage : LWStorage <NSCoding>
 
-@property (nonatomic,strong,readonly) LWTextLayout* textLayout;//文本布局模型
-@property (nonatomic,copy) NSString* text;//文本
-@property (nonatomic,strong) NSMutableAttributedString* attributedText;//属性文本
-@property (nonatomic,strong) UIColor* textColor;//文本颜色
-@property (nonatomic,strong) UIColor* textBackgroundColor;//文本的背景颜色
-@property (nonatomic,strong) UIColor* textBoundingStrokeColor;//文本外边框描边
-@property (nonatomic,strong) UIFont* font;//字体
-@property (nonatomic,assign) CGFloat linespacing;//行间距
-@property (nonatomic,assign) unichar characterSpacing;//字间距
-@property (nonatomic,assign) NSTextAlignment textAlignment;//水平对齐方式，默认是NSTextAlignmentLeft
-@property (nonatomic,assign) LWTextVericalAlignment vericalAlignment;//垂直对齐方式，默认是TOP
-@property (nonatomic,assign) NSUnderlineStyle underlineStyle;//下划线样式
-@property (nonatomic,strong) UIColor* underlineColor;//下划线颜色
-@property (nonatomic,assign) NSLineBreakMode lineBreakMode;//换行模式
-@property (nonatomic,assign) LWTextDrawMode textDrawMode;//绘制模式
-@property (nonatomic,strong) UIColor* strokeColor;//描边颜色
-@property (nonatomic,assign) CGFloat strokeWidth;//描边宽度
-@property (nonatomic,assign,readonly) CGSize suggestSize;//建议的绘制大小
-@property (nonatomic,assign) NSInteger maxNumberOfLines;//最大行数限制
-@property (nonatomic,assign,readonly) NSInteger numberOfLines;//文本的实际行数
-@property (nonatomic,assign) BOOL needDebug;//是否开启调试模式
-@property (nonatomic,assign,readonly) BOOL isTruncation;//是否折叠
+@property(nonatomic, strong, readonly) LWTextLayout *textLayout;//文本布局模型
+@property(nonatomic, copy) NSString *text;//文本
+@property(nonatomic, strong) NSMutableAttributedString *attributedText;//属性文本
+@property(nonatomic, strong) UIColor *textColor;//文本颜色
+@property(nonatomic, strong) UIColor *textBackgroundColor;//文本的背景颜色
+@property(nonatomic, strong) UIColor *textBoundingStrokeColor;//文本外边框描边
+@property(nonatomic, strong) UIFont *font;//字体
+@property(nonatomic, assign) CGFloat linespacing;//行间距
+@property(nonatomic, assign) unichar characterSpacing;//字间距
+@property(nonatomic, assign) NSTextAlignment textAlignment;//水平对齐方式，默认是NSTextAlignmentLeft
+@property(nonatomic, assign) LWTextVericalAlignment vericalAlignment;//垂直对齐方式，默认是TOP
+@property(nonatomic, assign) NSUnderlineStyle underlineStyle;//下划线样式
+@property(nonatomic, strong) UIColor *underlineColor;//下划线颜色
+@property(nonatomic, assign) NSLineBreakMode lineBreakMode;//换行模式
+@property(nonatomic, assign) LWTextDrawMode textDrawMode;//绘制模式
+@property(nonatomic, strong) UIColor *strokeColor;//描边颜色
+@property(nonatomic, assign) CGFloat strokeWidth;//描边宽度
+@property(nonatomic, assign, readonly) CGSize suggestSize;//建议的绘制大小
+@property(nonatomic, assign) NSInteger maxNumberOfLines;//最大行数限制
+@property(nonatomic, assign, readonly) NSInteger numberOfLines;//文本的实际行数
+@property(nonatomic, assign) BOOL needDebug;//是否开启调试模式
+@property(nonatomic, assign, readonly) BOOL isTruncation;//是否折叠
 
 
 
@@ -133,7 +133,6 @@ __deprecated_msg("Please use 'lw_addLinkForWholeTextStorageWithData:highLightCol
                                highLightColor:(UIColor *)highLightColor;
 
 
-
 /**
  *  为指定位置的文本添加点击事件
  *
@@ -187,7 +186,6 @@ __deprecated_msg("Please use 'lw_addLinkForWholeTextStorageWithData:highLightCol
                          imageSize:(CGSize)size
                          alignment:(LWTextAttachAlignment)attachAlignment
                              range:(NSRange)range;
-
 
 
 /**

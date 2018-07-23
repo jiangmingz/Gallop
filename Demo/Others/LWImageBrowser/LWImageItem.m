@@ -31,17 +31,17 @@ const CGFloat kMaximumZoomScale = 3.0f;
 const CGFloat kMinimumZoomScale = 1.0f;
 const CGFloat kDuration = 0.3f;
 
-@interface LWImageItem ()<UIScrollViewDelegate,UIActionSheetDelegate>
+@interface LWImageItem () <UIScrollViewDelegate, UIActionSheetDelegate>
 
-@property (nonatomic,assign) CGPoint originalPoint;
+@property(nonatomic, assign) CGPoint originalPoint;
 
 @end
 
-@implementation LWImageItem{
+@implementation LWImageItem {
     CGFloat _yFromCenter;
 }
 
-- (id)initWithFrame:(CGRect)frame{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
@@ -58,11 +58,11 @@ const CGFloat kDuration = 0.3f;
 }
 
 - (void)setupGestures {
-    UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(handleSingleTap:)];
-    UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(handleDoubleTap:)];
-    UITapGestureRecognizer* twoFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+    UITapGestureRecognizer *twoFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                    action:@selector(handleTwoFingerTap:)];
     singleTap.numberOfTapsRequired = 1;
     singleTap.numberOfTouchesRequired = 1;
@@ -94,8 +94,8 @@ const CGFloat kDuration = 0.3f;
     }
 
     CGRect destinationRect = [self calculateDestinationFrameWithSize:self.imageModel.thumbnailImage.size];
-    SDWebImageManager* manager = [SDWebImageManager sharedManager];
-    
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+
     __weak typeof(self) weakSelf = self;
     [manager cachedImageExistsForURL:self.imageModel.HDURL completion:^(BOOL isInCache) {
         __strong typeof(weakSelf) sself = weakSelf;
@@ -110,19 +110,19 @@ const CGFloat kDuration = 0.3f;
                                  animations:^{
                                      sself.imageView.center = sself.center;
                                  } completion:^(BOOL finished) {
-                                     if (finished) {
-                                         [sself downloadImageWithDestinationRect:destinationRect];
-                                     }
-                                 }];
+                            if (finished) {
+                                [sself downloadImageWithDestinationRect:destinationRect];
+                            }
+                        }];
             } else {
                 sself.imageView.center = sself.center;
                 [sself downloadImageWithDestinationRect:destinationRect];
             }
         }
-        
-        //已经下载的图片
+
+            //已经下载的图片
         else {
-            
+
             if (animated) {
                 sself.imageView.frame = sself.imageModel.originPosition;
                 [sself.imageView sd_setImageWithURL:sself.imageModel.HDURL];
@@ -131,10 +131,10 @@ const CGFloat kDuration = 0.3f;
                      usingSpringWithDamping:0.7
                       initialSpringVelocity:0.0f
                                     options:0 animations:^{
-                                        sself.imageView.frame = destinationRect;
-                                    } completion:^(BOOL finished) {
-                                        
-                                    }];
+                            sself.imageView.frame = destinationRect;
+                        }        completion:^(BOOL finished) {
+
+                        }];
             } else {
                 [sself.imageView sd_setImageWithURL:sself.imageModel.HDURL];
                 sself.imageView.frame = destinationRect;
@@ -144,46 +144,47 @@ const CGFloat kDuration = 0.3f;
 }
 
 - (void)downloadImageWithDestinationRect:(CGRect)destinationRect {
-    
+
     __weak typeof(self) weakSelf = self;
-    LWProgeressHUD* progressHUD = [LWProgeressHUD showHUDAddedTo:self];
-    SDWebImageManager* manager = [SDWebImageManager sharedManager];
+    LWProgeressHUD *progressHUD = [LWProgeressHUD showHUDAddedTo:self];
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
     SDWebImageOptions options = SDWebImageRetryFailed | SDWebImageLowPriority;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [manager loadImageWithURL:self.imageModel.HDURL
                           options:options
-                         progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-                             progressHUD.progress = (float)receivedSize/expectedSize;
-                         } completed:^(UIImage * _Nullable image,
-                                       NSData * _Nullable data,
-                                       NSError * _Nullable error,
-                                       SDImageCacheType cacheType,
-                                       BOOL finished,
-                                       NSURL * _Nullable imageURL) {
-                             
-                             __strong typeof(weakSelf) sself = weakSelf;
-                             if (finished && image) {
-                                 [LWProgeressHUD hideAllHUDForView:sself];
-                                 sself.imageView.image = image;
-                                 sself.imageModel.thumbnailImage = image;
-                                 if ([sself.eventDelegate respondsToSelector:@selector(didFinishedDownLoadHDImage)]) {
-                                     [sself.eventDelegate didFinishedDownLoadHDImage];
-                                 }
-                                 [UIView animateWithDuration:kDuration
-                                                       delay:0.0f
-                                      usingSpringWithDamping:0.7
-                                       initialSpringVelocity:0.0f
-                                                     options:0 animations:^{
-                                                         sself.imageView.frame = destinationRect;
-                                                     } completion:^(BOOL finished) {
-                                                     }];
-                             }
-                         }];
+                         progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL *_Nullable targetURL) {
+                             progressHUD.progress = (float) receivedSize / expectedSize;
+                         } completed:^(UIImage *_Nullable image,
+                        NSData *_Nullable data,
+                        NSError *_Nullable error,
+                        SDImageCacheType cacheType,
+                        BOOL finished,
+                        NSURL *_Nullable imageURL) {
+
+                    __strong typeof(weakSelf) sself = weakSelf;
+                    if (finished && image) {
+                        [LWProgeressHUD hideAllHUDForView:sself];
+                        sself.imageView.image = image;
+                        sself.imageModel.thumbnailImage = image;
+                        if ([sself.eventDelegate respondsToSelector:@selector(didFinishedDownLoadHDImage)]) {
+                            [sself.eventDelegate didFinishedDownLoadHDImage];
+                        }
+                        [UIView animateWithDuration:kDuration
+                                              delay:0.0f
+                             usingSpringWithDamping:0.7
+                              initialSpringVelocity:0.0f
+                                            options:0 animations:^{
+                                    sself.imageView.frame = destinationRect;
+                                }        completion:^(BOOL finished) {
+                                }];
+                    }
+                }];
     });
 }
 
 
 #pragma mark - Getter
+
 - (UIImageView *)imageView {
     if (!_imageView) {
         _imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
@@ -194,12 +195,12 @@ const CGFloat kDuration = 0.3f;
     return _imageView;
 }
 
-- (CGRect)calculateDestinationFrameWithSize:(CGSize)size{
+- (CGRect)calculateDestinationFrameWithSize:(CGSize)size {
     CGRect rect;
     rect = CGRectMake(0.0f,
-                      (SCREEN_HEIGHT - size.height * SCREEN_WIDTH/size.width)/2,
-                      SCREEN_WIDTH,
-                      size.height * SCREEN_WIDTH/size.width);
+            (SCREEN_HEIGHT - size.height * SCREEN_WIDTH / size.width) / 2,
+            SCREEN_WIDTH,
+            size.height * SCREEN_WIDTH / size.width);
     if (rect.size.height > SCREEN_HEIGHT) {
         rect = CGRectMake(0, 0, rect.size.width, rect.size.height);
     }
@@ -210,11 +211,11 @@ const CGFloat kDuration = 0.3f;
 
 #pragma mark - UIScrollViewDelegate
 
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.imageView;
 }
 
-- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale{
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
     [scrollView setZoomScale:scale + 0.01 animated:NO];
     [scrollView setZoomScale:scale animated:NO];
 }
@@ -227,7 +228,7 @@ const CGFloat kDuration = 0.3f;
 
 #pragma mark - UIGestureRecognizerHandler
 
-- (void)handleSingleTap:(UITapGestureRecognizer *)gestureRecognizer{
+- (void)handleSingleTap:(UITapGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.numberOfTapsRequired == 1) {
         if ([self.eventDelegate respondsToSelector:@selector(didClickedItemToHide)]) {
             [self.eventDelegate didClickedItemToHide];
@@ -235,9 +236,9 @@ const CGFloat kDuration = 0.3f;
     }
 }
 
-- (void)handleDoubleTap:(UITapGestureRecognizer *)gestureRecognizer{
+- (void)handleDoubleTap:(UITapGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.numberOfTapsRequired == 2) {
-        if(self.zoomScale == 1){
+        if (self.zoomScale == 1) {
             float newScale = [self zoomScale] * 2;
             CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:self]];
             [self zoomToRect:zoomRect animated:YES];
@@ -249,13 +250,13 @@ const CGFloat kDuration = 0.3f;
     }
 }
 
-- (void)handleTwoFingerTap:(UITapGestureRecognizer *)gestureRecongnizer{
-    float newScale = [self zoomScale]/2;
+- (void)handleTwoFingerTap:(UITapGestureRecognizer *)gestureRecongnizer {
+    float newScale = [self zoomScale] / 2;
     CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecongnizer locationInView:self]];
     [self zoomToRect:zoomRect animated:YES];
 }
 
-- (CGRect)zoomRectForScale:(CGFloat)scale withCenter:(CGPoint)center{
+- (CGRect)zoomRectForScale:(CGFloat)scale withCenter:(CGPoint)center {
     CGRect zoomRect;
     zoomRect.size.height = [self frame].size.height / scale;
     zoomRect.size.width = [self frame].size.width / scale;

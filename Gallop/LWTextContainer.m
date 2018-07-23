@@ -28,17 +28,15 @@
 #import "GallopDefine.h"
 
 
-
-
 @interface LWTextContainer ()
 
-@property (nonatomic,assign) CGSize size;
-@property (nonatomic,strong) UIBezierPath* path;
-@property (nonatomic,assign) UIEdgeInsets edgeInsets;
+@property(nonatomic, assign) CGSize size;
+@property(nonatomic, strong) UIBezierPath *path;
+@property(nonatomic, assign) UIEdgeInsets edgeInsets;
 
 @end
 
-@implementation LWTextContainer{
+@implementation LWTextContainer {
     dispatch_semaphore_t _lock;
     CGFloat _pathLineWidth;
 }
@@ -46,7 +44,7 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWTextContainer* one = [[LWTextContainer alloc] init];
+    LWTextContainer *one = [[LWTextContainer alloc] init];
     one.vericalAlignment = self.vericalAlignment;
     one.size = self.size;
     one.path = [self.path copy];
@@ -92,8 +90,8 @@
 
 
 + (id)lw_textContainerWithSize:(CGSize)size {
-    LWTextContainer* textContainer = [[LWTextContainer alloc] init];
-    UIBezierPath* bezierPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, size.width, size.height)];
+    LWTextContainer *textContainer = [[LWTextContainer alloc] init];
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, size.width, size.height)];
     textContainer.path = bezierPath;
     textContainer.size = size;
     textContainer.edgeInsets = UIEdgeInsetsZero;
@@ -103,10 +101,10 @@
 }
 
 + (id)lw_textContainerWithSize:(CGSize)size edgeInsets:(UIEdgeInsets)edgeInsets {
-    LWTextContainer* textContainer = [[LWTextContainer alloc] init];
-    CGRect rect = (CGRect) {CGPointZero,size};
-    rect = UIEdgeInsetsInsetRect(rect,edgeInsets);
-    UIBezierPath* bezierPath = [UIBezierPath bezierPathWithRect:rect];
+    LWTextContainer *textContainer = [[LWTextContainer alloc] init];
+    CGRect rect = (CGRect) {CGPointZero, size};
+    rect = UIEdgeInsetsInsetRect(rect, edgeInsets);
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRect:rect];
     textContainer.path = bezierPath;
     textContainer.size = size;
     textContainer.edgeInsets = edgeInsets;

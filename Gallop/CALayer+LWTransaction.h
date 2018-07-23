@@ -37,17 +37,17 @@ typedef NS_ENUM(NSUInteger, LWTransactionContainerState) {
     /**
      *  没有操作需要处理
      */
-    LWTransactionContainerStateNoTransactions,
+            LWTransactionContainerStateNoTransactions,
     /**
      *  正在处理操作
      */
-    LWTransactionContainerStatePendingTransactions,
+            LWTransactionContainerStatePendingTransactions,
 };
 
 
 @protocol LWTransactionContainerDelegate
 
-@property (nonatomic,readonly,assign) LWTransactionContainerState transactionContainerState;//操作事务容器的状态
+@property(nonatomic, readonly, assign) LWTransactionContainerState transactionContainerState;//操作事务容器的状态
 
 /**
  *  取消这个容器CALayer上的所有事务,如果这个事务已经在执行了，则执行完
@@ -66,11 +66,11 @@ typedef NS_ENUM(NSUInteger, LWTransactionContainerState) {
  *  LWTransaction对象是通过runloop的observer观察到退出一个runloop和runloop即将进入休眠时
  *  需要执行的操作的抽象。这是LWTransaction对CALayer的扩展
  */
-@interface CALayer(LWTransaction)<LWTransactionContainerDelegate>
+@interface CALayer (LWTransaction) <LWTransactionContainerDelegate>
 
-@property (nonatomic,strong) NSHashTable* transactions;//这个CALayer对象上的操作事务哈希表
-@property (nonatomic,strong) LWTransaction* currentTransaction;//当前正在处理的事务
-@property (nonatomic,readonly,strong) LWTransaction* lw_asyncTransaction;//创建一个LWTransaction并添加到transactions当中
+@property(nonatomic, strong) NSHashTable *transactions;//这个CALayer对象上的操作事务哈希表
+@property(nonatomic, strong) LWTransaction *currentTransaction;//当前正在处理的事务
+@property(nonatomic, readonly, strong) LWTransaction *lw_asyncTransaction;//创建一个LWTransaction并添加到transactions当中
 
 - (void)lw_transactionContainerWillBeginTransaction:(LWTransaction *)transaction;//即将要开始处理一个LWTransaction
 - (void)lw_transactionContainerrDidCompleteTransaction:(LWTransaction *)transaction;//LWTransaction处理完成

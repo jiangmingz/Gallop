@@ -28,17 +28,17 @@
  *  结点
  */
 
-@interface LWHTMLNode : NSObject <NSCopying,NSMutableCopying,NSCoding>
+@interface LWHTMLNode : NSObject <NSCopying, NSMutableCopying, NSCoding>
 
-@property (nonatomic,strong) LWHTMLNode* parent;//双亲结点
-@property (nonatomic,strong) LWHTMLNode* firstChild;//子结点
-@property (nonatomic,strong) LWHTMLNode* rightSib;//右兄弟结点
-@property (nonatomic,strong) NSMutableArray* children;//子结点
-@property (nonatomic,copy) NSString* elementName;//元素标签名
-@property (nonatomic,copy) NSString* contentString;//内容
-@property (nonatomic,strong) NSMutableDictionary* attributeDict;//属性字典
-@property (nonatomic,assign) NSRange range;//若是文本内容，在父级结点中的位置
-@property (nonatomic,assign) BOOL isTag;//是否是标签结点
+@property(nonatomic, strong) LWHTMLNode *parent;//双亲结点
+@property(nonatomic, strong) LWHTMLNode *firstChild;//子结点
+@property(nonatomic, strong) LWHTMLNode *rightSib;//右兄弟结点
+@property(nonatomic, strong) NSMutableArray *children;//子结点
+@property(nonatomic, copy) NSString *elementName;//元素标签名
+@property(nonatomic, copy) NSString *contentString;//内容
+@property(nonatomic, strong) NSMutableDictionary *attributeDict;//属性字典
+@property(nonatomic, assign) NSRange range;//若是文本内容，在父级结点中的位置
+@property(nonatomic, assign) BOOL isTag;//是否是标签结点
 
 /**
  *  构造方法

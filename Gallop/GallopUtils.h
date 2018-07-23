@@ -54,7 +54,5 @@
 + (NSUInteger)greatestCommonDivisorWithNumber:(NSUInteger)numb1 another:(NSUInteger)numb2;
 
 
-
-
 @end
 

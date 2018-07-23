@@ -34,22 +34,22 @@
 /**
  * 第一帧图片
  */
-@property (nonatomic, strong, readonly) UIImage* coverImage;
+@property(nonatomic, strong, readonly) UIImage *coverImage;
 
 /**
  * 保存了帧索引对应的时间的字典
  */
-@property (nonatomic, strong, readonly) NSDictionary* timesForIndex;
+@property(nonatomic, strong, readonly) NSDictionary *timesForIndex;
 
 /**
  * 播放循环次数
  */
-@property (nonatomic, assign, readonly) NSUInteger loopCount;
+@property(nonatomic, assign, readonly) NSUInteger loopCount;
 
 /**
  * 总帧数
  */
-@property (nonatomic, assign, readonly) NSUInteger frameCount;
+@property(nonatomic, assign, readonly) NSUInteger frameCount;
 
 /**
  * 构造方法
@@ -73,7 +73,8 @@ extern const NSTimeInterval kLWGIFDelayTimeIntervalMinimumValue;
 
 @interface LWProxy : NSProxy
 
-@property (nonatomic,weak) id target;
+@property(nonatomic, weak) id target;
+
 + (instancetype)proxyWithObject:(id)object;
 
 @end

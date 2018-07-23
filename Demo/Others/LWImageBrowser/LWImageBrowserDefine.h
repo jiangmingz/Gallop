@@ -39,14 +39,13 @@
 #endif
 
 #ifndef RGB
-#define RGB(A,B,C,D) [UIColor colorWithRed:A/255.0f green:B/255.0f blue:C/255.0f alpha:D]
+#define RGB(A, B, C, D) [UIColor colorWithRed:A/255.0f green:B/255.0f blue:C/255.0f alpha:D]
 #endif
 
 #define kPageControlHeight 40.0f
 #define kImageBrowserWidth (SCREEN_WIDTH + 10.0f)
 #define kImageBrowserHeight SCREEN_HEIGHT
 #define kCellIdentifier @"LWImageBroserCellIdentifier"
-
 
 
 #endif /* LWImageBrowserDefine_h */

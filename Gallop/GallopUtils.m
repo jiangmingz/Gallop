@@ -39,9 +39,9 @@
 
 
 + (UIImage *)screenshotFromView:(UIView *)aView {
-    UIGraphicsBeginImageContextWithOptions(aView.bounds.size,NO,[UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContextWithOptions(aView.bounds.size, NO, [UIScreen mainScreen].scale);
     [aView.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage* screenshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *screenshotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return screenshotImage;
 }

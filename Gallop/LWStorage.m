@@ -30,12 +30,12 @@
 
 @interface LWStorage ()
 
-@property (nonatomic,assign) CGFloat height;
-@property (nonatomic,assign) CGFloat width;
-@property (nonatomic,assign) CGFloat left;
-@property (nonatomic,assign) CGFloat right;
-@property (nonatomic,assign) CGFloat top;
-@property (nonatomic,assign) CGFloat bottom;
+@property(nonatomic, assign) CGFloat height;
+@property(nonatomic, assign) CGFloat width;
+@property(nonatomic, assign) CGFloat left;
+@property(nonatomic, assign) CGFloat right;
+@property(nonatomic, assign) CGFloat top;
+@property(nonatomic, assign) CGFloat bottom;
 
 @end
 
@@ -194,7 +194,7 @@
 }
 
 - (CGFloat)right {
-    return  self.frame.origin.x + self.width;
+    return self.frame.origin.x + self.width;
 }
 
 - (CGFloat)top {
@@ -215,7 +215,7 @@
 
 - (CGPoint)center {
     return CGPointMake(self.frame.origin.x + self.frame.size.width * 0.5f,
-                       self.frame.origin.y + self.frame.size.height * 0.5f);
+            self.frame.origin.y + self.frame.size.height * 0.5f);
 }
 
 

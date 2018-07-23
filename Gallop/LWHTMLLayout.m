@@ -26,7 +26,7 @@
 
 @interface LWHTMLLayout ()
 
-@property (nonatomic,strong) NSMutableArray* items;
+@property(nonatomic, strong) NSMutableArray *items;
 
 @end
 
@@ -59,7 +59,8 @@
     }
     [self.items addObject:storage];
 }
-- (void)addStorages:(NSArray <LWStorage *>*)storages {
+
+- (void)addStorages:(NSArray <LWStorage *> *)storages {
     if (!storages.count) {
         return;
     }
@@ -73,33 +74,31 @@
     id lastObject = [self.items lastObject];
     if ([lastObject isKindOfClass:[NSArray class]]) {
         NSInteger index = [self.items indexOfObject:lastObject];
-        NSMutableArray* tmp = [[NSMutableArray alloc] initWithArray:lastObject];
+        NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:lastObject];
         [tmp addObject:storage];
         [self.items replaceObjectAtIndex:index withObject:[tmp copy]];
-    }
-    else if ([lastObject isKindOfClass:[LWStorage class]]) {
+    } else if ([lastObject isKindOfClass:[LWStorage class]]) {
         NSInteger index = [self.items indexOfObject:lastObject];
-        NSMutableArray* tmp = [[NSMutableArray alloc] init];
+        NSMutableArray *tmp = [[NSMutableArray alloc] init];
         [tmp addObject:lastObject];
         [tmp addObject:storage];
         [self.items replaceObjectAtIndex:index withObject:[tmp copy]];
     }
 }
 
-- (void)appendStorages:(NSArray <LWStorage *>*)storages {
-    if (!self.items.count  || !storages.count ) {
+- (void)appendStorages:(NSArray <LWStorage *> *)storages {
+    if (!self.items.count || !storages.count) {
         return;
     }
     id lastObject = [self.items lastObject];
     if ([lastObject isKindOfClass:[NSArray class]]) {
         NSInteger index = [self.items indexOfObject:lastObject];
-        NSMutableArray* tmp = [[NSMutableArray alloc] initWithArray:lastObject];
+        NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:lastObject];
         [tmp addObjectsFromArray:storages];
         [self.items replaceObjectAtIndex:index withObject:[tmp copy]];
-    }
-    else if ([lastObject isKindOfClass:[LWStorage class]]) {
+    } else if ([lastObject isKindOfClass:[LWStorage class]]) {
         NSInteger index = [self.items indexOfObject:lastObject];
-        NSMutableArray* tmp = [[NSMutableArray alloc] init];
+        NSMutableArray *tmp = [[NSMutableArray alloc] init];
         [tmp addObject:lastObject];
         [tmp addObjectsFromArray:storages];
         [self.items replaceObjectAtIndex:index withObject:[tmp copy]];

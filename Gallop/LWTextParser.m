@@ -32,31 +32,34 @@
 #define URLRegular @"[a-zA-z]+://[^\\s]*"
 
 
+static inline NSRegularExpression *EmojiRegularExpression();
 
-static inline NSRegularExpression* EmojiRegularExpression();
-static inline NSRegularExpression* URLRegularExpression();
-static inline NSRegularExpression* AccountRegularExpression();
-static inline NSRegularExpression* TopicRegularExpression();
-static inline NSRegularExpression* TelRegularExpression();
+static inline NSRegularExpression *URLRegularExpression();
+
+static inline NSRegularExpression *AccountRegularExpression();
+
+static inline NSRegularExpression *TopicRegularExpression();
+
+static inline NSRegularExpression *TelRegularExpression();
 
 
 @implementation LWTextParser
 
 
 + (void)parseEmojiWithTextStorage:(LWTextStorage *)textStorage {
-    NSString* text = textStorage.text;
+    NSString *text = textStorage.text;
     if (!text) {
         return;
     }
-    NSArray* resultArray = [EmojiRegularExpression() matchesInString:text
+    NSArray *resultArray = [EmojiRegularExpression() matchesInString:text
                                                              options:0
-                                                               range:NSMakeRange(0,text.length)];
-    [resultArray enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id  _Nonnull obj,
-                                                                               NSUInteger idx,
-                                                                               BOOL * _Nonnull stop) {
-        NSTextCheckingResult* match = [resultArray objectAtIndex:idx];
+                                                               range:NSMakeRange(0, text.length)];
+    [resultArray enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id _Nonnull obj,
+            NSUInteger idx,
+            BOOL *_Nonnull stop) {
+        NSTextCheckingResult *match = [resultArray objectAtIndex:idx];
         NSRange range = [match range];
-        NSString* content = [text substringWithRange:range];
+        NSString *content = [text substringWithRange:range];
         if (textStorage.text.length >= range.location + range.length) {
             [textStorage lw_replaceTextWithImage:[UIImage imageNamed:content]
                                      contentMode:UIViewContentModeScaleAspectFill
@@ -71,20 +74,20 @@ static inline NSRegularExpression* TelRegularExpression();
 + (void)parseHttpURLWithTextStorage:(LWTextStorage *)textStorage
                           linkColor:(UIColor *)linkColor
                      highlightColor:(UIColor *)higlightColor {
-    NSString* text = textStorage.text;
+    NSString *text = textStorage.text;
     if (!text) {
         return;
     }
-    NSArray* resultArray = [URLRegularExpression() matchesInString:text
+    NSArray *resultArray = [URLRegularExpression() matchesInString:text
                                                            options:0
-                                                             range:NSMakeRange(0,text.length)];
-    [resultArray enumerateObjectsUsingBlock:^(NSTextCheckingResult*  _Nonnull match,
-                                              NSUInteger idx,
-                                              BOOL * _Nonnull stop) {
+                                                             range:NSMakeRange(0, text.length)];
+    [resultArray enumerateObjectsUsingBlock:^(NSTextCheckingResult *_Nonnull match,
+            NSUInteger idx,
+            BOOL *_Nonnull stop) {
         NSRange range = [match range];
-        NSString* content = [text substringWithRange:range];
+        NSString *content = [text substringWithRange:range];
         if (textStorage.text.length >= range.location + range.length) {
-            [textStorage lw_addLinkWithData:[NSString stringWithFormat:@"href://%@",content]
+            [textStorage lw_addLinkWithData:[NSString stringWithFormat:@"href://%@", content]
                                       range:range
                                   linkColor:linkColor
                              highLightColor:higlightColor];
@@ -96,20 +99,20 @@ static inline NSRegularExpression* TelRegularExpression();
 + (void)parseAccountWithTextStorage:(LWTextStorage *)textStorage
                           linkColor:(UIColor *)linkColor
                      highlightColor:(UIColor *)higlightColor {
-    NSString* text = textStorage.text;
+    NSString *text = textStorage.text;
     if (!text) {
         return;
     }
-    NSArray* resultArray = [AccountRegularExpression() matchesInString:text
+    NSArray *resultArray = [AccountRegularExpression() matchesInString:text
                                                                options:0
-                                                                 range:NSMakeRange(0,text.length)];
-    [resultArray enumerateObjectsUsingBlock:^(NSTextCheckingResult*  _Nonnull match,
-                                              NSUInteger idx,
-                                              BOOL * _Nonnull stop) {
+                                                                 range:NSMakeRange(0, text.length)];
+    [resultArray enumerateObjectsUsingBlock:^(NSTextCheckingResult *_Nonnull match,
+            NSUInteger idx,
+            BOOL *_Nonnull stop) {
         NSRange range = [match range];
-        NSString* content = [text substringWithRange:range];
+        NSString *content = [text substringWithRange:range];
         if (textStorage.text.length >= range.location + range.length) {
-            [textStorage lw_addLinkWithData:[NSString stringWithFormat:@"user://%@",content]
+            [textStorage lw_addLinkWithData:[NSString stringWithFormat:@"user://%@", content]
                                       range:range
                                   linkColor:linkColor
                              highLightColor:higlightColor];
@@ -121,20 +124,20 @@ static inline NSRegularExpression* TelRegularExpression();
 + (void)parseTopicWithLWTextStorage:(LWTextStorage *)textStorage
                           linkColor:(UIColor *)linkColor
                      highlightColor:(UIColor *)higlightColor {
-    NSString* text = textStorage.text;
+    NSString *text = textStorage.text;
     if (!text) {
         return;
     }
-    NSArray* resultArray = [TopicRegularExpression() matchesInString:text
+    NSArray *resultArray = [TopicRegularExpression() matchesInString:text
                                                              options:0
-                                                               range:NSMakeRange(0,text.length)];
-    [resultArray enumerateObjectsUsingBlock:^(NSTextCheckingResult*  _Nonnull match,
-                                              NSUInteger idx,
-                                              BOOL * _Nonnull stop) {
+                                                               range:NSMakeRange(0, text.length)];
+    [resultArray enumerateObjectsUsingBlock:^(NSTextCheckingResult *_Nonnull match,
+            NSUInteger idx,
+            BOOL *_Nonnull stop) {
         NSRange range = [match range];
-        NSString* content = [text substringWithRange:range];
+        NSString *content = [text substringWithRange:range];
         if (textStorage.text.length >= range.location + range.length) {
-            [textStorage lw_addLinkWithData:[NSString stringWithFormat:@"topic://%@",content]
+            [textStorage lw_addLinkWithData:[NSString stringWithFormat:@"topic://%@", content]
                                       range:range
                                   linkColor:linkColor
                              highLightColor:higlightColor];
@@ -146,20 +149,20 @@ static inline NSRegularExpression* TelRegularExpression();
 + (void)parseTelWithLWTextStorage:(LWTextStorage *)textStorage
                         linkColor:(UIColor *)linkColor
                    highlightColor:(UIColor *)higlightColor {
-    NSString* text = textStorage.text;
+    NSString *text = textStorage.text;
     if (!text) {
         return;
     }
-    NSArray* resultArray = [TelRegularExpression() matchesInString:text
+    NSArray *resultArray = [TelRegularExpression() matchesInString:text
                                                            options:0
-                                                             range:NSMakeRange(0,text.length)];
-    [resultArray enumerateObjectsUsingBlock:^(NSTextCheckingResult*  _Nonnull match,
-                                              NSUInteger idx,
-                                              BOOL * _Nonnull stop) {
+                                                             range:NSMakeRange(0, text.length)];
+    [resultArray enumerateObjectsUsingBlock:^(NSTextCheckingResult *_Nonnull match,
+            NSUInteger idx,
+            BOOL *_Nonnull stop) {
         NSRange range = [match range];
-        NSString* content = [text substringWithRange:range];
+        NSString *content = [text substringWithRange:range];
         if (textStorage.text.length >= range.location + range.length) {
-            [textStorage lw_addLinkWithData:[NSString stringWithFormat:@"tel://%@",content]
+            [textStorage lw_addLinkWithData:[NSString stringWithFormat:@"tel://%@", content]
                                       range:range
                                   linkColor:linkColor
                              highLightColor:higlightColor];
@@ -171,63 +174,62 @@ static inline NSRegularExpression* TelRegularExpression();
 @end
 
 
-
-static inline NSRegularExpression* EmojiRegularExpression() {
-    static NSRegularExpression* _EmojiRegularExpression = nil;
+static inline NSRegularExpression *EmojiRegularExpression() {
+    static NSRegularExpression *_EmojiRegularExpression = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _EmojiRegularExpression = [[NSRegularExpression alloc]
-                                   initWithPattern:EmojiRegular
-                                   options:NSRegularExpressionAnchorsMatchLines
-                                   error:nil];
+                initWithPattern:EmojiRegular
+                        options:NSRegularExpressionAnchorsMatchLines
+                          error:nil];
     });
     return _EmojiRegularExpression;
 }
 
-static inline NSRegularExpression* URLRegularExpression() {
-    static NSRegularExpression* _URLRegularExpression = nil;
+static inline NSRegularExpression *URLRegularExpression() {
+    static NSRegularExpression *_URLRegularExpression = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _URLRegularExpression = [[NSRegularExpression alloc]
-                                 initWithPattern:URLRegular
-                                 options:NSRegularExpressionAnchorsMatchLines
-                                 error:nil];
+                initWithPattern:URLRegular
+                        options:NSRegularExpressionAnchorsMatchLines
+                          error:nil];
     });
     return _URLRegularExpression;
 }
 
-static inline NSRegularExpression* AccountRegularExpression() {
-    static NSRegularExpression* _AccountRegularExpression = nil;
+static inline NSRegularExpression *AccountRegularExpression() {
+    static NSRegularExpression *_AccountRegularExpression = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _AccountRegularExpression = [[NSRegularExpression alloc]
-                                     initWithPattern:AccountRegular
-                                     options:NSRegularExpressionAnchorsMatchLines
-                                     error:nil];
+                initWithPattern:AccountRegular
+                        options:NSRegularExpressionAnchorsMatchLines
+                          error:nil];
     });
     return _AccountRegularExpression;
 }
 
-static inline NSRegularExpression* TopicRegularExpression() {
-    static NSRegularExpression* _TopicRegularExpression = nil;
+static inline NSRegularExpression *TopicRegularExpression() {
+    static NSRegularExpression *_TopicRegularExpression = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _TopicRegularExpression = [[NSRegularExpression alloc]
-                                   initWithPattern:TopicRegular
-                                   options:NSRegularExpressionCaseInsensitive
-                                   error:nil];
+                initWithPattern:TopicRegular
+                        options:NSRegularExpressionCaseInsensitive
+                          error:nil];
     });
     return _TopicRegularExpression;
 }
 
-static inline NSRegularExpression* TelRegularExpression() {
-    static NSRegularExpression* _TelRegularExpression = nil;
+static inline NSRegularExpression *TelRegularExpression() {
+    static NSRegularExpression *_TelRegularExpression = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _TelRegularExpression = [[NSRegularExpression alloc]
-                                 initWithPattern:TELRegular
-                                 options:NSRegularExpressionCaseInsensitive
-                                 error:nil];
+                initWithPattern:TELRegular
+                        options:NSRegularExpressionCaseInsensitive
+                          error:nil];
     });
     return _TelRegularExpression;
 }

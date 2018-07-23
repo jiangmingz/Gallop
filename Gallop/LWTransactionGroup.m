@@ -23,15 +23,16 @@
  */
 
 #import "LWTransactionGroup.h"
+
 #import "CALayer+LWTransaction.h"
 
 static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observer,
-                                                     CFRunLoopActivity activity,
-                                                     void* info);
+        CFRunLoopActivity activity,
+        void *info);
 
 @interface LWTransactionGroup ()
 
-@property (nonatomic,strong) NSHashTable* layersContainers;
+@property(nonatomic, strong) NSHashTable *layersContainers;
 
 @end
 
@@ -40,7 +41,7 @@ static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observ
 #pragma mark - Init
 
 + (LWTransactionGroup *)mainTransactionGroup {
-    static LWTransactionGroup* mainTransactionGroup;
+    static LWTransactionGroup *mainTransactionGroup;
     if (mainTransactionGroup == nil) {
         mainTransactionGroup = [[LWTransactionGroup alloc] init];
         [self registerTransactionGroupAsMainRunloopObserver:mainTransactionGroup];
@@ -59,20 +60,20 @@ static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observ
     static CFRunLoopObserverRef observer;
     CFRunLoopRef runLoop = CFRunLoopGetCurrent();
     CFOptionFlags activities = (kCFRunLoopBeforeWaiting | kCFRunLoopExit);
-    
+
     CFRunLoopObserverContext context = {
-        0,
-        (__bridge void *)transactionGroup,
-        &CFRetain,
-        &CFRelease,
-        NULL
+            0,
+            (__bridge void *) transactionGroup,
+            &CFRetain,
+            &CFRelease,
+            NULL
     };
     observer = CFRunLoopObserverCreate(NULL,
-                                       activities,
-                                       YES,
-                                       INT_MAX,
-                                       &_transactionGroupRunLoopObserverCallback,
-                                       &context);
+            activities,
+            YES,
+            INT_MAX,
+            &_transactionGroupRunLoopObserverCallback,
+            &context);
     CFRunLoopAddObserver(runLoop, observer, kCFRunLoopCommonModes);
     CFRelease(observer);
 }
@@ -89,10 +90,10 @@ static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observ
 
 - (void)commit {
     if ([self.layersContainers count]) {
-        NSHashTable* containerLayersToCommit = self.layersContainers;
+        NSHashTable *containerLayersToCommit = self.layersContainers;
         self.layersContainers = [NSHashTable hashTableWithOptions:NSPointerFunctionsObjectPointerPersonality];
-        for (CALayer* containerLayer in containerLayersToCommit) {
-            LWTransaction* transaction = containerLayer.currentTransaction;
+        for (CALayer *containerLayer in containerLayersToCommit) {
+            LWTransaction *transaction = containerLayer.currentTransaction;
             containerLayer.currentTransaction = nil;
             [transaction commit];
         }
@@ -101,8 +102,8 @@ static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observ
 
 @end
 
-static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void* info) {
-    LWTransactionGroup* group = (__bridge LWTransactionGroup *)info;
+static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
+    LWTransactionGroup *group = (__bridge LWTransactionGroup *) info;
     [group commit];
 }
 

@@ -26,15 +26,13 @@
 
 
 #import "CALayer+WebCache.h"
+
 #import <objc/runtime.h>
+
 #import "CALayer+WebCacheOperation.h"
 #import "CALayer+LWTransaction.h"
 #import "LWGIFImage.h"
 #import "NSData+ImageContentType.h"
-
-
-
-
 
 
 static char imageURLKey;
@@ -56,85 +54,86 @@ static char imageURLKey;
                    options:(SDWebImageOptions)options
                   progress:(LWWebImageDownloaderProgressBlock)progressBlock
                  completed:(LWWebImageDownloaderCompletionBlock)completedBlock {
-    
+
     [self lw_cancelCurrentImageLoad];
-    
+
     objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
+
     //设置占位图
     if (!(options & SDWebImageDelayPlaceholder)) {
         dispatch_main_async_safe(^{
             [self.lw_asyncTransaction addAsyncOperationWithTarget:self
                                                          selector:@selector(setContents:)
-                                                           object:(__bridge id)placeholder.CGImage
-                                                       completion:^(BOOL canceled) {}];
+                                                           object:(__bridge id) placeholder.CGImage
+                                                       completion:^(BOOL canceled) {
+                                                       }];
         });
     }
     //下载
     if (url) {
         __weak typeof(self) weakSelf = self;
         id <SDWebImageOperation> operation = [[SDWebImageManager sharedManager]
-                                              lw_downloadImageWithURL:url
-                                              cornerRadius:cornerRadius
-                                              cornerBackgroundColor:cornerBackgroundColor
-                                              borderColor:borderColor
-                                              borderWidth:borderWidth
-                                              size:size
-                                              contentMode:contentMode
-                                              isBlur:isBlur
-                                              options:options
-                                              progress:progressBlock
-                                              completed:^(UIImage * _Nullable image,
-                                                          NSData * _Nullable data,
-                                                          NSError * _Nullable error,
-                                                          SDImageCacheType cacheType,
-                                                          BOOL finished,
-                                                          NSURL * _Nullable imageURL) {
-                                                  __strong typeof(weakSelf) sself = weakSelf;
-                                                  if (!sself || !image) {
-                                                      completedBlock(image,data,error);
-                                                      return;
-                                                  }
-                                                  //CALayer不支持GIF显示，显示封面图
-                                                  dispatch_main_async_safe(^{
-                                                      if (image && (options & SDWebImageAvoidAutoSetImage) && completedBlock) {
-                                                          completedBlock(image,data,error);
-                                                          return ;
-                                                          
-                                                      } else if (image) {
-                                                          [sself.lw_asyncTransaction addAsyncOperationWithTarget:self
-                                                                                                        selector:@selector(setContents:)
-                                                                                                          object:(__bridge id)image.CGImage
-                                                                                                      completion:nil];
-                                                          [sself setNeedsLayout];
-                                                      } else {
-                                                          if ((options & SDWebImageDelayPlaceholder)) {
-                                                              [sself.lw_asyncTransaction addAsyncOperationWithTarget:self
-                                                                                                            selector:@selector(setContents:)
-                                                                                                              object:(__bridge id)placeholder.CGImage
-                                                                                                          completion:nil];
-                                                              [sself setNeedsLayout];
-                                                          }
-                                                      }
-                                                      if (completedBlock && finished) {
-                                                          completedBlock(image,data,error);
-                                                      }
-                                                  });
-                                              }];
-        
+                lw_downloadImageWithURL:url
+                           cornerRadius:cornerRadius
+                  cornerBackgroundColor:cornerBackgroundColor
+                            borderColor:borderColor
+                            borderWidth:borderWidth
+                                   size:size
+                            contentMode:contentMode
+                                 isBlur:isBlur
+                                options:options
+                               progress:progressBlock
+                              completed:^(UIImage *_Nullable image,
+                                      NSData *_Nullable data,
+                                      NSError *_Nullable error,
+                                      SDImageCacheType cacheType,
+                                      BOOL finished,
+                                      NSURL *_Nullable imageURL) {
+                                  __strong typeof(weakSelf) sself = weakSelf;
+                                  if (!sself || !image) {
+                                      completedBlock(image, data, error);
+                                      return;
+                                  }
+                                  //CALayer不支持GIF显示，显示封面图
+                                  dispatch_main_async_safe(^{
+                                      if (image && (options & SDWebImageAvoidAutoSetImage) && completedBlock) {
+                                          completedBlock(image, data, error);
+                                          return;
+
+                                      } else if (image) {
+                                          [sself.lw_asyncTransaction addAsyncOperationWithTarget:self
+                                                                                        selector:@selector(setContents:)
+                                                                                          object:(__bridge id) image.CGImage
+                                                                                      completion:nil];
+                                          [sself setNeedsLayout];
+                                      } else {
+                                          if ((options & SDWebImageDelayPlaceholder)) {
+                                              [sself.lw_asyncTransaction addAsyncOperationWithTarget:self
+                                                                                            selector:@selector(setContents:)
+                                                                                              object:(__bridge id) placeholder.CGImage
+                                                                                          completion:nil];
+                                              [sself setNeedsLayout];
+                                          }
+                                      }
+                                      if (completedBlock && finished) {
+                                          completedBlock(image, data, error);
+                                      }
+                                  });
+                              }];
+
         //把operation设置到LWAsyncImageView的关联对象operationDictionary上，用于取消操作
         [self lw_setImageLoadOperation:operation forKey:CALayerLoadKey];
     } else {
         dispatch_main_async_safe(^{
-            NSError* error = [NSError errorWithDomain:SDWebImageErrorDomain
+            NSError *error = [NSError errorWithDomain:SDWebImageErrorDomain
                                                  code:-1
-                                             userInfo:@{NSLocalizedDescriptionKey : @"Trying to load a nil url"}];
+                                             userInfo:@{NSLocalizedDescriptionKey: @"Trying to load a nil url"}];
             if (completedBlock) {
-                completedBlock(nil,nil,error);
+                completedBlock(nil, nil, error);
             }
         });
     }
-    
+
 }
 
 

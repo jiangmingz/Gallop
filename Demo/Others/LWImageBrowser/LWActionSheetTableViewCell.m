@@ -27,10 +27,9 @@
 #import "LWImageBrowserDefine.h"
 
 
-
 @interface LWActionSheetTableViewCell ()
 
-@property (nonatomic,strong) LWActionSheetTableViewCellContent* content;
+@property(nonatomic, strong) LWActionSheetTableViewCellContent *content;
 
 @end
 
@@ -43,10 +42,10 @@
         self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = YES;
         self.content = [[LWActionSheetTableViewCellContent alloc]
-                        initWithFrame:CGRectMake(0.0f,
-                                                 60.0f,
-                                                 SCREEN_WIDTH,
-                                                 60.0f)];
+                initWithFrame:CGRectMake(0.0f,
+                        60.0f,
+                        SCREEN_WIDTH,
+                        60.0f)];
         [self.contentView addSubview:self.content];
     }
     return self;
@@ -58,12 +57,13 @@
                           delay:0.0f
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-        self.content.frame = CGRectMake(0, 0, SCREEN_WIDTH, 60.0f);
-    } completion:^(BOOL finished) {}];
+                         self.content.frame = CGRectMake(0, 0, SCREEN_WIDTH, 60.0f);
+                     } completion:^(BOOL finished) {
+            }];
 }
 
 - (void)setTitle:(NSString *)title {
-    if (_title != title ) {
+    if (_title != title) {
         _title = title;
     }
     self.content.title = self.title;
@@ -72,11 +72,10 @@
 @end
 
 
-
 @interface LWActionSheetTableViewCellContent ()
 
 
-@property (nonatomic,strong) UILabel* textLabel;
+@property(nonatomic, strong) UILabel *textLabel;
 
 @end
 

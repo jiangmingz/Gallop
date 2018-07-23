@@ -33,29 +33,26 @@
 #import "LWImageItem.h"
 
 
+@interface LWImageBrowser () <UICollectionViewDataSource,
+        UICollectionViewDelegate,
+        UIScrollViewDelegate,
+        UIAlertViewDelegate,
+        LWImageItemEventDelegate,
+        LWActionSheetViewDelegate>
 
-@interface LWImageBrowser ()
-
-<UICollectionViewDataSource,
-UICollectionViewDelegate,
-UIScrollViewDelegate,
-UIAlertViewDelegate,
-LWImageItemEventDelegate,
-LWActionSheetViewDelegate>
-
-@property (nonatomic,strong) UIImageView* screenshotImageView;
-@property (nonatomic,strong) UIImageView* blurImageView;
-@property (nonatomic,strong) UIImage* screenshot;
-@property (nonatomic,strong) UIImage* blurImage;
-@property (nonatomic,strong) LWImageBrowserFlowLayout* flowLayout;
-@property (nonatomic,strong) UICollectionView* collectionView;
-@property (nonatomic,strong) UIPageControl* pageControl;
-@property (nonatomic,weak) UIViewController* parentVC;
-@property (nonatomic,assign,getter=isFirstShow) BOOL firstShow;
-@property (nonatomic,strong) LWImageBrowserButton* button;
-@property (nonatomic,copy)NSArray* imageModels;//存放图片模型的数组
-@property (nonatomic,assign) NSInteger currentIndex;//当前页码
-@property (nonatomic,strong) LWImageItem* currentImageItem;//当前的ImageItem
+@property(nonatomic, strong) UIImageView *screenshotImageView;
+@property(nonatomic, strong) UIImageView *blurImageView;
+@property(nonatomic, strong) UIImage *screenshot;
+@property(nonatomic, strong) UIImage *blurImage;
+@property(nonatomic, strong) LWImageBrowserFlowLayout *flowLayout;
+@property(nonatomic, strong) UICollectionView *collectionView;
+@property(nonatomic, strong) UIPageControl *pageControl;
+@property(nonatomic, weak) UIViewController *parentVC;
+@property(nonatomic, assign, getter=isFirstShow) BOOL firstShow;
+@property(nonatomic, strong) LWImageBrowserButton *button;
+@property(nonatomic, copy) NSArray *imageModels;//存放图片模型的数组
+@property(nonatomic, assign) NSInteger currentIndex;//当前页码
+@property(nonatomic, strong) LWImageItem *currentImageItem;//当前的ImageItem
 
 @end
 
@@ -71,8 +68,8 @@ LWActionSheetViewDelegate>
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.pageControl];
     [self.view addSubview:self.button];
-    [self.collectionView setContentOffset:
-     CGPointMake(self.currentIndex * kImageBrowserWidth, 0.0f) animated:NO];
+    [self.collectionView                                      setContentOffset:
+            CGPointMake(self.currentIndex * kImageBrowserWidth, 0.0f) animated:NO];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -85,7 +82,8 @@ LWActionSheetViewDelegate>
     [super viewDidAppear:animated];
     [UIView animateWithDuration:0.2f animations:^{
         self.screenshotImageView.alpha = 0.0f;
-    } completion:^(BOOL finished) {}];
+    }                completion:^(BOOL finished) {
+    }];
 
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self _setCurrentItem];
@@ -93,6 +91,7 @@ LWActionSheetViewDelegate>
 }
 
 #pragma mark - UICollectionViewDataSource
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section {
     return self.imageModels.count;
@@ -109,6 +108,7 @@ LWActionSheetViewDelegate>
 }
 
 #pragma mark - UIScrollViewDelegate
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offset = scrollView.contentOffset.x;
     NSInteger index = offset / SCREEN_WIDTH;
@@ -130,21 +130,23 @@ LWActionSheetViewDelegate>
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
-        case 1:{
-            NSMutableArray* tmpArray = [[NSMutableArray alloc]
-                                        initWithArray:[self.imageModels copy]];
+        case 1: {
+            NSMutableArray *tmpArray = [[NSMutableArray alloc]
+                    initWithArray:[self.imageModels copy]];
             [tmpArray removeObjectAtIndex:self.currentIndex];
             self.imageModels = tmpArray;
             [self _setCurrentItem];
             [self.collectionView reloadData];
         }
             break;
-        default:break;
+        default:
+            break;
     }
 }
 
 - (void)show {
-    [self.parentVC presentViewController:self animated:NO completion:^{}];
+    [self.parentVC presentViewController:self animated:NO completion:^{
+    }];
 }
 
 - (void)_hide {
@@ -162,16 +164,15 @@ LWActionSheetViewDelegate>
                          weakSelf.screenshotImageView.alpha = 1.0f;
                          if (weakSelf.isScalingToHide) {
                              weakSelf.currentImageItem.imageView.frame =
-                             weakSelf.currentImageItem.imageModel.originPosition;
-                         }
-                         else {
+                                     weakSelf.currentImageItem.imageModel.originPosition;
+                         } else {
                              weakSelf.currentImageItem.imageView.alpha = 0.0f;
                          }
                      } completion:^(BOOL finished) {
-                         [weakSelf dismissViewControllerAnimated:NO completion:^{
-                             weakSelf.imageModels = nil;
-                         }];
-                     }];
+                [weakSelf dismissViewControllerAnimated:NO completion:^{
+                    weakSelf.imageModels = nil;
+                }];
+            }];
 }
 
 - (void)_hideNavigationBar {
@@ -185,9 +186,9 @@ LWActionSheetViewDelegate>
 }
 
 - (void)_setCurrentItem {
-    NSArray* cells = [self.collectionView visibleCells];
+    NSArray *cells = [self.collectionView visibleCells];
     if (cells.count != 0) {
-        LWImageBrowserCell* cell = [cells objectAtIndex:0];
+        LWImageBrowserCell *cell = [cells objectAtIndex:0];
         if (self.currentImageItem != cell.imageItem) {
             self.currentImageItem = cell.imageItem;
             [self _preDownLoadImageWithIndex:self.currentIndex];
@@ -196,39 +197,41 @@ LWActionSheetViewDelegate>
 }
 
 - (void)_preDownLoadImageWithIndex:(NSInteger)index {
-    
-    SDWebImageManager* manager = [SDWebImageManager sharedManager];
+
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
     if (index + 1 < self.imageModels.count) {
-        LWImageBrowserModel* nextModel = [self.imageModels objectAtIndex:index + 1];
+        LWImageBrowserModel *nextModel = [self.imageModels objectAtIndex:index + 1];
         [manager loadImageWithURL:nextModel.HDURL
                           options:0
                          progress:nil
-                        completed:^(UIImage * _Nullable image,
-                                    NSData * _Nullable data,
-                                    NSError * _Nullable error,
-                                    SDImageCacheType cacheType,
-                                    BOOL finished,
-                                    NSURL * _Nullable imageURL) {}];
+                        completed:^(UIImage *_Nullable image,
+                                NSData *_Nullable data,
+                                NSError *_Nullable error,
+                                SDImageCacheType cacheType,
+                                BOOL finished,
+                                NSURL *_Nullable imageURL) {
+                        }];
     }
     if (index - 1 >= 0) {
-        LWImageBrowserModel* previousModel = [self.imageModels objectAtIndex:index - 1];
-        
+        LWImageBrowserModel *previousModel = [self.imageModels objectAtIndex:index - 1];
+
         [manager loadImageWithURL:previousModel.HDURL
                           options:0
                          progress:nil
-                        completed:^(UIImage * _Nullable image,
-                                    NSData * _Nullable data,
-                                    NSError * _Nullable error,
-                                    SDImageCacheType cacheType,
-                                    BOOL finished,
-                                    NSURL * _Nullable imageURL) {}];
+                        completed:^(UIImage *_Nullable image,
+                                NSData *_Nullable data,
+                                NSError *_Nullable error,
+                                SDImageCacheType cacheType,
+                                BOOL finished,
+                                NSURL *_Nullable imageURL) {
+                        }];
     }
 }
 
 - (void)_tapMenuButton {
-    LWActionSheetView* actionSheet = [[LWActionSheetView alloc]
-                                      initTilesArray:@[@"保存到本地",@"取消"]
-                                      delegate:self];
+    LWActionSheetView *actionSheet = [[LWActionSheetView alloc]
+            initTilesArray:@[@"保存到本地", @"取消"]
+                  delegate:self];
     [actionSheet show];
 }
 
@@ -243,16 +246,16 @@ LWActionSheetViewDelegate>
 
 #pragma mark - Save Photo
 
-- (void)saveImageToPhotos:(UIImage*)savedImage {
+- (void)saveImageToPhotos:(UIImage *)savedImage {
     UIImageWriteToSavedPhotosAlbum(savedImage,
-                                   self,
-                                   @selector(image:didFinishSavingWithError:contextInfo:),
-                                   NULL);
+            self,
+            @selector(image:didFinishSavingWithError:contextInfo:),
+            NULL);
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error
   contextInfo:(void *)contextInfo {
-    NSString* msg = @"";
+    NSString *msg = @"";
     msg = @"图片已保存到本地";
     [LWAlertView shoWithMessage:msg];
 }
@@ -274,11 +277,11 @@ LWActionSheetViewDelegate>
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc]
-                           initWithFrame:CGRectMake(0,
-                                                    0,
-                                                    kImageBrowserWidth,
-                                                    self.view.bounds.size.height)
-                           collectionViewLayout:self.flowLayout];
+                initWithFrame:CGRectMake(0,
+                        0,
+                        kImageBrowserWidth,
+                        self.view.bounds.size.height)
+         collectionViewLayout:self.flowLayout];
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
@@ -294,10 +297,10 @@ LWActionSheetViewDelegate>
 - (UIPageControl *)pageControl {
     if (!_pageControl) {
         _pageControl = [[UIPageControl alloc]
-                        initWithFrame:CGRectMake(0.0f,
-                                                 SCREEN_HEIGHT - kPageControlHeight - 10.0f,
-                                                 SCREEN_WIDTH,
-                                                 kPageControlHeight)];
+                initWithFrame:CGRectMake(0.0f,
+                        SCREEN_HEIGHT - kPageControlHeight - 10.0f,
+                        SCREEN_WIDTH,
+                        kPageControlHeight)];
         _pageControl.numberOfPages = self.imageModels.count;
         _pageControl.currentPage = self.currentIndex;
         _pageControl.userInteractionEnabled = NO;
@@ -308,12 +311,12 @@ LWActionSheetViewDelegate>
 - (LWImageBrowserButton *)button {
     if (!_button) {
         _button = [[LWImageBrowserButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 60.0f,
-                                                                         SCREEN_HEIGHT - 50.0f,
-                                                                         60.0f,
-                                                                         40.0f)];
+                SCREEN_HEIGHT - 50.0f,
+                60.0f,
+                40.0f)];
         [_button addGestureRecognizer:[[UITapGestureRecognizer alloc]
-                                       initWithTarget:self
-                                       action:@selector(_tapMenuButton)]];
+                initWithTarget:self
+                        action:@selector(_tapMenuButton)]];
     }
     return _button;
 }
@@ -340,7 +343,7 @@ LWActionSheetViewDelegate>
 
 - (id)initWithImageBrowserModels:(NSArray *)imageModels
                     currentIndex:(NSInteger)index {
-    self  = [super init];
+    self = [super init];
     if (self) {
         self.firstShow = YES;
         self.isScalingToHide = YES;
@@ -359,51 +362,51 @@ LWActionSheetViewDelegate>
 #pragma mark - Private
 
 - (UIImage *)_screenshotFromView:(UIView *)aView {
-    UIGraphicsBeginImageContextWithOptions(aView.bounds.size,NO,[UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContextWithOptions(aView.bounds.size, NO, [UIScreen mainScreen].scale);
     [aView.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage* screenshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *screenshotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return screenshotImage;
 }
 
-- (UIViewController *)_getParentVC{
-    UIViewController* result = nil;
-    UIWindow* window = [[UIApplication sharedApplication] keyWindow];
+- (UIViewController *)_getParentVC {
+    UIViewController *result = nil;
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
 
     if (window.windowLevel != UIWindowLevelNormal) {
-        NSArray* windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows) {
-            if (tmpWin.windowLevel == UIWindowLevelNormal){
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for (UIWindow *tmpWin in windows) {
+            if (tmpWin.windowLevel == UIWindowLevelNormal) {
                 window = tmpWin;
                 break;
             }
         }
     }
 
-    id  nextResponder = nil;
-    UIViewController* appRootVC = window.rootViewController;
+    id nextResponder = nil;
+    UIViewController *appRootVC = window.rootViewController;
     if (appRootVC.presentedViewController) {
 
         nextResponder = appRootVC.presentedViewController;
 
-    }else{
+    } else {
 
-        UIView* frontView = [[window subviews] objectAtIndex:0];
+        UIView *frontView = [[window subviews] objectAtIndex:0];
         nextResponder = [frontView nextResponder];
     }
-    if ([nextResponder isKindOfClass:[UITabBarController class]]){
+    if ([nextResponder isKindOfClass:[UITabBarController class]]) {
 
-        UITabBarController* tabbar = (UITabBarController *)nextResponder;
-        UINavigationController* nav = (UINavigationController *)tabbar.viewControllers[tabbar.selectedIndex];
-        result=nav.childViewControllers.lastObject;
+        UITabBarController *tabbar = (UITabBarController *) nextResponder;
+        UINavigationController *nav = (UINavigationController *) tabbar.viewControllers[tabbar.selectedIndex];
+        result = nav.childViewControllers.lastObject;
 
-    } else if ([nextResponder isKindOfClass:[UINavigationController class]]){
+    } else if ([nextResponder isKindOfClass:[UINavigationController class]]) {
 
-        UIViewController * nav = (UIViewController *)nextResponder;
+        UIViewController *nav = (UIViewController *) nextResponder;
         result = nav.childViewControllers.lastObject;
 
     } else {
-        
+
         result = nextResponder;
     }
     return result;

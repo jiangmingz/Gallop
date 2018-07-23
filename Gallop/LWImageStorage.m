@@ -29,9 +29,9 @@
 #import "GallopUtils.h"
 
 
-@interface LWImageStorage()
+@interface LWImageStorage ()
 
-@property (nonatomic,assign) BOOL needRerendering;
+@property(nonatomic, assign) BOOL needRerendering;
 
 @end
 
@@ -51,15 +51,15 @@
     if (self == object) {
         return YES;
     }
-    
-    LWImageStorage* imageStorage = (LWImageStorage *)object;
+
+    LWImageStorage *imageStorage = (LWImageStorage *) object;
     return [imageStorage.contents isEqual:self.contents] && CGRectEqualToRect(imageStorage.frame, self.frame);
 }
 
 
 - (NSUInteger)hash {
-    long v1 = (long)self.contents;
-    long v2 = (long)[NSValue valueWithCGRect:self.frame];
+    long v1 = (long) self.contents;
+    long v2 = (long) [NSValue valueWithCGRect:self.frame];
     return v1 ^ v2;
 }
 
@@ -124,86 +124,85 @@
 #pragma mark - Methods
 
 - (void)stretchableImageWithLeftCapWidth:(CGFloat)leftCapWidth topCapHeight:(NSInteger)topCapHeight {
-    
+
     if ([self.contents isKindOfClass:[UIImage class]] &&
-        self.localImageType == LWLocalImageDrawInLWAsyncDisplayView) {
-        self.contents = [(UIImage *)self.contents
-                         stretchableImageWithLeftCapWidth:leftCapWidth
-                         topCapHeight:topCapHeight];
+            self.localImageType == LWLocalImageDrawInLWAsyncDisplayView) {
+        self.contents = [(UIImage *) self.contents
+                stretchableImageWithLeftCapWidth:leftCapWidth
+                                    topCapHeight:topCapHeight];
     }
 }
 
 - (void)lw_drawInContext:(CGContextRef)context isCancelled:(LWAsyncDisplayIsCanclledBlock)isCancelld {
-    
+
     if (isCancelld()) {
         return;
     }
-    
+
     if ([self.contents isKindOfClass:[NSURL class]]) {
         return;
     }
-    
+
     if ([self.contents isKindOfClass:[UIImage class]] &&
-        self.localImageType == LWLocalImageDrawInLWAsyncDisplayView) {
-        
-        
-        UIImage* image = (UIImage *)self.contents;
+            self.localImageType == LWLocalImageDrawInLWAsyncDisplayView) {
+
+
+        UIImage *image = (UIImage *) self.contents;
         BOOL isOpaque = self.opaque;
-        UIColor* backgroundColor = self.backgroundColor;
+        UIColor *backgroundColor = self.backgroundColor;
         CGFloat cornerRaiuds = self.cornerRadius;
-        UIColor* cornerBackgroundColor = self.cornerBackgroundColor;
-        UIColor* cornerBorderColor = self.cornerBorderColor;
+        UIColor *cornerBackgroundColor = self.cornerBackgroundColor;
+        UIColor *cornerBorderColor = self.cornerBorderColor;
         CGFloat cornerBorderWidth = self.cornerBorderWidth;
         CGRect rect = self.frame;
         rect = CGRectStandardize(rect);
-        
+
         CGRect imgRect = {
-            {rect.origin.x + cornerBorderWidth,rect.origin.y + cornerBorderWidth},
-            {rect.size.width - 2 * cornerBorderWidth,rect.size.height - 2 * cornerBorderWidth}
+                {rect.origin.x + cornerBorderWidth, rect.origin.y + cornerBorderWidth},
+                {rect.size.width - 2 * cornerBorderWidth, rect.size.height - 2 * cornerBorderWidth}
         };
-        
+
         if (!image) {
             return;
         }
-        
+
         if (self.isBlur) {
             image = [image lw_applyBlurWithRadius:20
                                         tintColor:RGB(0, 0, 0, 0.15f)
                             saturationDeltaFactor:1.4
                                         maskImage:nil];
         }
-        
+
         CGContextSaveGState(context);
         if (isOpaque && backgroundColor) {
             [backgroundColor setFill];
             UIRectFill(imgRect);
         }
-        
-        UIBezierPath* backgroundRect = [UIBezierPath bezierPathWithRect:imgRect];
-        UIBezierPath* cornerPath = [UIBezierPath bezierPathWithRoundedRect:imgRect
+
+        UIBezierPath *backgroundRect = [UIBezierPath bezierPathWithRect:imgRect];
+        UIBezierPath *cornerPath = [UIBezierPath bezierPathWithRoundedRect:imgRect
                                                               cornerRadius:cornerRaiuds];
-        
+
         if (cornerBackgroundColor) {
             [cornerBackgroundColor setFill];
             [backgroundRect fill];
         }
         [cornerPath addClip];
-        
+
         [image lw_drawInRect:imgRect
                  contentMode:self.contentMode
                clipsToBounds:YES];
-        
+
         CGContextRestoreGState(context);
         if (cornerBorderColor && cornerBorderWidth != 0) {
             [cornerPath setLineWidth:cornerBorderWidth];
             [cornerBorderColor setStroke];
             [cornerPath stroke];
         }
-        
-        
+
+
     }
 }
-
 
 
 @end

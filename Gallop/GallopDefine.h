@@ -49,7 +49,7 @@
 
 //通过RGB返回UIColor
 #ifndef RGB
-#define RGB(R,G,B,A) [UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:A]
+#define RGB(R, G, B, A) [UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:A]
 #endif
 
 //DEBUG模式下打印
@@ -96,21 +96,24 @@
 #endif
 
 
-
-
-
-
-
 /******************************************************************************/
 @class LWImageStorage;
+
 typedef BOOL(^LWAsyncDisplayIsCanclledBlock)(void);
+
 typedef void(^LWAsyncDisplayWillDisplayBlock)(CALayer *layer);
+
 typedef void(^LWAsyncDisplayBlock)(CGContextRef context, CGSize size, LWAsyncDisplayIsCanclledBlock isCancelledBlock);
+
 typedef void(^LWAsyncDisplayDidDisplayBlock)(CALayer *layer, BOOL finished);
-typedef void(^LWHTMLImageResizeBlock)(LWImageStorage*imageStorage, CGFloat delta);
+
+typedef void(^LWHTMLImageResizeBlock)(LWImageStorage *imageStorage, CGFloat delta);
+
 typedef void(^LWAsyncCompleteBlock)(void);
-typedef void(^LWWebImageDownloaderProgressBlock)(NSInteger receivedSize, NSInteger expectedSize, NSURL* targetURL);
-typedef void(^LWWebImageDownloaderCompletionBlock)(UIImage* image,NSData* imageData,NSError* error);
+
+typedef void(^LWWebImageDownloaderProgressBlock)(NSInteger receivedSize, NSInteger expectedSize, NSURL *targetURL);
+
+typedef void(^LWWebImageDownloaderCompletionBlock)(UIImage *image, NSData *imageData, NSError *error);
 /******************************************************************************/
 
 

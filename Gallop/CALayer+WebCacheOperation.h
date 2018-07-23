@@ -27,7 +27,6 @@
 #import "SDWebImageManager.h"
 
 
-
 @interface CALayer (WebCacheOperation)
 
 
@@ -47,7 +46,6 @@
  *  @param key       operation对象存在字典中的key
  */
 - (void)lw_cancelImageLoadOperationWithKey:(nullable NSString *)key;
-
 
 
 /**

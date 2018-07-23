@@ -28,7 +28,7 @@
 
 @implementation LWImageBrowserFlowLayout
 
--(id)init {
+- (id)init {
     self = [super init];
     if (self) {
         self.itemSize = CGSizeMake(kImageBrowserWidth, SCREEN_HEIGHT);

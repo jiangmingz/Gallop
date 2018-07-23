@@ -36,10 +36,11 @@
 
 @interface LWActionSheetView : UIView
 
-@property (nonatomic,weak) id <LWActionSheetViewDelegate> delegate;
-@property (nonatomic,strong) id userInfo;
+@property(nonatomic, weak) id <LWActionSheetViewDelegate> delegate;
+@property(nonatomic, strong) id userInfo;
 
 - (id)initTilesArray:(NSArray *)titles delegate:(id <LWActionSheetViewDelegate>)delegate;
+
 - (void)show;
 
 @end

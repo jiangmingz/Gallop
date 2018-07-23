@@ -27,21 +27,20 @@
 #import <objc/runtime.h>
 
 
-static void* LWTextStoragesKey = &LWTextStoragesKey ;
-static void* LWImageStoragesKey = &LWImageStoragesKey;
-static void* LWTotalStoragesKey = &LWTotalStoragesKey;
+static void *LWTextStoragesKey = &LWTextStoragesKey;
+static void *LWImageStoragesKey = &LWImageStoragesKey;
+static void *LWTotalStoragesKey = &LWTotalStoragesKey;
 
-@implementation  NSManagedObject(LWLayout)
+@implementation NSManagedObject (LWLayout)
 
 - (void)addStorage:(LWStorage *)storage {
     if (!storage) {
         return;
     }
     if ([storage isMemberOfClass:[LWTextStorage class]]) {
-        [self.textStorages addObject:(LWTextStorage *)storage];
-    }
-    else if ([storage isMemberOfClass:[LWImageStorage class]]) {
-        [self.imageStorages addObject:(LWImageStorage *)storage];
+        [self.textStorages addObject:(LWTextStorage *) storage];
+    } else if ([storage isMemberOfClass:[LWImageStorage class]]) {
+        [self.imageStorages addObject:(LWImageStorage *) storage];
     }
     [self.totalStorages addObject:storage];
 }
@@ -50,12 +49,11 @@ static void* LWTotalStoragesKey = &LWTotalStoragesKey;
     if (!storages) {
         return;
     }
-    for (LWStorage* storage in storages) {
+    for (LWStorage *storage in storages) {
         if ([storage isMemberOfClass:[LWTextStorage class]]) {
-            [self.textStorages addObject:(LWTextStorage *)storage];
-        }
-        else if ([storage isMemberOfClass:[LWImageStorage class]]) {
-            [self.imageStorages addObject:(LWImageStorage *)storage];
+            [self.textStorages addObject:(LWTextStorage *) storage];
+        } else if ([storage isMemberOfClass:[LWImageStorage class]]) {
+            [self.imageStorages addObject:(LWImageStorage *) storage];
         }
     }
     [self.totalStorages addObjectsFromArray:storages];
@@ -67,14 +65,14 @@ static void* LWTotalStoragesKey = &LWTotalStoragesKey;
         return;
     }
     if ([storage isMemberOfClass:[LWTextStorage class]]) {
-        if ([self.textStorages containsObject:(LWTextStorage *)storage]) {
-            [self.textStorages removeObject:(LWTextStorage *)storage];
-            [self.totalStorages removeObject:(LWTextStorage *)storage];
+        if ([self.textStorages containsObject:(LWTextStorage *) storage]) {
+            [self.textStorages removeObject:(LWTextStorage *) storage];
+            [self.totalStorages removeObject:(LWTextStorage *) storage];
         }
     } else if ([storage isMemberOfClass:[LWImageStorage class]]) {
-        if ([self.imageStorages containsObject:(LWImageStorage *)storage]) {
-            [self.imageStorages removeObject:(LWImageStorage *)storage];
-            [self.totalStorages removeObject:(LWImageStorage *)storage];
+        if ([self.imageStorages containsObject:(LWImageStorage *) storage]) {
+            [self.imageStorages removeObject:(LWImageStorage *) storage];
+            [self.totalStorages removeObject:(LWImageStorage *) storage];
         }
     }
 }
@@ -83,16 +81,16 @@ static void* LWTotalStoragesKey = &LWTotalStoragesKey;
     if (!storages) {
         return;
     }
-    for (LWStorage* storage in storages) {
+    for (LWStorage *storage in storages) {
         if ([storage isMemberOfClass:[LWTextStorage class]]) {
-            if ([self.textStorages containsObject:(LWTextStorage *)storage]) {
-                [self.textStorages removeObject:(LWTextStorage *)storage];
-                [self.totalStorages removeObject:(LWTextStorage *)storage];
+            if ([self.textStorages containsObject:(LWTextStorage *) storage]) {
+                [self.textStorages removeObject:(LWTextStorage *) storage];
+                [self.totalStorages removeObject:(LWTextStorage *) storage];
             }
         } else if ([storage isMemberOfClass:[LWImageStorage class]]) {
-            if ([self.imageStorages containsObject:(LWImageStorage *)storage]) {
-                [self.imageStorages removeObject:(LWImageStorage *)storage];
-                [self.totalStorages removeObject:(LWImageStorage *)storage];
+            if ([self.imageStorages containsObject:(LWImageStorage *) storage]) {
+                [self.imageStorages removeObject:(LWImageStorage *) storage];
+                [self.totalStorages removeObject:(LWImageStorage *) storage];
             }
         }
     }
@@ -100,39 +98,39 @@ static void* LWTotalStoragesKey = &LWTotalStoragesKey;
 
 - (CGFloat)suggestHeightWithBottomMargin:(CGFloat)bottomMargin {
     CGFloat suggestHeight = 0.0f;
-    for (LWStorage* storage in self.totalStorages) {
-        suggestHeight = suggestHeight > storage.bottom ? suggestHeight :storage.bottom;
+    for (LWStorage *storage in self.totalStorages) {
+        suggestHeight = suggestHeight > storage.bottom ? suggestHeight : storage.bottom;
     }
     return suggestHeight + bottomMargin;
 }
 
-- (NSMutableArray<LWTextStorage *>*)textStorages {
-    NSMutableArray* textStorages = objc_getAssociatedObject(self, LWTextStoragesKey);
+- (NSMutableArray<LWTextStorage *> *)textStorages {
+    NSMutableArray *textStorages = objc_getAssociatedObject(self, LWTextStoragesKey);
     if (textStorages != nil) {
         return textStorages;
     }
     textStorages = [[NSMutableArray alloc] init];
-    objc_setAssociatedObject(self,LWTextStoragesKey, textStorages, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, LWTextStoragesKey, textStorages, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return textStorages;
 }
 
-- (NSMutableArray<LWImageStorage *>*)imageStorages {
-    NSMutableArray* imageStorages = objc_getAssociatedObject(self, LWImageStoragesKey);
+- (NSMutableArray<LWImageStorage *> *)imageStorages {
+    NSMutableArray *imageStorages = objc_getAssociatedObject(self, LWImageStoragesKey);
     if (imageStorages != nil) {
         return imageStorages;
     }
     imageStorages = [[NSMutableArray alloc] init];
-    objc_setAssociatedObject(self,LWImageStoragesKey, imageStorages, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, LWImageStoragesKey, imageStorages, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return imageStorages;
 }
 
-- (NSMutableArray<LWStorage *>*) totalStorages {
-    NSMutableArray* totalStorages = objc_getAssociatedObject(self, LWTotalStoragesKey);
+- (NSMutableArray<LWStorage *> *)totalStorages {
+    NSMutableArray *totalStorages = objc_getAssociatedObject(self, LWTotalStoragesKey);
     if (totalStorages != nil) {
         return totalStorages;
     }
     totalStorages = [[NSMutableArray alloc] init];
-    objc_setAssociatedObject(self,LWTotalStoragesKey, totalStorages, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, LWTotalStoragesKey, totalStorages, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return totalStorages;
 }
 

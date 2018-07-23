@@ -70,7 +70,7 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWTextGlyph* one = [[LWTextGlyph alloc] init];
+    LWTextGlyph *one = [[LWTextGlyph alloc] init];
     one.glyph = self.glyph;
     one.position = self.position;
     one.ascent = self.ascent;

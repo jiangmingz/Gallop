@@ -27,7 +27,7 @@
 
 @interface LWActionSheetTableViewCell : UITableViewCell
 
-@property (nonatomic,copy) NSString* title;
+@property(nonatomic, copy) NSString *title;
 
 - (void)show;
 
@@ -35,6 +35,6 @@
 
 @interface LWActionSheetTableViewCellContent : UIView
 
-@property (nonatomic,copy) NSString* title;
+@property(nonatomic, copy) NSString *title;
 
 @end

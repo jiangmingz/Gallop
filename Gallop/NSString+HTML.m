@@ -26,15 +26,15 @@
 
 #define IS_WHITESPACE(_c) (_c == ' '|| _c == '\t' || _c == 0xA || _c == 0xB || _c == 0xC || _c == 0xD || _c == 0x85)
 
-@implementation NSString(HTML)
+@implementation NSString (HTML)
 
 - (NSString *)stringByNormalizingWhitespace {
     NSInteger stringLength = [self length];
-    unichar* _characters = calloc(stringLength, sizeof(unichar));
+    unichar *_characters = calloc(stringLength, sizeof(unichar));
     [self getCharacters:_characters range:NSMakeRange(0, stringLength)];
     NSInteger outputLength = 0;
     BOOL inWhite = NO;
-    for (NSInteger i = 0; i<stringLength; i++) {
+    for (NSInteger i = 0; i < stringLength; i++) {
         unichar oneChar = _characters[i];
         if (IS_WHITESPACE(oneChar)) {
             if (!inWhite) {
@@ -48,7 +48,7 @@
             inWhite = NO;
         }
     }
-    NSString* retString = [NSString stringWithCharacters:_characters length:outputLength];
+    NSString *retString = [NSString stringWithCharacters:_characters length:outputLength];
     free(_characters);
     return retString;
 }

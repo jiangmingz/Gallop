@@ -28,23 +28,27 @@
 
 
 static void LWTextDeallocCallback(void *ref);
+
 static CGFloat LWTextAscentCallback(void *ref);
+
 static CGFloat LWTextDescentCallback(void *ref);
+
 static CGFloat LWTextWidthCallback(void *ref);
 
 
 @implementation LWTextRunDelegate
 
 #pragma mark - Getter
+
 - (CTRunDelegateRef)CTRunDelegate {
     CTRunDelegateCallbacks callbacks;
-    memset(&callbacks,0,sizeof(CTRunDelegateCallbacks));
+    memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
     callbacks.version = kCTRunDelegateVersion1;
     callbacks.dealloc = LWTextDeallocCallback;
     callbacks.getAscent = LWTextAscentCallback;
     callbacks.getDescent = LWTextDescentCallback;
     callbacks.getWidth = LWTextWidthCallback;
-    return CTRunDelegateCreate(&callbacks, (__bridge_retained void *)([self copy]));
+    return CTRunDelegateCreate(&callbacks, (__bridge_retained void *) ([self copy]));
 }
 
 #pragma mark - NSCoding
@@ -77,7 +81,7 @@ static CGFloat LWTextWidthCallback(void *ref);
 }
 
 - (id)copyWithZone:(nullable NSZone *)zone {
-    LWTextRunDelegate* delegate = [[[self class] alloc] init];
+    LWTextRunDelegate *delegate = [[[self class] alloc] init];
     delegate.ascent = self.ascent;
     delegate.descent = self.descent;
     delegate.width = self.width;
@@ -89,21 +93,21 @@ static CGFloat LWTextWidthCallback(void *ref);
 @end
 
 static void LWTextDeallocCallback(void *ref) {
-    LWTextRunDelegate* self = (__bridge_transfer LWTextRunDelegate *)(ref);
+    LWTextRunDelegate *self = (__bridge_transfer LWTextRunDelegate *) (ref);
     self = nil;
 }
 
 static CGFloat LWTextAscentCallback(void *ref) {
-    LWTextRunDelegate* self = (__bridge LWTextRunDelegate *)(ref);
+    LWTextRunDelegate *self = (__bridge LWTextRunDelegate *) (ref);
     return self.ascent;
 }
 
 static CGFloat LWTextDescentCallback(void *ref) {
-    LWTextRunDelegate* self = (__bridge LWTextRunDelegate *)(ref);
+    LWTextRunDelegate *self = (__bridge LWTextRunDelegate *) (ref);
     return self.descent;
 }
 
 static CGFloat LWTextWidthCallback(void *ref) {
-    LWTextRunDelegate* self = (__bridge LWTextRunDelegate *)(ref);
+    LWTextRunDelegate *self = (__bridge LWTextRunDelegate *) (ref);
     return self.width;
 }

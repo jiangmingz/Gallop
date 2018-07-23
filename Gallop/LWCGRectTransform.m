@@ -28,7 +28,7 @@
 
 + (CGRect)lw_CGRectFitWithContentMode:(UIViewContentMode)contentMode
                                  rect:(CGRect)rect
-                                 size:(CGSize)size  {
+                                 size:(CGSize)size {
 
     rect = CGRectStandardize(rect);
     size.width = size.width < 0 ? -size.width : size.width;
@@ -37,8 +37,8 @@
     switch (contentMode) {
         case UIViewContentModeScaleAspectFit:
         case UIViewContentModeScaleAspectFill: {
-            if (rect.size.width < 0.01 || rect.size.height < 0.01 ||
-                size.width < 0.01 || size.height < 0.01) {
+            if (rect.size.width < 0.01f || rect.size.height < 0.01f ||
+                    size.width < 0.01f || size.height < 0.01f) {
                 rect.origin = center;
                 rect.size = CGSizeZero;
             } else {
@@ -61,45 +61,55 @@
                 rect.size = size;
                 rect.origin = CGPointMake(center.x - size.width * 0.5, center.y - size.height * 0.5);
             }
-        } break;
+        }
+            break;
         case UIViewContentModeCenter: {
             rect.size = size;
             rect.origin = CGPointMake(center.x - size.width * 0.5, center.y - size.height * 0.5);
-        } break;
+        }
+            break;
         case UIViewContentModeTop: {
             rect.origin.x = center.x - size.width * 0.5;
             rect.size = size;
-        } break;
+        }
+            break;
         case UIViewContentModeBottom: {
-            rect.origin.x = center.x - size.width * 0.5;
+            rect.origin.x = center.x - size.width * 0.5f;
             rect.origin.y += rect.size.height - size.height;
             rect.size = size;
-        } break;
+        }
+            break;
         case UIViewContentModeLeft: {
-            rect.origin.y = center.y - size.height * 0.5;
+            rect.origin.y = center.y - size.height * 0.5f;
             rect.size = size;
-        } break;
+        }
+            break;
         case UIViewContentModeRight: {
-            rect.origin.y = center.y - size.height * 0.5;
+            rect.origin.y = center.y - size.height * 0.5f;
             rect.origin.x += rect.size.width - size.width;
             rect.size = size;
-        } break;
+        }
+            break;
         case UIViewContentModeTopLeft: {
             rect.size = size;
-        } break;
+        }
+            break;
         case UIViewContentModeTopRight: {
             rect.origin.x += rect.size.width - size.width;
             rect.size = size;
-        } break;
+        }
+            break;
         case UIViewContentModeBottomLeft: {
             rect.origin.y += rect.size.height - size.height;
             rect.size = size;
-        } break;
+        }
+            break;
         case UIViewContentModeBottomRight: {
             rect.origin.x += rect.size.width - size.width;
             rect.origin.y += rect.size.height - size.height;
             rect.size = size;
-        } break;
+        }
+            break;
         case UIViewContentModeScaleToFill:
         case UIViewContentModeRedraw:
         default: {

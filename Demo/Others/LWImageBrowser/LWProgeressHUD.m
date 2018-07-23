@@ -30,17 +30,17 @@ const CGFloat kHUDSize = 70.0f;
 
 @interface LWProgeressHUD ()
 
-@property (nonatomic,strong) CAShapeLayer* shapeLayer;
+@property(nonatomic, strong) CAShapeLayer *shapeLayer;
 
 @end
 
 @implementation LWProgeressHUD
 
 + (LWProgeressHUD *)showHUDAddedTo:(UIView *)view {
-    LWProgeressHUD* hud = [[LWProgeressHUD alloc] initWithFrame:CGRectMake(0,
-                                                                           0,
-                                                                           kHUDSize,
-                                                                           kHUDSize)];
+    LWProgeressHUD *hud = [[LWProgeressHUD alloc] initWithFrame:CGRectMake(0,
+            0,
+            kHUDSize,
+            kHUDSize)];
     hud.center = view.center;
     hud.progress = 0.0f;
     [view addSubview:hud];
@@ -49,7 +49,7 @@ const CGFloat kHUDSize = 70.0f;
 
 
 + (void)hideAllHUDForView:(UIView *)view {
-    for (UIView* subView in view.subviews) {
+    for (UIView *subView in view.subviews) {
         if ([subView isMemberOfClass:[LWProgeressHUD class]]) {
             [subView removeFromSuperview];
         }
@@ -68,14 +68,14 @@ const CGFloat kHUDSize = 70.0f;
         self.layer.cornerRadius = 8.0f;
         self.layer.masksToBounds = YES;
         self.backgroundColor = RGB(0, 0, 0, 0.75f);
-        
-        UIBezierPath* path = [UIBezierPath bezierPathWithArcCenter:self.center
+
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:self.center
                                                             radius:25.0f
-                                                        startAngle:-M_PI/2
-                                                          endAngle:3.0f/2 * M_PI
+                                                        startAngle:-M_PI / 2.0
+                                                          endAngle:3.0f / 2 * M_PI
                                                          clockwise:YES];
-        
-        CAShapeLayer* shapeLayer = [CAShapeLayer layer];
+
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
         shapeLayer.path = path.CGPath;
         shapeLayer.lineWidth = 2.0f;
         shapeLayer.lineCap = kCALineCapRound;
@@ -84,7 +84,7 @@ const CGFloat kHUDSize = 70.0f;
         shapeLayer.fillColor = [UIColor clearColor].CGColor;
         shapeLayer.strokeColor = [UIColor lightGrayColor].CGColor;
         [self.layer addSublayer:shapeLayer];
-        
+
         self.shapeLayer = [CAShapeLayer layer];
         self.shapeLayer.path = path.CGPath;
         self.shapeLayer.lineWidth = 2.0f;

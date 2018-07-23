@@ -27,6 +27,6 @@
 
 @interface LWAlertContentView : UIView
 
-@property (nonatomic,copy) NSString* message;
+@property(nonatomic, copy) NSString *message;
 
 @end

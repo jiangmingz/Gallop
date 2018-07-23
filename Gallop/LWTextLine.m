@@ -30,31 +30,30 @@
 
 @interface LWTextLine ()
 
-@property (nonatomic,assign) CTLineRef CTLine;
-@property (nonatomic,assign) CGPoint lineOrigin;
+@property(nonatomic, assign) CTLineRef CTLine;
+@property(nonatomic, assign) CGPoint lineOrigin;
 
-@property (nonatomic,assign) NSRange range;
-@property (nonatomic,assign) CGRect frame;
-@property (nonatomic,assign) CGSize size;
-@property (nonatomic,assign) CGFloat width;
-@property (nonatomic,assign) CGFloat height;
-@property (nonatomic,assign) CGFloat top;
-@property (nonatomic,assign) CGFloat bottom;
-@property (nonatomic,assign) CGFloat left;
-@property (nonatomic,assign) CGFloat right;
+@property(nonatomic, assign) NSRange range;
+@property(nonatomic, assign) CGRect frame;
+@property(nonatomic, assign) CGSize size;
+@property(nonatomic, assign) CGFloat width;
+@property(nonatomic, assign) CGFloat height;
+@property(nonatomic, assign) CGFloat top;
+@property(nonatomic, assign) CGFloat bottom;
+@property(nonatomic, assign) CGFloat left;
+@property(nonatomic, assign) CGFloat right;
 
-@property (nonatomic,assign) CGFloat ascent;
-@property (nonatomic,assign) CGFloat descent;
-@property (nonatomic,assign) CGFloat leading;
-@property (nonatomic,assign) CGFloat lineWidth;
-@property (nonatomic,assign) CGFloat trailingWhitespaceWidth;
+@property(nonatomic, assign) CGFloat ascent;
+@property(nonatomic, assign) CGFloat descent;
+@property(nonatomic, assign) CGFloat leading;
+@property(nonatomic, assign) CGFloat lineWidth;
+@property(nonatomic, assign) CGFloat trailingWhitespaceWidth;
 
-@property (nonatomic,copy) NSArray<LWTextGlyph *>* glyphs;
-@property (nonatomic,copy) NSArray<LWTextAttachment *>* attachments;
-@property (nonatomic,copy) NSArray<NSValue *>* attachmentRanges;
-@property (nonatomic,copy) NSArray<NSValue *>* attachmentRects;
-@property (nonatomic,assign) CGFloat firstGlyphPosition;
-
+@property(nonatomic, copy) NSArray<LWTextGlyph *> *glyphs;
+@property(nonatomic, copy) NSArray<LWTextAttachment *> *attachments;
+@property(nonatomic, copy) NSArray<NSValue *> *attachmentRanges;
+@property(nonatomic, copy) NSArray<NSValue *> *attachmentRects;
+@property(nonatomic, assign) CGFloat firstGlyphPosition;
 
 
 @end
@@ -65,14 +64,14 @@
 #pragma mark - NSCoding
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:(__nonnull id)self.CTLine forKey:@"CTLine"];
+    [aCoder encodeObject:(__nonnull id) self.CTLine forKey:@"CTLine"];
     [aCoder encodeCGPoint:self.lineOrigin forKey:@"lineOrigin"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
-    CTLineRef CTLine = (__bridge CTLineRef)([aDecoder decodeObjectForKey:@"CTLine"]);
+    CTLineRef CTLine = (__bridge CTLineRef) ([aDecoder decodeObjectForKey:@"CTLine"]);
     CGPoint lineOrigin = [aDecoder decodeCGPointForKey:@"lineOrigin"];
-    LWTextLine* one = [LWTextLine lw_textLineWithCTlineRef:CTLine lineOrigin:lineOrigin];
+    LWTextLine *one = [LWTextLine lw_textLineWithCTlineRef:CTLine lineOrigin:lineOrigin];
     return one;
 }
 
@@ -82,7 +81,7 @@
     if (!CTLine) {
         return nil;
     }
-    LWTextLine* line = [[LWTextLine alloc] init];
+    LWTextLine *line = [[LWTextLine alloc] init];
     line.CTLine = CTLine;
     line.lineOrigin = lineOrigin;
     return line;
@@ -120,7 +119,7 @@
             CGFloat ascent;
             CGFloat descent;
             CGFloat leading;
-            
+
             self.lineWidth = CTLineGetTypographicBounds(_CTLine, &ascent, &descent, &leading);
             self.ascent = ascent;
             self.descent = descent;
@@ -151,10 +150,10 @@
 
 - (void)_calculatesTheBounds {
     self.frame = CGRectMake(self.lineOrigin.x + self.firstGlyphPosition,
-                            self.lineOrigin.y - self.ascent,
-                            self.lineWidth,
-                            self.ascent + self.descent);
-    if (!self.CTLine){
+            self.lineOrigin.y - self.ascent,
+            self.lineWidth,
+            self.ascent + self.descent);
+    if (!self.CTLine) {
         return;
     }
     CFArrayRef runs = CTLineGetGlyphRuns(self.CTLine);
@@ -162,13 +161,13 @@
     if (runCount == 0) {
         return;
     }
-    
-    NSMutableArray* attachments = [[NSMutableArray alloc] init];
-    NSMutableArray* attachmentRanges = [[NSMutableArray alloc] init];
-    NSMutableArray* attachmentRects = [[NSMutableArray alloc] init];
-    NSMutableArray* glyphsArray = [[NSMutableArray alloc] init];
-    
-    for (NSUInteger i = 0; i < runCount; i ++) {
+
+    NSMutableArray *attachments = [[NSMutableArray alloc] init];
+    NSMutableArray *attachmentRanges = [[NSMutableArray alloc] init];
+    NSMutableArray *attachmentRects = [[NSMutableArray alloc] init];
+    NSMutableArray *glyphsArray = [[NSMutableArray alloc] init];
+
+    for (NSUInteger i = 0; i < runCount; i++) {
         CTRunRef run = CFArrayGetValueAtIndex(runs, i);
         CFIndex glyphCount = CTRunGetGlyphCount(run);
         if (glyphCount == 0) {
@@ -178,26 +177,26 @@
         CTRunGetPositions(run, CFRangeMake(0, 1), &runPosition);
         CGFloat ascent, descent, leading, runWidth;
         CGRect runTypoBounds;
-        
+
         runWidth = CTRunGetTypographicBounds(run, CFRangeMake(0, 0), &ascent, &descent, &leading);
         runPosition.x += self.lineOrigin.x;
         runPosition.y = self.lineOrigin.y - runPosition.y;
         runTypoBounds = CGRectMake(runPosition.x, runPosition.y - ascent, runWidth, ascent + descent);
-        
+
         NSRange runRange = NSMakeRange(CTRunGetStringRange(run).location, CTRunGetStringRange(run).length);
-        
+
         {
             CGGlyph glyphs[glyphCount];
-            CTRunGetGlyphs(run, CFRangeMake(0, 0),glyphs);
-            
+            CTRunGetGlyphs(run, CFRangeMake(0, 0), glyphs);
+
             CGPoint glyphPositions[glyphCount];
             CTRunGetPositions(run, CFRangeMake(0, 0), glyphPositions);
-            
+
             CGSize glyphAdvances[glyphCount];
             CTRunGetAdvances(run, CFRangeMake(0, glyphCount), glyphAdvances);
-                        
-            for (NSInteger i = 0; i < glyphCount; i ++) {
-                LWTextGlyph* glyph = [[LWTextGlyph alloc] init];
+
+            for (NSInteger i = 0; i < glyphCount; i++) {
+                LWTextGlyph *glyph = [[LWTextGlyph alloc] init];
                 glyph.glyph = glyphs[i];
                 glyph.position = glyphPositions[i];
                 glyph.leading = leading;
@@ -208,9 +207,9 @@
                 [glyphsArray addObject:glyph];
             }
         }
-        
-        NSDictionary* attributes = (id)CTRunGetAttributes(run);
-        LWTextAttachment* attachment = [attributes objectForKey:LWTextAttachmentAttributeName];
+
+        NSDictionary *attributes = (id) CTRunGetAttributes(run);
+        LWTextAttachment *attachment = [attributes objectForKey:LWTextAttachmentAttributeName];
         if (attachment) {
             [attachments addObject:attachment];
             [attachmentRanges addObject:[NSValue valueWithRange:runRange]];

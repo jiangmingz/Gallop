@@ -43,7 +43,7 @@
  *
  *  @param storages 一个包含LWStorage对象的数组
  */
-- (void)addStorages:(NSArray <LWStorage *>*)storages;
+- (void)addStorages:(NSArray <LWStorage *> *)storages;
 
 /**
  *  在当前所添加的LWStorage对象的后面拼接一个LWStorage对象
@@ -57,7 +57,7 @@
  *
  *  @param storage 一个LWStorage对象
  */
-- (void)appendStorages:(NSArray <LWStorage *>*)storages;
+- (void)appendStorages:(NSArray <LWStorage *> *)storages;
 
 /**
  *  获取所有的LWStorage对象

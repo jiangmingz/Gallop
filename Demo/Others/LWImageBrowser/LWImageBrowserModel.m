@@ -28,12 +28,10 @@
 #import "LWImageBrowserDefine.h"
 
 
-
-
 @interface LWImageBrowserModel ()
 
-@property (nonatomic,assign,readwrite) CGRect destinationFrame;
-@property (nonatomic,assign,readwrite) BOOL isDownload;
+@property(nonatomic, assign, readwrite) CGRect destinationFrame;
+@property(nonatomic, assign, readwrite) BOOL isDownload;
 
 @end
 
@@ -52,12 +50,11 @@
         self.HDURL = HDURL;
         self.index = index;
         if (containerView != nil) {
-            UIWindow* window = [UIApplication sharedApplication].keyWindow;
+            UIWindow *window = [UIApplication sharedApplication].keyWindow;
             CGRect originRect = [containerView convertRect:positionInContainer toView:window];
             self.originPosition = originRect;
-        }
-        else {
-            self.originPosition = CGRectMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, 0, 0);
+        } else {
+            self.originPosition = CGRectMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 0, 0);
         }
     }
     return self;
@@ -71,23 +68,23 @@
         return;
     }
     __weak typeof(self) weakSelf = self;
-    SDWebImageManager* manager = [SDWebImageManager sharedManager];
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
     [manager loadImageWithURL:self.thumbnailURL
                       options:0
                      progress:nil
-                    completed:^(UIImage * _Nullable image,
-                                NSData * _Nullable data,
-                                NSError * _Nullable error,
-                                SDImageCacheType cacheType,
-                                BOOL finished,
-                                NSURL * _Nullable imageURL) {
+                    completed:^(UIImage *_Nullable image,
+                            NSData *_Nullable data,
+                            NSError *_Nullable error,
+                            SDImageCacheType cacheType,
+                            BOOL finished,
+                            NSURL *_Nullable imageURL) {
                         __strong typeof(weakSelf) sself = weakSelf;
 
                         if (finished) {
                             sself.thumbnailImage = image;
                             sself.destinationFrame =
-                            [sself calculateDestinationFrameWithSize:sself.thumbnailImage.size
-                                                               index:sself.index];
+                                    [sself calculateDestinationFrameWithSize:sself.thumbnailImage.size
+                                                                       index:sself.index];
                         }
                     }];
 
@@ -97,9 +94,9 @@
 - (CGRect)calculateDestinationFrameWithSize:(CGSize)size
                                       index:(NSInteger)index {
     CGRect rect = CGRectMake(kImageBrowserWidth * index,
-                             (kImageBrowserHeight - size.height * [UIScreen mainScreen].bounds.size.width / size.width)/2,
-                             [UIScreen mainScreen].bounds.size.width,
-                             size.height * [UIScreen mainScreen].bounds.size.width / size.width);
+            (kImageBrowserHeight - size.height * [UIScreen mainScreen].bounds.size.width / size.width) / 2,
+            [UIScreen mainScreen].bounds.size.width,
+            size.height * [UIScreen mainScreen].bounds.size.width / size.width);
     return rect;
 }
 

@@ -32,8 +32,7 @@
 
 @interface LWAsyncDisplayLayer ()
 
-@property (nonatomic,strong) LWFlag* displayFlag;
-
+@property(nonatomic, strong) LWFlag *displayFlag;
 
 @end
 
@@ -48,10 +47,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         displayQueue = dispatch_queue_create("com.Gallop.LWAsyncDisplayLayer.displayQueue",
-                                             DISPATCH_QUEUE_CONCURRENT);
-        
+                DISPATCH_QUEUE_CONCURRENT);
+
         dispatch_set_target_queue(displayQueue,
-                                  dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0));
+                dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0));
     });
     return displayQueue;
 }
@@ -88,6 +87,7 @@
 
 - (void)setNeedsDisplay {
     [self cancelAsyncDisplay];
+
     [super setNeedsDisplay];
 }
 
@@ -114,16 +114,15 @@
 
 
 - (void)display:(BOOL)asynchronously {
-    
-    
+
     __strong id <LWAsyncDisplayLayerDelegate> delegate = (id) self.delegate;
-    LWAsyncDisplayTransaction* transaction = [delegate asyncDisplayTransaction];
+    LWAsyncDisplayTransaction *transaction = [delegate asyncDisplayTransaction];
     if (!transaction.displayBlock) {
         if (transaction.willDisplayBlock) {
             transaction.willDisplayBlock(self);
         }
-        
-        CGImageRef imageRef = (__bridge_retained CGImageRef)(self.contents);
+
+        CGImageRef imageRef = (__bridge_retained CGImageRef) (self.contents);
         id contents = self.contents;
         self.contents = nil;
         if (imageRef) {
@@ -132,15 +131,15 @@
                 CFRelease(imageRef);
             });
         }
-        
+
         if (transaction.didDisplayBlock) {
             transaction.didDisplayBlock(self, YES);
         }
         return;
     }
-    
+
     //清除之前的内容
-    CGImageRef imageRef = (__bridge_retained CGImageRef)(self.contents);
+    CGImageRef imageRef = (__bridge_retained CGImageRef) (self.contents);
     id contents = self.contents;
     self.contents = nil;
     if (imageRef) {
@@ -149,30 +148,30 @@
             CFRelease(imageRef);
         });
     }
-    
-    
+
+
     //把内容尽可能多的绘制在同一个CALayer上，然后赋值给contents
     if (asynchronously) {
         if (transaction.willDisplayBlock) {
             transaction.willDisplayBlock(self);
         }
-        
-        
-        LWFlag* displayFlag = _displayFlag;
+
+
+        LWFlag *displayFlag = _displayFlag;
         int32_t value = displayFlag.value;
-        
+
         LWAsyncDisplayIsCanclledBlock isCancelledBlock = ^BOOL() {
             return value != displayFlag.value;
         };
-        
+
         CGSize size = self.bounds.size;
         BOOL opaque = self.opaque;
         CGFloat scale = self.contentsScale;
         CGColorRef backgroundColor = (opaque && self.backgroundColor) ?
-        CGColorRetain(self.backgroundColor) : NULL;
-        
+                CGColorRetain(self.backgroundColor) : NULL;
+
         if (size.width < 1 || size.height < 1) {
-            CGImageRef image = (__bridge_retained CGImageRef)(self.contents);
+            CGImageRef image = (__bridge_retained CGImageRef) (self.contents);
             self.contents = nil;
             if (image) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
@@ -185,7 +184,7 @@
             CGColorRelease(backgroundColor);
             return;
         }
-        
+
         dispatch_async([LWAsyncDisplayLayer displayQueue], ^{
             if (isCancelledBlock()) {
                 CGColorRelease(backgroundColor);
@@ -194,7 +193,8 @@
             UIGraphicsBeginImageContextWithOptions(size, opaque, scale);
             CGContextRef context = UIGraphicsGetCurrentContext();
             if (opaque) {
-                CGContextSaveGState(context); {
+                CGContextSaveGState(context);
+                {
                     if (!backgroundColor || CGColorGetAlpha(backgroundColor) < 1) {
                         CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
                         CGContextAddRect(context, CGRectMake(0, 0, size.width * scale, size.height * scale));
@@ -205,7 +205,8 @@
                         CGContextAddRect(context, CGRectMake(0, 0, size.width * scale, size.height * scale));
                         CGContextFillPath(context);
                     }
-                } CGContextRestoreGState(context);
+                }
+                CGContextRestoreGState(context);
                 CGColorRelease(backgroundColor);
             }
             transaction.displayBlock(context, size, isCancelledBlock);
@@ -218,8 +219,8 @@
                 });
                 return;
             }
-            
-            UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
+
+            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
             if (isCancelledBlock()) {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -229,41 +230,42 @@
                 });
                 return;
             }
-            
+
             dispatch_async(dispatch_get_main_queue(), ^{
                 __weak typeof(self) weakSelf = self;
-                LWTransaction* layerAsyncTransaction = self.lw_asyncTransaction;
+                LWTransaction *layerAsyncTransaction = self.lw_asyncTransaction;
                 [layerAsyncTransaction addAsyncOperationWithTarget:self
                                                           selector:@selector(setContents:)
-                                                            object:(__bridge id)(image.CGImage)
+                                                            object:(__bridge id) (image.CGImage)
                                                         completion:^(BOOL canceled) {
                                                             __strong typeof(weakSelf) swself = weakSelf;
                                                             if (canceled) {
                                                                 if (transaction.didDisplayBlock) {
-                                                                    transaction.didDisplayBlock(swself,NO);
+                                                                    transaction.didDisplayBlock(swself, NO);
                                                                 }
                                                             } else {
                                                                 if (transaction.didDisplayBlock) {
-                                                                    transaction.didDisplayBlock(swself,YES);
+                                                                    transaction.didDisplayBlock(swself, YES);
                                                                 }
                                                             }
                                                         }];
             });
         });
-        
+
     } else {
-        
+
         if (transaction.willDisplayBlock) {
             transaction.willDisplayBlock(self);
         }
-        
+
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, self.contentsScale);
         CGContextRef context = UIGraphicsGetCurrentContext();
         if (self.opaque) {
             CGSize size = self.bounds.size;
             size.width *= self.contentsScale;
             size.height *= self.contentsScale;
-            CGContextSaveGState(context); {
+            CGContextSaveGState(context);
+            {
                 if (!self.backgroundColor || CGColorGetAlpha(self.backgroundColor) < 1) {
                     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
                     CGContextAddRect(context, CGRectMake(0, 0, size.width, size.height));
@@ -274,14 +276,17 @@
                     CGContextAddRect(context, CGRectMake(0, 0, size.width, size.height));
                     CGContextFillPath(context);
                 }
-            } CGContextRestoreGState(context);
+            }
+            CGContextRestoreGState(context);
         }
-        
-        
-        transaction.displayBlock(context, self.bounds.size, ^{return NO;});
-        UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
+
+
+        transaction.displayBlock(context, self.bounds.size, ^{
+            return NO;
+        });
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-        self.contents = (__bridge id)(image.CGImage);
+        self.contents = (__bridge id) (image.CGImage);
         if (transaction.didDisplayBlock) {
             transaction.didDisplayBlock(self, YES);
         }

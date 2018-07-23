@@ -26,7 +26,7 @@
 #import "LWLayout.h"
 
 
-@interface NSManagedObject(LWLayout)<LWLayoutProtocol>
+@interface NSManagedObject (LWLayout) <LWLayoutProtocol>
 
 
 /**
@@ -72,21 +72,20 @@
  *  获取包含LWTextStorage的数组
  *
  */
-- (NSMutableArray<LWTextStorage *>*)textStorages;
+- (NSMutableArray<LWTextStorage *> *)textStorages;
 
 /**
  *  获取包含LWImageStorage的数组
  *
  */
-- (NSMutableArray<LWImageStorage *>*)imageStorages;
+- (NSMutableArray<LWImageStorage *> *)imageStorages;
 
 
 /**
  *  获取包含所有的LWStorage的数组
  *
  */
-- (NSMutableArray<LWStorage *>*) totalStorages;
-
+- (NSMutableArray<LWStorage *> *)totalStorages;
 
 
 @end

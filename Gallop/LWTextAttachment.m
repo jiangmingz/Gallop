@@ -28,11 +28,10 @@
 #import "GallopDefine.h"
 
 
-
 @implementation LWTextAttachment
 
 + (id)lw_textAttachmentWithContent:(id)content {
-    LWTextAttachment* attachment = [[LWTextAttachment alloc] init];
+    LWTextAttachment *attachment = [[LWTextAttachment alloc] init];
     attachment.content = content;
     attachment.contentMode = UIViewContentModeScaleAspectFill;
     attachment.contentEdgeInsets = UIEdgeInsetsZero;
@@ -59,7 +58,7 @@
     [aCoder encodeInteger:self.contentMode forKey:@"contentMode"];
     [aCoder encodeUIEdgeInsets:self.contentEdgeInsets forKey:@"contentEdgeInsets"];
     [aCoder encodeObject:self.userInfo forKey:@"userInfo"];
-    
+
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -79,7 +78,7 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWTextAttachment* attachment = [[LWTextAttachment alloc] init];
+    LWTextAttachment *attachment = [[LWTextAttachment alloc] init];
     if ([self.content conformsToProtocol:@protocol(NSCopying)]) {
         attachment.content = [self.content copy];
     } else {
@@ -99,8 +98,6 @@
 }
 
 @end
-
-
 
 
 @implementation LWTextHighlight
@@ -150,11 +147,10 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWTextHighlight* highlight = [[LWTextHighlight alloc] init];
+    LWTextHighlight *highlight = [[LWTextHighlight alloc] init];
     if ([self.content conformsToProtocol:@protocol(NSCopying)]) {
         highlight.content = [self.content copy];
-    }
-    else {
+    } else {
         highlight.content = self.content;
     }
     highlight.range = self.range;
@@ -172,20 +168,21 @@
 
 
 #pragma mark -
+
 - (NSUInteger)hash {
-    long v1 = (long)((__bridge void *)self.content);
-    long v2 = (long)[NSValue valueWithRange:self.range];
+    long v1 = (long) ((__bridge void *) self.content);
+    long v2 = (long) [NSValue valueWithRange:self.range];
     return v1 ^ v2;
 }
 
-- (BOOL)isEqual:(id)object{
+- (BOOL)isEqual:(id)object {
     if (self == object) {
         return YES;
     }
-    if (![object isMemberOfClass:self.class]){
+    if (![object isMemberOfClass:self.class]) {
         return NO;
     }
-    LWTextHighlight* other = object;
+    LWTextHighlight *other = object;
     return other.content == _content && [NSValue valueWithRange:other.range] == [NSValue valueWithRange:self.range];
 }
 
@@ -230,7 +227,7 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWTextBackgroundColor* bgColor = [[LWTextBackgroundColor alloc] init];
+    LWTextBackgroundColor *bgColor = [[LWTextBackgroundColor alloc] init];
     bgColor.backgroundColor = [self.backgroundColor copy];
     bgColor.range = self.range;
     bgColor.userInfo = [self.userInfo copy];
@@ -269,7 +266,7 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWTextStroke* stroke = [[LWTextStroke alloc] init];
+    LWTextStroke *stroke = [[LWTextStroke alloc] init];
     stroke.strokeColor = [self.strokeColor copy];
     stroke.range = self.range;
     stroke.userInfo = [self.userInfo copy];
@@ -288,7 +285,7 @@
     [aCoder encodeObject:self.strokeColor forKey:@"strokeColor"];
     [aCoder encodeObject:self.userInfo forKey:@"userInfo"];
     [aCoder encodeFloat:self.strokeWidth forKey:@"strokeWidth"];
-    
+
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -303,10 +300,6 @@
 }
 
 @end
-
-
-
-
 
 
 /**
@@ -329,13 +322,14 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWTextBoundingStroke* stroke = [[LWTextBoundingStroke alloc] init];
+    LWTextBoundingStroke *stroke = [[LWTextBoundingStroke alloc] init];
     stroke.strokeColor = [self.strokeColor copy];
     stroke.range = self.range;
     stroke.userInfo = [self.userInfo copy];
     stroke.positions = [self.positions copy];
     return stroke;
 }
+
 - (id)mutableCopyWithZone:(NSZone *)zone {
     return [self copyWithZone:zone];
 }

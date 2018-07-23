@@ -28,12 +28,13 @@
 #import <objc/runtime.h>
 
 
-static void* LWTransactionsKey = @"LWTransactionsKey";
-static void* LWCurrentTransacitonKey = @"LWCurrentTransacitonKey";
+static void *LWTransactionsKey = @"LWTransactionsKey";
+static void *LWCurrentTransacitonKey = @"LWCurrentTransacitonKey";
 
-@implementation CALayer(LWTransaction)
+@implementation CALayer (LWTransaction)
 
 #pragma mark - Associations
+
 - (void)setTransactions:(NSHashTable *)transactions {
     objc_setAssociatedObject(self, LWTransactionsKey, transactions, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
@@ -47,7 +48,7 @@ static void* LWCurrentTransacitonKey = @"LWCurrentTransacitonKey";
 }
 
 - (LWTransaction *)currentTransaction {
-    return  objc_getAssociatedObject(self, LWCurrentTransacitonKey);
+    return objc_getAssociatedObject(self, LWCurrentTransacitonKey);
 }
 
 - (LWTransactionContainerState)transactionContainerState {
@@ -55,17 +56,18 @@ static void* LWCurrentTransacitonKey = @"LWCurrentTransacitonKey";
 }
 
 - (void)lw_transactionContainerWillBeginTransaction:(LWTransaction *)transaction {
-    
+
 }
+
 - (void)lw_transactionContainerrDidCompleteTransaction:(LWTransaction *)transaction {
-    
+
 }
 
 - (void)lw_cancelAsyncTransactions {
-    LWTransaction* currentTransaction = self.currentTransaction;
+    LWTransaction *currentTransaction = self.currentTransaction;
     [currentTransaction commit];
     self.currentTransaction = nil;
-    for (LWTransaction* transaction in [self.transactions copy]) {
+    for (LWTransaction *transaction in [self.transactions copy]) {
         [transaction cancel];
     }
 }
@@ -78,14 +80,14 @@ static void* LWCurrentTransacitonKey = @"LWCurrentTransacitonKey";
 }
 
 - (LWTransaction *)lw_asyncTransaction {
-    LWTransaction* transaction = self.currentTransaction;
+    LWTransaction *transaction = self.currentTransaction;
     if (transaction == nil) {
-        NSHashTable* transactions = self.transactions;
+        NSHashTable *transactions = self.transactions;
         if (transactions == nil) {
             transactions = [NSHashTable hashTableWithOptions:NSPointerFunctionsObjectPointerPersonality];
             self.transactions = transactions;
         }
-        
+
         transaction = [[LWTransaction alloc] initWithCallbackQueue:dispatch_get_main_queue()
                                                    completionBlock:^(LWTransaction *completeTransaction, BOOL isCancelled) {
                                                        [transactions removeObject:completeTransaction];

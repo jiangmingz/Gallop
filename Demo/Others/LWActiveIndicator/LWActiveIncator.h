@@ -27,7 +27,9 @@
 @interface LWActiveIncator : UIView
 
 + (void)showInView:(UIView *)view;
+
 + (void)showInView:(UIView *)view backgroundColor:(UIColor *)color;
+
 + (void)hideInViwe:(UIView *)view;
 
 @end

@@ -33,9 +33,6 @@
 #import "LWGIFImage.h"
 
 
-
-
-
 static char imageURLKey;
 
 #define LWAsyncImageVeiewLoadKey @"LWAsyncImageVeiewLoadKey"
@@ -54,12 +51,12 @@ static char imageURLKey;
                         options:(SDWebImageOptions)options
                        progress:(LWWebImageDownloaderProgressBlock)progressBlock
                       completed:(LWWebImageDownloaderCompletionBlock)completedBlock {
-    
+
     //如果当前LWAsyncImageView上还有其他下载任务，取消掉
     [self lw_cancelCurrentImageLoad];
-    
+
     objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
+
     //设置占位图
     if (!(options & SDWebImageDelayPlaceholder)) {
         dispatch_main_async_safe(^{
@@ -69,98 +66,99 @@ static char imageURLKey;
     if (url) {
         __weak typeof(self) weakSelf = self;
         id <SDWebImageOperation> operation = [[SDWebImageManager sharedManager]
-                                              lw_downloadImageWithURL:url
-                                              cornerRadius:cornerRadius
-                                              cornerBackgroundColor:cornerBackgroundColor
-                                              borderColor:borderColor
-                                              borderWidth:borderWidth
-                                              size:size
-                                              contentMode:contentMode
-                                              isBlur:isBlur
-                                              options:options
-                                              progress:progressBlock
-                                              completed:^(UIImage * _Nullable image,
-                                                          NSData * _Nullable data,
-                                                          NSError * _Nullable error,
-                                                          SDImageCacheType cacheType,
-                                                          BOOL finished,
-                                                          NSURL * _Nullable imageURL) {
-                                                  
-                                                  __strong typeof(weakSelf) sself = weakSelf;
-                                                  if (!sself || !image) {
-                                                      completedBlock(image,data,error);
-                                                      return;
+                lw_downloadImageWithURL:url
+                           cornerRadius:cornerRadius
+                  cornerBackgroundColor:cornerBackgroundColor
+                            borderColor:borderColor
+                            borderWidth:borderWidth
+                                   size:size
+                            contentMode:contentMode
+                                 isBlur:isBlur
+                                options:options
+                               progress:progressBlock
+                              completed:^(UIImage *_Nullable image,
+                                      NSData *_Nullable data,
+                                      NSError *_Nullable error,
+                                      SDImageCacheType cacheType,
+                                      BOOL finished,
+                                      NSURL *_Nullable imageURL) {
+
+                                  __strong typeof(weakSelf) sself = weakSelf;
+                                  if ((!sself || !image) && completedBlock) {
+                                      completedBlock(image, data, error);
+                                      return;
+                                  }
+
+                                  dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                                      SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:data];
+                                      if (imageFormat == SDImageFormatGIF) {
+
+                                          //GIF
+                                          LWGIFImage *gif = [[LWGIFImage alloc] initWithGIFData:data];
+                                          dispatch_main_async_safe(^{
+                                              if (gif && (options & SDWebImageAvoidAutoSetImage) && completedBlock) {
+                                                  completedBlock(gif, data, error);
+                                                  return;
+
+                                              } else if (gif) {
+                                                  sself.image = nil;
+                                                  sself.gifImage = gif;
+                                                  [sself setNeedsLayout];
+
+                                              } else {
+
+                                                  if ((options & SDWebImageDelayPlaceholder)) {
+                                                      sself.gifImage = nil;
+                                                      sself.image = placeholder;
+                                                      [sself setNeedsLayout];
                                                   }
-                                                  dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                                                      SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:data];
-                                                      if (imageFormat == SDImageFormatGIF) {
-                                                          
-                                                          //GIF
-                                                          LWGIFImage* gif = [[LWGIFImage alloc] initWithGIFData:data];
-                                                          dispatch_main_async_safe(^{
-                                                              if (gif && (options & SDWebImageAvoidAutoSetImage) && completedBlock) {
-                                                                  completedBlock(gif,data,error);
-                                                                  return;
-                                                                  
-                                                              } else if (gif) {
-                                                                  sself.image = nil;
-                                                                  sself.gifImage = gif;
-                                                                  [sself setNeedsLayout];
-                                                                  
-                                                              } else {
-                                                                  
-                                                                  if ((options & SDWebImageDelayPlaceholder)) {
-                                                                      sself.gifImage = nil;
-                                                                      sself.image = placeholder;
-                                                                      [sself setNeedsLayout];
-                                                                  }
-                                                              }
-                                                              
-                                                              if (completedBlock && finished) {
-                                                                  completedBlock(gif,data,error);
-                                                              }
-                                                          });
-                                                          
-                                                      } else {
-                                                          //普通图片
-                                                          dispatch_main_async_safe(^{
-                                                              
-                                                              if (image && (options & SDWebImageAvoidAutoSetImage) && completedBlock) {
-                                                                  completedBlock(image,data,error);
-                                                                  return ;
-                                                                  
-                                                              } else if (image) {
-                                                                  sself.gifImage = nil;
-                                                                  sself.image = image;
-                                                                  [sself setNeedsLayout];
-                                                                  
-                                                              } else {
-                                                                  
-                                                                  if ((options & SDWebImageDelayPlaceholder)) {
-                                                                      sself.gifImage = nil;
-                                                                      sself.image = placeholder;
-                                                                      [sself setNeedsLayout];
-                                                                      
-                                                                  }
-                                                              }
-                                                              
-                                                              if (completedBlock && finished) {
-                                                                  completedBlock(image,data,error);
-                                                              }
-                                                          });
-                                                      }
-                                                  });
-                                              }];
-        
+                                              }
+
+                                              if (completedBlock && finished) {
+                                                  completedBlock(gif, data, error);
+                                              }
+                                          });
+
+                                      } else {
+                                          //普通图片
+                                          dispatch_main_async_safe(^{
+
+                                              if (image && (options & SDWebImageAvoidAutoSetImage) && completedBlock) {
+                                                  completedBlock(image, data, error);
+                                                  return;
+
+                                              } else if (image) {
+                                                  sself.gifImage = nil;
+                                                  sself.image = image;
+                                                  [sself setNeedsLayout];
+
+                                              } else {
+
+                                                  if ((options & SDWebImageDelayPlaceholder)) {
+                                                      sself.gifImage = nil;
+                                                      sself.image = placeholder;
+                                                      [sself setNeedsLayout];
+
+                                                  }
+                                              }
+
+                                              if (completedBlock && finished) {
+                                                  completedBlock(image, data, error);
+                                              }
+                                          });
+                                      }
+                                  });
+                              }];
+
         //把operation设置到LWAsyncImageView的关联对象operationDictionary上，用于取消操作
         [self lw_setImageLoadOperation:operation forKey:LWAsyncImageVeiewLoadKey];
     } else {
         dispatch_main_async_safe(^{
-            NSError* error = [NSError errorWithDomain:SDWebImageErrorDomain
+            NSError *error = [NSError errorWithDomain:SDWebImageErrorDomain
                                                  code:-1
-                                             userInfo:@{NSLocalizedDescriptionKey : @"Trying to load a nil url"}];
+                                             userInfo:@{NSLocalizedDescriptionKey: @"Trying to load a nil url"}];
             if (completedBlock) {
-                completedBlock(nil,nil,error);
+                completedBlock(nil, nil, error);
             }
         });
     }
@@ -175,7 +173,6 @@ static char imageURLKey;
 - (void)lw_cancelCurrentImageLoad {
     [self lw_cancelImageLoadOperationWithKey:LWAsyncImageVeiewLoadKey];
 }
-
 
 
 @end

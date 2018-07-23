@@ -28,7 +28,7 @@
 @implementation LWHTMLNode
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWHTMLNode* one = [[LWHTMLNode alloc] init];
+    LWHTMLNode *one = [[LWHTMLNode alloc] init];
     one.parent = [self.parent copy];
     one.firstChild = [self.firstChild copy];
     one.rightSib = [self.rightSib copy];
@@ -108,7 +108,7 @@
         self.elementName = [elementName copy];
         self.attributeDict = [[NSMutableDictionary alloc] init];
         self.children = [[NSMutableArray alloc] init];
-        for (NSString* key in attributeDict) {
+        for (NSString *key in attributeDict) {
             [self.attributeDict setObject:attributeDict[key] forKey:key];
         }
     }

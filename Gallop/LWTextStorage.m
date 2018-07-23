@@ -28,13 +28,12 @@
 #import "GallopDefine.h"
 
 
-
 @interface LWTextStorage ()
 
-@property (nonatomic,strong) LWTextLayout* textLayout;
-@property (nonatomic,assign) CGSize suggestSize;//建议的绘制大小
-@property (nonatomic,assign) NSInteger numberOfLines;//文本的实际行数
-@property (nonatomic,assign) BOOL isTruncation;//是否折叠
+@property(nonatomic, strong) LWTextLayout *textLayout;
+@property(nonatomic, assign) CGSize suggestSize;//建议的绘制大小
+@property(nonatomic, assign) NSInteger numberOfLines;//文本的实际行数
+@property(nonatomic, assign) BOOL isTruncation;//是否折叠
 
 @end
 
@@ -55,18 +54,19 @@
     if (self == object) {
         return YES;
     }
-    LWTextStorage* textStorage = (LWTextStorage *)object;
+    LWTextStorage *textStorage = (LWTextStorage *) object;
     return [textStorage.text isEqualToString:self.text] && CGRectEqualToRect(textStorage.frame, self.frame);
 }
 
 - (NSUInteger)hash {
-    long v1 = (long)self.text;
-    long v2 = (long)[NSValue valueWithCGRect:self.frame];
+    long v1 = (long) self.text;
+    long v2 = (long) [NSValue valueWithCGRect:self.frame];
     return v1 ^ v2;
 }
 
 
 #pragma mark - NSCoding
+
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
     [aCoder encodeObject:self.textLayout forKey:@"textLayout"];
@@ -114,7 +114,7 @@
         self.suggestSize = [aDecoder decodeCGSizeForKey:@"suggestSize"];
         self.maxNumberOfLines = [aDecoder decodeIntegerForKey:@"maxNumberOfLines"];
         self.numberOfLines = [aDecoder decodeIntegerForKey:@"numberOfLines"];
-        self.needDebug  = [aDecoder decodeIntegerForKey:@"needDebug"];
+        self.needDebug = [aDecoder decodeIntegerForKey:@"needDebug"];
         self.isTruncation = [aDecoder decodeIntegerForKey:@"isTruncation"];
     }
     return self;
@@ -124,15 +124,15 @@
 
 + (LWTextStorage *)lw_textStorageWithTextLayout:(LWTextLayout *)textLayout
                                           frame:(CGRect)frame {
-    LWTextStorage* textStorage = [[LWTextStorage alloc] initWithFrame:frame];
+    LWTextStorage *textStorage = [[LWTextStorage alloc] initWithFrame:frame];
     textStorage.textLayout = textLayout;
     return textStorage;
 }
 
 + (LWTextStorage *)lw_textStorageWithText:(NSAttributedString *)attributedText
                                     frame:(CGRect)frame {
-    LWTextStorage* textStorage = [[LWTextStorage alloc] initWithFrame:frame];
-    LWTextContainer* textContainer = [LWTextContainer lw_textContainerWithSize:frame.size];
+    LWTextStorage *textStorage = [[LWTextStorage alloc] initWithFrame:frame];
+    LWTextContainer *textContainer = [LWTextContainer lw_textContainerWithSize:frame.size];
     textStorage.textLayout = [LWTextLayout lw_layoutWithContainer:textContainer
                                                              text:attributedText];
     textStorage.attributedText = [attributedText mutableCopy];
@@ -211,7 +211,7 @@
 
 - (void)lw_addLongPressActionWithData:(id)data
                        highLightColor:(UIColor *)highLightColor {
-    
+
     [self.attributedText addLongPressActionWithData:data
                                      highLightColor:highLightColor];
     [self _creatTextLayout];
@@ -225,30 +225,30 @@
     if (!self.attributedText) {
         return;
     }
-    CGFloat ascent,descent = 0.0f;
+    CGFloat ascent, descent = 0.0f;
     switch (attachAlignment) {
         case LWTextAttachAlignmentTop: {
             ascent = size.height;
             descent = 0.0f;
         }
             break;
-        case LWTextAttachAlignmentCenter:{
-            ascent = size.height/2;
-            descent = size.height/2;
+        case LWTextAttachAlignmentCenter: {
+            ascent = size.height / 2;
+            descent = size.height / 2;
         }
             break;
-        case LWTextAttachAlignmentBottom:{
+        case LWTextAttachAlignmentBottom: {
             ascent = 0.0f;
             descent = size.height;
         }
             break;
     }
-    NSMutableAttributedString* attachString =
-    [NSMutableAttributedString lw_textAttachmentStringWithContent:image
-                                                      contentMode:contentMode
-                                                           ascent:ascent
-                                                          descent:descent
-                                                            width:size.width];
+    NSMutableAttributedString *attachString =
+            [NSMutableAttributedString lw_textAttachmentStringWithContent:image
+                                                              contentMode:contentMode
+                                                                   ascent:ascent
+                                                                  descent:descent
+                                                                    width:size.width];
     [self.attributedText replaceCharactersInRange:range
                              withAttributedString:attachString];
     [self _creatTextLayout];
@@ -263,42 +263,42 @@
     if (!self.attributedText) {
         return;
     }
-    CGFloat ascent,descent = 0.0f;
+    CGFloat ascent, descent = 0.0f;
     switch (attachAlignment) {
         case LWTextAttachAlignmentTop: {
             ascent = size.height;
             descent = 0.0f;
         }
             break;
-        case LWTextAttachAlignmentCenter:{
-            ascent = size.height/2;
-            descent = size.height/2;
+        case LWTextAttachAlignmentCenter: {
+            ascent = size.height / 2;
+            descent = size.height / 2;
         }
             break;
-        case LWTextAttachAlignmentBottom:{
+        case LWTextAttachAlignmentBottom: {
             ascent = 0.0f;
             descent = size.height;
         }
             break;
     }
-    NSDictionary* userInfo;
-    
+    NSDictionary *userInfo;
+
     if (URL) {
-        userInfo = @{@"URL":URL};
+        userInfo = @{@"URL": URL};
     }
-    
-    NSMutableAttributedString* attachString =
-    [NSMutableAttributedString
-     lw_textAttachmentStringWithContent:[[UIImageView alloc]
-                                         initWithFrame:CGRectMake(0,
-                                                                  0,
-                                                                  size.width,
-                                                                  size.height)]
-     userInfo:userInfo
-     contentMode:contentMode
-     ascent:ascent
-     descent:descent
-     width:size.width];
+
+    NSMutableAttributedString *attachString =
+            [NSMutableAttributedString
+                    lw_textAttachmentStringWithContent:[[UIImageView alloc]
+                            initWithFrame:CGRectMake(0,
+                                    0,
+                                    size.width,
+                                    size.height)]
+                                              userInfo:userInfo
+                                           contentMode:contentMode
+                                                ascent:ascent
+                                               descent:descent
+                                                 width:size.width];
     [self.attributedText replaceCharactersInRange:range
                              withAttributedString:attachString];
     [self _creatTextLayout];
@@ -313,30 +313,30 @@
     if (!self.attributedText) {
         return;
     }
-    CGFloat ascent,descent = 0.0f;
+    CGFloat ascent, descent = 0.0f;
     switch (attachAlignment) {
         case LWTextAttachAlignmentTop: {
             ascent = size.height;
             descent = 0.0f;
         }
             break;
-        case LWTextAttachAlignmentCenter:{
-            ascent = size.height/2;
-            descent = size.height/2;
+        case LWTextAttachAlignmentCenter: {
+            ascent = size.height / 2;
+            descent = size.height / 2;
         }
             break;
-        case LWTextAttachAlignmentBottom:{
+        case LWTextAttachAlignmentBottom: {
             ascent = 0.0f;
             descent = size.height;
         }
             break;
     }
-    NSMutableAttributedString* attachString =
-    [NSMutableAttributedString lw_textAttachmentStringWithContent:view
-                                                      contentMode:contentMode
-                                                           ascent:ascent
-                                                          descent:descent
-                                                            width:size.width];
+    NSMutableAttributedString *attachString =
+            [NSMutableAttributedString lw_textAttachmentStringWithContent:view
+                                                              contentMode:contentMode
+                                                                   ascent:ascent
+                                                                  descent:descent
+                                                                    width:size.width];
     [self.attributedText replaceCharactersInRange:range withAttributedString:attachString];
     [self _creatTextLayout];
 }
@@ -346,7 +346,7 @@
     if (!aTextStorage) {
         return;
     }
-    NSMutableAttributedString* attributedString = [aTextStorage attributedText];
+    NSMutableAttributedString *attributedString = [aTextStorage attributedText];
     if (!attributedString) {
         return;
     }
@@ -361,7 +361,7 @@
         return;
     }
     _text = [text copy];
-    
+
     _attributedText = [[NSMutableAttributedString alloc] initWithString:_text attributes:nil];
     NSRange range = NSMakeRange(0, self.attributedText.length);
     [_attributedText setTextColor:self.textColor range:range];
@@ -514,7 +514,7 @@
     if (!self.attributedText) {
         return;
     }
-    LWTextContainer* textContainer = [LWTextContainer lw_textContainerWithSize:self.frame.size];
+    LWTextContainer *textContainer = [LWTextContainer lw_textContainerWithSize:self.frame.size];
     textContainer.maxNumberOfLines = self.maxNumberOfLines;
     textContainer.vericalAlignment = self.vericalAlignment;
     self.textLayout = [LWTextLayout lw_layoutWithContainer:textContainer
@@ -523,6 +523,7 @@
 }
 
 #pragma mark - Getter
+
 - (BOOL)isTruncation {
     return self.textLayout.needTruncation;
 }
@@ -536,7 +537,7 @@
 }
 
 - (CGFloat)right {
-    return  self.textLayout.cgPathBox.origin.x + self.position.x + self.width;
+    return self.textLayout.cgPathBox.origin.x + self.position.x + self.width;
 }
 
 - (CGFloat)top {
@@ -563,9 +564,9 @@
 }
 
 - (CGPoint)center {
-    return CGPointMake(self.textLayout.cgPathBox.origin.x  + self.position.x + self.textLayout.cgPathBox.size.width * 0.5f,
-                       
-                       self.textLayout.cgPathBox.origin.y + self.position.y + self.textLayout.cgPathBox.size.height * 0.5f);
+    return CGPointMake(self.textLayout.cgPathBox.origin.x + self.position.x + self.textLayout.cgPathBox.size.width * 0.5f,
+
+            self.textLayout.cgPathBox.origin.y + self.position.y + self.textLayout.cgPathBox.size.height * 0.5f);
 }
 
 - (CGSize)suggestSize {

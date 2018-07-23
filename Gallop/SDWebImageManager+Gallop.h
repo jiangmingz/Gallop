@@ -24,10 +24,10 @@
 
 #import "SDWebImageManager.h"
 
-@interface  SDWebImageManager(Gallop)
+@interface SDWebImageManager (Gallop)
 
-@property (strong, nonatomic) NSMutableSet *failedURLs;
-@property (strong, nonatomic) NSMutableArray *runningOperations;
+@property(strong, nonatomic) NSMutableSet *failedURLs;
+@property(strong, nonatomic) NSMutableArray *runningOperations;
 
 
 /**
@@ -57,7 +57,6 @@
                                             options:(SDWebImageOptions)options
                                            progress:(SDWebImageDownloaderProgressBlock)progressBlock
                                           completed:(SDInternalCompletionBlock)completedBlock;
-
 
 
 @end

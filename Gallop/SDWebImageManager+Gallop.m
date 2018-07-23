@@ -34,15 +34,15 @@
 @interface SDWebImageCombinedOperation : NSObject <SDWebImageOperation>
 
 
-@property (nonatomic,assign,getter = isCancelled) BOOL cancelled;
-@property (nonatomic,copy) SDWebImageNoParamsBlock cancelBlock;
-@property (nonatomic,strong) NSOperation* cacheOperation;
+@property(nonatomic, assign, getter = isCancelled) BOOL cancelled;
+@property(nonatomic, copy) SDWebImageNoParamsBlock cancelBlock;
+@property(nonatomic, strong) NSOperation *cacheOperation;
 
 
 @end
 
 
-@implementation SDWebImageManager(Gallop)
+@implementation SDWebImageManager (Gallop)
 
 @dynamic runningOperations;
 @dynamic failedURLs;
@@ -58,19 +58,19 @@
                                             options:(SDWebImageOptions)options
                                            progress:(SDWebImageDownloaderProgressBlock)progressBlock
                                           completed:(SDInternalCompletionBlock)completedBlock {
-    
-    
+
+
     if ([url isKindOfClass:NSString.class]) {
-        url = [NSURL URLWithString:(NSString *)url];
+        url = [NSURL URLWithString:(NSString *) url];
     }
-    
+
     if (![url isKindOfClass:NSURL.class]) {
         url = nil;
     }
-    
+
     __block SDWebImageCombinedOperation *operation = [SDWebImageCombinedOperation new];
     __weak SDWebImageCombinedOperation *weakOperation = operation;
-    
+
     BOOL isFailedUrl = NO;
     if (url) {
         @synchronized (self.failedURLs) {
@@ -84,9 +84,9 @@
     @synchronized (self.runningOperations) {
         [self.runningOperations addObject:operation];
     }
-    
+
     /***  将图片的圆角半径、模糊信息信息保存到key中  ***/
-    NSString* key;
+    NSString *key;
     if (cornerRadius != 0 || isBlur) {
         key = [LWImageProcessor lw_imageTransformCacheKeyForURL:url
                                                    cornerRadius:cornerRadius
@@ -99,7 +99,7 @@
     } else {
         key = [self cacheKeyForURL:url];
     }
-    
+
     /********************************************/
     //先从缓存中查找，先内存后硬盘
     operation.cacheOperation = [self.imageCache queryCacheOperationForKey:key done:^(UIImage *cachedImage, NSData *cachedData, SDImageCacheType cacheType) {
@@ -108,144 +108,144 @@
             [self lw_safelyRemoveOperationFromRunning:operation];
             return;
         }
-        
+
         if ((!cachedImage || options & SDWebImageRefreshCached)/*缓存中没找到，或者需要刷新缓存*/ &&
-            (![self.delegate respondsToSelector:@selector(imageManager:shouldDownloadImageForURL:)] ||
-             [self.delegate imageManager:self shouldDownloadImageForURL:url])) {
-                //如果存在已经存在缓存，但是需要刷新缓存
-                if (cachedImage && options & SDWebImageRefreshCached) {
-                    [self lw_callCompletionBlockForOperation:weakOperation completion:completedBlock image:cachedImage data:cachedData error:nil cacheType:cacheType finished:YES url:url];
-                }
-                
-                //开始下载图片
-                SDWebImageDownloaderOptions downloaderOptions = 0;
-                if (options & SDWebImageLowPriority) downloaderOptions |= SDWebImageDownloaderLowPriority;
-                if (options & SDWebImageProgressiveDownload) downloaderOptions |= SDWebImageDownloaderProgressiveDownload;
-                if (options & SDWebImageRefreshCached) downloaderOptions |= SDWebImageDownloaderUseNSURLCache;
-                if (options & SDWebImageContinueInBackground) downloaderOptions |= SDWebImageDownloaderContinueInBackground;
-                if (options & SDWebImageHandleCookies) downloaderOptions |= SDWebImageDownloaderHandleCookies;
-                if (options & SDWebImageAllowInvalidSSLCertificates) downloaderOptions |= SDWebImageDownloaderAllowInvalidSSLCertificates;
-                if (options & SDWebImageHighPriority) downloaderOptions |= SDWebImageDownloaderHighPriority;
-                if (options & SDWebImageScaleDownLargeImages) downloaderOptions |= SDWebImageDownloaderScaleDownLargeImages;
-                
-                if (cachedImage && options & SDWebImageRefreshCached) {
-                    downloaderOptions &= ~SDWebImageDownloaderProgressiveDownload;
-                    downloaderOptions |= SDWebImageDownloaderIgnoreCachedResponse;
-                }
-                
-                SDWebImageDownloadToken *subOperationToken =
-                [self.imageDownloader downloadImageWithURL:url
-                                                   options:downloaderOptions
-                                                  progress:progressBlock
-                                                 completed:^(UIImage *downloadedImage,
+                (![self.delegate respondsToSelector:@selector(imageManager:shouldDownloadImageForURL:)] ||
+                        [self.delegate imageManager:self shouldDownloadImageForURL:url])) {
+            //如果存在已经存在缓存，但是需要刷新缓存
+            if (cachedImage && options & SDWebImageRefreshCached) {
+                [self lw_callCompletionBlockForOperation:weakOperation completion:completedBlock image:cachedImage data:cachedData error:nil cacheType:cacheType finished:YES url:url];
+            }
+
+            //开始下载图片
+            SDWebImageDownloaderOptions downloaderOptions = 0;
+            if (options & SDWebImageLowPriority) downloaderOptions |= SDWebImageDownloaderLowPriority;
+            if (options & SDWebImageProgressiveDownload) downloaderOptions |= SDWebImageDownloaderProgressiveDownload;
+            if (options & SDWebImageRefreshCached) downloaderOptions |= SDWebImageDownloaderUseNSURLCache;
+            if (options & SDWebImageContinueInBackground) downloaderOptions |= SDWebImageDownloaderContinueInBackground;
+            if (options & SDWebImageHandleCookies) downloaderOptions |= SDWebImageDownloaderHandleCookies;
+            if (options & SDWebImageAllowInvalidSSLCertificates) downloaderOptions |= SDWebImageDownloaderAllowInvalidSSLCertificates;
+            if (options & SDWebImageHighPriority) downloaderOptions |= SDWebImageDownloaderHighPriority;
+            if (options & SDWebImageScaleDownLargeImages) downloaderOptions |= SDWebImageDownloaderScaleDownLargeImages;
+
+            if (cachedImage && options & SDWebImageRefreshCached) {
+                downloaderOptions &= ~SDWebImageDownloaderProgressiveDownload;
+                downloaderOptions |= SDWebImageDownloaderIgnoreCachedResponse;
+            }
+
+            SDWebImageDownloadToken *subOperationToken =
+                    [self.imageDownloader downloadImageWithURL:url
+                                                       options:downloaderOptions
+                                                      progress:progressBlock
+                                                     completed:^(UIImage *downloadedImage,
                                                              NSData *downloadedData,
                                                              NSError *error,
                                                              BOOL finished) {
-                                                     
-                                                     __strong __typeof(weakOperation) strongOperation = weakOperation;
-                                                     if (!strongOperation || strongOperation.isCancelled) {//下载取消
-                                                     } else if (error) {//下载出现错误
-                                                         [self lw_callCompletionBlockForOperation:strongOperation completion:completedBlock error:error url:url];
-                                                         
-                                                         if (   error.code != NSURLErrorNotConnectedToInternet
-                                                             && error.code != NSURLErrorCancelled
-                                                             && error.code != NSURLErrorTimedOut
-                                                             && error.code != NSURLErrorInternationalRoamingOff
-                                                             && error.code != NSURLErrorDataNotAllowed
-                                                             && error.code != NSURLErrorCannotFindHost
-                                                             && error.code != NSURLErrorCannotConnectToHost
-                                                             && error.code != NSURLErrorNetworkConnectionLost) {
-                                                             @synchronized (self.failedURLs) {
-                                                                 [self.failedURLs addObject:url];
-                                                             }
-                                                         }
-                                                     } else {//下载完成
-                                                         if ((options & SDWebImageRetryFailed)) {
-                                                             @synchronized (self.failedURLs) {
-                                                                 [self.failedURLs removeObject:url];
-                                                             }
-                                                         }
-                                                         
-                                                         BOOL cacheOnDisk = !(options & SDWebImageCacheMemoryOnly);
-                                                         //刷新图片缓存触发了NSURLCache缓存
-                                                         if (options & SDWebImageRefreshCached && cachedImage && !downloadedImage) {
-                                                             
-                                                         } else if (downloadedImage && (!downloadedImage.images || (options & SDWebImageTransformAnimatedImage)) && [self.delegate respondsToSelector:@selector(imageManager:transformDownloadedImage:withURL:)]) {
-                                                             
-                                                             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-                                                                 UIImage* transformedImage = [self.delegate imageManager:self transformDownloadedImage:downloadedImage withURL:url];
-                                                                 if (transformedImage && finished) {
-                                                                     BOOL imageWasTransformed = ![transformedImage isEqual:downloadedImage];
-                                                                     /********* 缓存图片，这个方法已经被替换  **************/
-                                                                     [self.imageCache storeImage:transformedImage imageData:(imageWasTransformed ? nil : downloadedData) forKey:key toDisk:cacheOnDisk completion:nil];
-                                                                     /***********************************************/
+
+                                                         __strong __typeof(weakOperation) strongOperation = weakOperation;
+                                                         if (!strongOperation || strongOperation.isCancelled) {//下载取消
+                                                         } else if (error) {//下载出现错误
+                                                             [self lw_callCompletionBlockForOperation:strongOperation completion:completedBlock error:error url:url];
+
+                                                             if (error.code != NSURLErrorNotConnectedToInternet
+                                                                     && error.code != NSURLErrorCancelled
+                                                                     && error.code != NSURLErrorTimedOut
+                                                                     && error.code != NSURLErrorInternationalRoamingOff
+                                                                     && error.code != NSURLErrorDataNotAllowed
+                                                                     && error.code != NSURLErrorCannotFindHost
+                                                                     && error.code != NSURLErrorCannotConnectToHost
+                                                                     && error.code != NSURLErrorNetworkConnectionLost) {
+                                                                 @synchronized (self.failedURLs) {
+                                                                     [self.failedURLs addObject:url];
                                                                  }
-                                                                 [self lw_callCompletionBlockForOperation:strongOperation completion:completedBlock image:transformedImage data:downloadedData error:nil cacheType:SDImageCacheTypeNone finished:finished url:url];
-                                                             });
-                                                             
-                                                             
-                                                         } else {
-                                                             
-                                                             if (downloadedImage && finished) {//下载完成
-                                                                 
-                                                                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-                                                                     /*********  缓存图片，这个方法已经被替换  **************/
-                                                                     [self.imageCache storeImage:downloadedImage imageData:downloadedData forKey:key toDisk:cacheOnDisk completion:^{
-                                                                         dispatch_main_async_safe(^{
-                                                                             //没有取消
-                                                                             if (operation && !operation.isCancelled && completedBlock) {
-                                                                                 /*****  从缓存中读取经过处理的图片缓存  ****/
-                                                                                 if ([key hasPrefix:[NSString stringWithFormat:@"%@",kLWImageProcessorPrefixKey]]) {
-                                                                                     completedBlock([self.imageCache imageFromCacheForKey:key],
-                                                                                                    downloadedData,
-                                                                                                    nil,
-                                                                                                    SDImageCacheTypeNone,
-                                                                                                    finished,
-                                                                                                    url);
-                                                                                     /*******************************/
-                                                                                 } else {//不需要处理的图片
-                                                                                     completedBlock(downloadedImage,
-                                                                                                    downloadedData,
-                                                                                                    nil,
-                                                                                                    SDImageCacheTypeNone,
-                                                                                                    finished,
-                                                                                                    url);
-                                                                                 }
-                                                                             }
-                                                                         });
-                                                                     }];
-                                                                     /***********************************************/
-                                                                 });
                                                              }
+                                                         } else {//下载完成
+                                                             if ((options & SDWebImageRetryFailed)) {
+                                                                 @synchronized (self.failedURLs) {
+                                                                     [self.failedURLs removeObject:url];
+                                                                 }
+                                                             }
+
+                                                             BOOL cacheOnDisk = !(options & SDWebImageCacheMemoryOnly);
+                                                             //刷新图片缓存触发了NSURLCache缓存
+                                                             if (options & SDWebImageRefreshCached && cachedImage && !downloadedImage) {
+
+                                                             } else if (downloadedImage && (!downloadedImage.images || (options & SDWebImageTransformAnimatedImage)) && [self.delegate respondsToSelector:@selector(imageManager:transformDownloadedImage:withURL:)]) {
+
+                                                                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                                                                     UIImage *transformedImage = [self.delegate imageManager:self transformDownloadedImage:downloadedImage withURL:url];
+                                                                     if (transformedImage && finished) {
+                                                                         BOOL imageWasTransformed = ![transformedImage isEqual:downloadedImage];
+                                                                         /********* 缓存图片，这个方法已经被替换  **************/
+                                                                         [self.imageCache storeImage:transformedImage imageData:(imageWasTransformed ? nil : downloadedData) forKey:key toDisk:cacheOnDisk completion:nil];
+                                                                         /***********************************************/
+                                                                     }
+                                                                     [self lw_callCompletionBlockForOperation:strongOperation completion:completedBlock image:transformedImage data:downloadedData error:nil cacheType:SDImageCacheTypeNone finished:finished url:url];
+                                                                 });
+
+
+                                                             } else {
+
+                                                                 if (downloadedImage && finished) {//下载完成
+
+                                                                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                                                                         /*********  缓存图片，这个方法已经被替换  **************/
+                                                                         [self.imageCache storeImage:downloadedImage imageData:downloadedData forKey:key toDisk:cacheOnDisk completion:^{
+                                                                             dispatch_main_async_safe(^{
+                                                                                 //没有取消
+                                                                                 if (operation && !operation.isCancelled && completedBlock) {
+                                                                                     /*****  从缓存中读取经过处理的图片缓存  ****/
+                                                                                     if ([key hasPrefix:[NSString stringWithFormat:@"%@", kLWImageProcessorPrefixKey]]) {
+                                                                                         completedBlock([self.imageCache imageFromCacheForKey:key],
+                                                                                                 downloadedData,
+                                                                                                 nil,
+                                                                                                 SDImageCacheTypeNone,
+                                                                                                 finished,
+                                                                                                 url);
+                                                                                         /*******************************/
+                                                                                     } else {//不需要处理的图片
+                                                                                         completedBlock(downloadedImage,
+                                                                                                 downloadedData,
+                                                                                                 nil,
+                                                                                                 SDImageCacheTypeNone,
+                                                                                                 finished,
+                                                                                                 url);
+                                                                                     }
+                                                                                 }
+                                                                             });
+                                                                         }];
+                                                                         /***********************************************/
+                                                                     });
+                                                                 }
+                                                             }
+
                                                          }
-                                                         
-                                                     }
-                                                     if (finished) {
-                                                         [self lw_safelyRemoveOperationFromRunning:strongOperation];
-                                                     }
-                                                 }];
-                operation.cancelBlock = ^{
-                    [self.imageDownloader cancel:subOperationToken];
-                    __strong __typeof(weakOperation) strongOperation = weakOperation;
-                    [self lw_safelyRemoveOperationFromRunning:strongOperation];
-                };
-                //缓存中存在图片
-            } else if (cachedImage) {
+                                                         if (finished) {
+                                                             [self lw_safelyRemoveOperationFromRunning:strongOperation];
+                                                         }
+                                                     }];
+            operation.cancelBlock = ^{
+                [self.imageDownloader cancel:subOperationToken];
                 __strong __typeof(weakOperation) strongOperation = weakOperation;
-                [self lw_callCompletionBlockForOperation:strongOperation completion:completedBlock image:cachedImage data:cachedData error:nil cacheType:cacheType finished:YES url:url];
-                [self lw_safelyRemoveOperationFromRunning:operation];
-            } else {
-                
-                __strong __typeof(weakOperation) strongOperation = weakOperation;
-                [self lw_callCompletionBlockForOperation:strongOperation completion:completedBlock image:nil data:nil error:nil cacheType:SDImageCacheTypeNone finished:YES url:url];
-                [self lw_safelyRemoveOperationFromRunning:operation];
-            }
+                [self lw_safelyRemoveOperationFromRunning:strongOperation];
+            };
+            //缓存中存在图片
+        } else if (cachedImage) {
+            __strong __typeof(weakOperation) strongOperation = weakOperation;
+            [self lw_callCompletionBlockForOperation:strongOperation completion:completedBlock image:cachedImage data:cachedData error:nil cacheType:cacheType finished:YES url:url];
+            [self lw_safelyRemoveOperationFromRunning:operation];
+        } else {
+
+            __strong __typeof(weakOperation) strongOperation = weakOperation;
+            [self lw_callCompletionBlockForOperation:strongOperation completion:completedBlock image:nil data:nil error:nil cacheType:SDImageCacheTypeNone finished:YES url:url];
+            [self lw_safelyRemoveOperationFromRunning:operation];
+        }
     }];
     return operation;
 }
 
 
-- (void)lw_callCompletionBlockForOperation:(nullable SDWebImageCombinedOperation*)operation
+- (void)lw_callCompletionBlockForOperation:(nullable SDWebImageCombinedOperation *)operation
                                 completion:(nullable SDInternalCompletionBlock)completionBlock
                                      error:(nullable NSError *)error
                                        url:(nullable NSURL *)url {
@@ -253,7 +253,7 @@
 }
 
 
-- (void)lw_callCompletionBlockForOperation:(nullable SDWebImageCombinedOperation*)operation
+- (void)lw_callCompletionBlockForOperation:(nullable SDWebImageCombinedOperation *)operation
                                 completion:(nullable SDInternalCompletionBlock)completionBlock
                                      image:(nullable UIImage *)image
                                       data:(nullable NSData *)data
@@ -261,7 +261,7 @@
                                  cacheType:(SDImageCacheType)cacheType
                                   finished:(BOOL)finished
                                        url:(nullable NSURL *)url {
-    
+
     dispatch_main_async_safe(^{
         if (operation && !operation.isCancelled && completionBlock) {
             completionBlock(image, data, error, cacheType, finished, url);
@@ -270,7 +270,7 @@
 }
 
 
-- (void)lw_safelyRemoveOperationFromRunning:(nullable SDWebImageCombinedOperation*)operation {
+- (void)lw_safelyRemoveOperationFromRunning:(nullable SDWebImageCombinedOperation *)operation {
     @synchronized (self.runningOperations) {
         if (operation) {
             [self.runningOperations removeObject:operation];

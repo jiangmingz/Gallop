@@ -28,7 +28,8 @@
 
 @class LWTransaction;
 
-typedef void(^LWAsyncTransactionCompletionBlock)(LWTransaction* completeTransaction,BOOL isCancelled);
+typedef void(^LWAsyncTransactionCompletionBlock)(LWTransaction *completeTransaction, BOOL isCancelled);
+
 typedef void(^LWAsyncTransactionOperationCompletionBlock)(BOOL canceled);
 
 /**
@@ -38,19 +39,19 @@ typedef NS_ENUM(NSUInteger, LWAsyncTransactionState) {
     /**
      *  开始处理一个事务
      */
-    LWAsyncTransactionStateOpen = 0,
+            LWAsyncTransactionStateOpen = 0,
     /**
      *  提交一个事务
      */
-    LWAsyncTransactionStateCommitted,
+            LWAsyncTransactionStateCommitted,
     /**
      *  事务取消
      */
-    LWAsyncTransactionStateCanceled,
+            LWAsyncTransactionStateCanceled,
     /**
      *  事务完成
      */
-    LWAsyncTransactionStateComplete
+            LWAsyncTransactionStateComplete
 };
 
 
@@ -71,9 +72,9 @@ typedef NS_ENUM(NSUInteger, LWAsyncTransactionState) {
 - (LWTransaction *)initWithCallbackQueue:(dispatch_queue_t)callbackQueue
                          completionBlock:(LWAsyncTransactionCompletionBlock)completionBlock;
 
-@property (nonatomic,strong,readonly) dispatch_queue_t callbackQueue;//回调所在的dispatch_queue_t
-@property (nonatomic,copy,readonly) LWAsyncTransactionCompletionBlock completionBlock;//处理完成时回调的Block
-@property (nonatomic,assign,readonly) LWAsyncTransactionState state;//事务状态
+@property(nonatomic, strong, readonly) dispatch_queue_t callbackQueue;//回调所在的dispatch_queue_t
+@property(nonatomic, copy, readonly) LWAsyncTransactionCompletionBlock completionBlock;//处理完成时回调的Block
+@property(nonatomic, assign, readonly) LWAsyncTransactionState state;//事务状态
 
 
 /**

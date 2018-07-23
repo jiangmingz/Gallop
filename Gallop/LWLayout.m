@@ -30,9 +30,9 @@
 
 @interface LWLayout ()
 
-@property (nonatomic,strong) NSMutableArray<LWTextStorage *>* textStorages;
-@property (nonatomic,strong) NSMutableArray<LWImageStorage *>* imageStorages;
-@property (nonatomic,strong) NSMutableArray<LWStorage *>* totalStorages;
+@property(nonatomic, strong) NSMutableArray<LWTextStorage *> *textStorages;
+@property(nonatomic, strong) NSMutableArray<LWImageStorage *> *imageStorages;
+@property(nonatomic, strong) NSMutableArray<LWStorage *> *totalStorages;
 
 @end
 
@@ -49,13 +49,13 @@
     if (!object || ![object isKindOfClass:[LWLayout class]]) {
         return NO;
     }
-    LWLayout* layout = (LWLayout *)object;
+    LWLayout *layout = (LWLayout *) object;
     return ([layout.textStorages isEqual:self.textStorages] && [layout.imageStorages isEqual:self.imageStorages]);
 }
 
 - (NSUInteger)hash {
-    long v1 = (long)((__bridge void *)self.textStorages);
-    long v2 = (long)((__bridge void *)self.imageStorages);
+    long v1 = (long) ((__bridge void *) self.textStorages);
+    long v2 = (long) ((__bridge void *) self.imageStorages);
     return v1 ^ v2;
 }
 
@@ -83,10 +83,9 @@
         return;
     }
     if ([storage isMemberOfClass:[LWTextStorage class]]) {
-        [self.textStorages addObject:(LWTextStorage *)storage];
-    }
-    else if ([storage isMemberOfClass:[LWImageStorage class]]) {
-        [self.imageStorages addObject:(LWImageStorage *)storage];
+        [self.textStorages addObject:(LWTextStorage *) storage];
+    } else if ([storage isMemberOfClass:[LWImageStorage class]]) {
+        [self.imageStorages addObject:(LWImageStorage *) storage];
     }
     [self.totalStorages addObject:storage];
 }
@@ -95,12 +94,11 @@
     if (!storages) {
         return;
     }
-    for (LWStorage* storage in storages) {
+    for (LWStorage *storage in storages) {
         if ([storage isMemberOfClass:[LWTextStorage class]]) {
-            [self.textStorages addObject:(LWTextStorage *)storage];
-        }
-        else if ([storage isMemberOfClass:[LWImageStorage class]]) {
-            [self.imageStorages addObject:(LWImageStorage *)storage];
+            [self.textStorages addObject:(LWTextStorage *) storage];
+        } else if ([storage isMemberOfClass:[LWImageStorage class]]) {
+            [self.imageStorages addObject:(LWImageStorage *) storage];
         }
     }
     [self.totalStorages addObjectsFromArray:storages];
@@ -112,15 +110,14 @@
         return;
     }
     if ([storage isMemberOfClass:[LWTextStorage class]]) {
-        if ([self.textStorages containsObject:(LWTextStorage *)storage]) {
-            [self.textStorages removeObject:(LWTextStorage *)storage];
-            [self.totalStorages removeObject:(LWTextStorage *)storage];
+        if ([self.textStorages containsObject:(LWTextStorage *) storage]) {
+            [self.textStorages removeObject:(LWTextStorage *) storage];
+            [self.totalStorages removeObject:(LWTextStorage *) storage];
         }
-    }
-    else if ([storage isMemberOfClass:[LWImageStorage class]]) {
-        if ([self.imageStorages containsObject:(LWImageStorage *)storage]) {
-            [self.imageStorages removeObject:(LWImageStorage *)storage];
-            [self.totalStorages removeObject:(LWImageStorage *)storage];
+    } else if ([storage isMemberOfClass:[LWImageStorage class]]) {
+        if ([self.imageStorages containsObject:(LWImageStorage *) storage]) {
+            [self.imageStorages removeObject:(LWImageStorage *) storage];
+            [self.totalStorages removeObject:(LWImageStorage *) storage];
         }
     }
 }
@@ -129,16 +126,16 @@
     if (!storages) {
         return;
     }
-    for (LWStorage* storage in storages) {
+    for (LWStorage *storage in storages) {
         if ([storage isMemberOfClass:[LWTextStorage class]]) {
-            if ([self.textStorages containsObject:(LWTextStorage *)storage]) {
-                [self.textStorages removeObject:(LWTextStorage *)storage];
-                [self.totalStorages removeObject:(LWTextStorage *)storage];
+            if ([self.textStorages containsObject:(LWTextStorage *) storage]) {
+                [self.textStorages removeObject:(LWTextStorage *) storage];
+                [self.totalStorages removeObject:(LWTextStorage *) storage];
             }
         } else if ([storage isMemberOfClass:[LWImageStorage class]]) {
-            if ([self.imageStorages containsObject:(LWImageStorage *)storage]) {
-                [self.imageStorages removeObject:(LWImageStorage *)storage];
-                [self.totalStorages removeObject:(LWImageStorage *)storage];
+            if ([self.imageStorages containsObject:(LWImageStorage *) storage]) {
+                [self.imageStorages removeObject:(LWImageStorage *) storage];
+                [self.totalStorages removeObject:(LWImageStorage *) storage];
             }
         }
     }
@@ -147,13 +144,14 @@
 
 - (CGFloat)suggestHeightWithBottomMargin:(CGFloat)bottomMargin {
     CGFloat suggestHeight = 0.0f;
-    for (LWStorage* storage in self.totalStorages) {
-        suggestHeight = suggestHeight > storage.bottom ? suggestHeight :storage.bottom;
+    for (LWStorage *storage in self.totalStorages) {
+        suggestHeight = suggestHeight > storage.bottom ? suggestHeight : storage.bottom;
     }
     return suggestHeight + bottomMargin;
 }
 
 #pragma mark - Getter
+
 - (NSMutableArray *)textStorages {
     if (_textStorages) {
         return _textStorages;
@@ -177,7 +175,6 @@
     _totalStorages = [[NSMutableArray alloc] init];
     return _totalStorages;
 }
-
 
 
 @end

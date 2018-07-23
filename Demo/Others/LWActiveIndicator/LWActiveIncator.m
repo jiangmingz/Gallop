@@ -29,7 +29,7 @@
 
 @interface LWActiveIncator ()
 
-@property (nonatomic,strong) LWActiveIncatorAnimationView* animationView;
+@property(nonatomic, strong) LWActiveIncatorAnimationView *animationView;
 
 @end
 
@@ -40,11 +40,11 @@
     if (self) {
         self.backgroundColor = RGB(255, 255, 255, 1);
         self.animationView = [[LWActiveIncatorAnimationView alloc]
-                              initWithFrame:CGRectMake(SCREEN_WIDTH/2- 40.0f,
-                                                       SCREEN_HEIGHT/2 - 40.0f,
-                                                       80.0f,
-                                                       80.0f)];
-        self.animationView.animationTintColor = RGB(232, 104, 96,1.0f);
+                initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 40.0f,
+                        SCREEN_HEIGHT / 2 - 40.0f,
+                        80.0f,
+                        80.0f)];
+        self.animationView.animationTintColor = RGB(232, 104, 96, 1.0f);
         [self addSubview:self.animationView];
     }
     return self;
@@ -55,11 +55,11 @@
     if (self) {
         self.backgroundColor = color;
         self.animationView = [[LWActiveIncatorAnimationView alloc]
-                              initWithFrame:CGRectMake(SCREEN_WIDTH/2- 40.0f,
-                                                       SCREEN_HEIGHT/2 - 40.0f,
-                                                       80.0f,
-                                                       80.0f)];
-        self.animationView.animationTintColor = RGB(232, 104, 96,1.0f);
+                initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 40.0f,
+                        SCREEN_HEIGHT / 2 - 40.0f,
+                        80.0f,
+                        80.0f)];
+        self.animationView.animationTintColor = RGB(232, 104, 96, 1.0f);
         [self addSubview:self.animationView];
     }
     return self;
@@ -67,7 +67,7 @@
 
 
 + (void)showInView:(UIView *)view {
-    LWActiveIncator* loadingView = [[LWActiveIncator alloc] init];
+    LWActiveIncator *loadingView = [[LWActiveIncator alloc] init];
     [view addSubview:loadingView];
     loadingView.hidden = NO;
     [loadingView.animationView animationBegin];
@@ -75,25 +75,25 @@
 
 
 + (void)showInView:(UIView *)view backgroundColor:(UIColor *)color {
-    LWActiveIncator* loadingView = [[LWActiveIncator alloc] initWithBackgroundColor:color];
+    LWActiveIncator *loadingView = [[LWActiveIncator alloc] initWithBackgroundColor:color];
     [view addSubview:loadingView];
     loadingView.hidden = NO;
     [loadingView.animationView animationBegin];
 }
 
 + (void)hideInViwe:(UIView *)view {
-    for (UIView* aView in view.subviews) {
+    for (UIView *aView in view.subviews) {
         if ([aView isMemberOfClass:[LWActiveIncator class]]) {
-            LWActiveIncator* loadingView = (LWActiveIncator *)aView;
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2f * NSEC_PER_SEC)),
-                           dispatch_get_main_queue(), ^{
-                [UIView animateWithDuration:0.5 animations:^{
-                    loadingView.alpha = 0.0f;
-                }completion:^(BOOL finished) {
-                    [loadingView.animationView animationStop];
-                    [loadingView removeFromSuperview];
-                }];
-            });
+            LWActiveIncator *loadingView = (LWActiveIncator *) aView;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (0.2f * NSEC_PER_SEC)),
+                    dispatch_get_main_queue(), ^{
+                        [UIView animateWithDuration:0.5 animations:^{
+                            loadingView.alpha = 0.0f;
+                        }                               completion:^(BOOL finished) {
+                            [loadingView.animationView animationStop];
+                            [loadingView removeFromSuperview];
+                        }];
+                    });
         }
     }
 }

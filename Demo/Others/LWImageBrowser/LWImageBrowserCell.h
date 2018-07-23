@@ -29,7 +29,7 @@
 
 @interface LWImageBrowserCell : UICollectionViewCell
 
-@property (nonatomic,strong) LWImageBrowserModel* imageModel;
-@property (nonatomic,strong) LWImageItem* imageItem;
+@property(nonatomic, strong) LWImageBrowserModel *imageModel;
+@property(nonatomic, strong) LWImageItem *imageItem;
 
 @end

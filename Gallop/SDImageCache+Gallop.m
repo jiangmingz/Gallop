@@ -39,16 +39,16 @@
 + (void)load {
     [super load];
     Method originMethod = class_getInstanceMethod([self class],
-                                                  NSSelectorFromString(@"storeImage:imageData:forKey:toDisk:completion:"));
-    
+            NSSelectorFromString(@"storeImage:imageData:forKey:toDisk:completion:"));
+
     Method newMethod = class_getInstanceMethod([self class],
-                                               NSSelectorFromString(@"lw_storeImage:imageData:forKey:toDisk:completion:"));
-    
+            NSSelectorFromString(@"lw_storeImage:imageData:forKey:toDisk:completion:"));
+
     if (!class_addMethod([self class],
-                         @selector(lw_storeImage:imageData:forKey:toDisk:completion:),
-                         method_getImplementation(newMethod),
-                         method_getTypeEncoding(newMethod))) {
-        
+            @selector(lw_storeImage:imageData:forKey:toDisk:completion:),
+            method_getImplementation(newMethod),
+            method_getTypeEncoding(newMethod))) {
+
         method_exchangeImplementations(newMethod, originMethod);
     }
 }
@@ -58,10 +58,10 @@
                forKey:(nullable NSString *)key
                toDisk:(BOOL)toDisk
            completion:(nullable SDWebImageNoParamsBlock)completionBlock {
-    
+
     //根据从key中取出相关绘制信息，处理图片，然后将处理完的图片缓存
     image = [LWImageProcessor lw_cornerRadiusImageWithImage:image withKey:key];
-    if (key && [key hasPrefix:[NSString stringWithFormat:@"%@",kLWImageProcessorPrefixKey]]) {
+    if (key && [key hasPrefix:[NSString stringWithFormat:@"%@", kLWImageProcessorPrefixKey]]) {
         if (image) {
             imageData = UIImagePNGRepresentation(image);
         }

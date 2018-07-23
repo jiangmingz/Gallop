@@ -42,15 +42,15 @@ typedef NS_ENUM(NSUInteger, LWTextHighLightType) {
 /**
  *  文本的附件的封装，可以是图片或是UIView对象、CALayer对象
  */
-@interface LWTextAttachment : NSObject<NSCopying,NSMutableCopying,NSCoding>
+@interface LWTextAttachment : NSObject <NSCopying, NSMutableCopying, NSCoding>
 
-@property (nonatomic,strong) id content;//内容
-@property (nonatomic,assign) NSRange range;//在string中的range
-@property (nonatomic,assign) CGRect frame;//frame
-@property (nonatomic,strong) NSURL* URL;//URL
-@property (nonatomic,assign) UIViewContentMode contentMode;//内容模式
-@property (nonatomic,assign) UIEdgeInsets contentEdgeInsets;//边缘内嵌大小
-@property (nonatomic,strong) NSDictionary* userInfo;//自定义的一些信息
+@property(nonatomic, strong) id content;//内容
+@property(nonatomic, assign) NSRange range;//在string中的range
+@property(nonatomic, assign) CGRect frame;//frame
+@property(nonatomic, strong) NSURL *URL;//URL
+@property(nonatomic, assign) UIViewContentMode contentMode;//内容模式
+@property(nonatomic, assign) UIEdgeInsets contentEdgeInsets;//边缘内嵌大小
+@property(nonatomic, strong) NSDictionary *userInfo;//自定义的一些信息
 
 /**
  *  构造方法
@@ -68,29 +68,28 @@ typedef NS_ENUM(NSUInteger, LWTextHighLightType) {
 /**
  *  文本链接的封装
  */
-@interface LWTextHighlight : NSObject <NSCopying,NSMutableCopying,NSCoding>
+@interface LWTextHighlight : NSObject <NSCopying, NSMutableCopying, NSCoding>
 
-@property (nonatomic,assign) NSRange range;//在字符串的range
-@property (nonatomic,strong) UIColor* linkColor;//链接的颜色
-@property (nonatomic,strong) UIColor* hightlightColor;//高亮颜色
-@property (nonatomic,copy) NSArray<NSValue *>* positions;//位置数组
-@property (nonatomic,strong) id content;//内容
-@property (nonatomic,strong) NSDictionary* userInfo;//自定义的一些信息
-@property (nonatomic,assign) LWTextHighLightType type;//高亮类型
+@property(nonatomic, assign) NSRange range;//在字符串的range
+@property(nonatomic, strong) UIColor *linkColor;//链接的颜色
+@property(nonatomic, strong) UIColor *hightlightColor;//高亮颜色
+@property(nonatomic, copy) NSArray<NSValue *> *positions;//位置数组
+@property(nonatomic, strong) id content;//内容
+@property(nonatomic, strong) NSDictionary *userInfo;//自定义的一些信息
+@property(nonatomic, assign) LWTextHighLightType type;//高亮类型
 
 @end
-
 
 
 /**
  *  文本背景颜色的封装
  */
-@interface LWTextBackgroundColor : NSObject  <NSCopying,NSMutableCopying,NSCoding>
+@interface LWTextBackgroundColor : NSObject <NSCopying, NSMutableCopying, NSCoding>
 
-@property (nonatomic,assign) NSRange range;//在字符串的range
-@property (nonatomic,strong) UIColor* backgroundColor;//背景颜色
-@property (nonatomic,copy) NSArray<NSValue *>* positions;//位置数组
-@property (nonatomic,strong) NSDictionary* userInfo;//自定义的一些信息
+@property(nonatomic, assign) NSRange range;//在字符串的range
+@property(nonatomic, strong) UIColor *backgroundColor;//背景颜色
+@property(nonatomic, copy) NSArray<NSValue *> *positions;//位置数组
+@property(nonatomic, strong) NSDictionary *userInfo;//自定义的一些信息
 
 @end
 
@@ -98,12 +97,12 @@ typedef NS_ENUM(NSUInteger, LWTextHighLightType) {
 /**
  *  文本描边的封装（空心字）
  */
-@interface LWTextStroke : NSObject  <NSCopying,NSMutableCopying,NSCoding>
+@interface LWTextStroke : NSObject <NSCopying, NSMutableCopying, NSCoding>
 
-@property (nonatomic,assign) NSRange range;//在字符串的range
-@property (nonatomic,strong) UIColor* strokeColor;//描边颜色
-@property (nonatomic,assign) CGFloat strokeWidth;//描边的宽度
-@property (nonatomic,strong) NSDictionary* userInfo;//自定义的一些信息
+@property(nonatomic, assign) NSRange range;//在字符串的range
+@property(nonatomic, strong) UIColor *strokeColor;//描边颜色
+@property(nonatomic, assign) CGFloat strokeWidth;//描边的宽度
+@property(nonatomic, strong) NSDictionary *userInfo;//自定义的一些信息
 
 @end
 
@@ -111,12 +110,12 @@ typedef NS_ENUM(NSUInteger, LWTextHighLightType) {
  *  文本边框
  */
 
-@interface LWTextBoundingStroke : NSObject<NSCopying,NSMutableCopying,NSCoding>
+@interface LWTextBoundingStroke : NSObject <NSCopying, NSMutableCopying, NSCoding>
 
-@property (nonatomic,assign) NSRange range;//在字符串的range
-@property (nonatomic,strong) UIColor* strokeColor;//描边颜色
-@property (nonatomic,copy) NSArray<NSValue *>* positions;//位置数组
-@property (nonatomic,strong) NSDictionary* userInfo;//自定义的一些信息
+@property(nonatomic, assign) NSRange range;//在字符串的range
+@property(nonatomic, strong) UIColor *strokeColor;//描边颜色
+@property(nonatomic, copy) NSArray<NSValue *> *positions;//位置数组
+@property(nonatomic, strong) NSDictionary *userInfo;//自定义的一些信息
 
 
 @end

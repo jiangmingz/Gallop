@@ -25,8 +25,6 @@
 #import "SDImageCache.h"
 
 
-
-
 /**
  *  Gallop对SDImageCache的Hook，通过methodSwizzling来实现对图片处理并缓存
  */

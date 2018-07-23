@@ -30,7 +30,7 @@
 @implementation LWHTMLImageConfig
 
 - (id)copyWithZone:(NSZone *)zone {
-    LWHTMLImageConfig* one = [[LWHTMLImageConfig alloc] init];
+    LWHTMLImageConfig *one = [[LWHTMLImageConfig alloc] init];
     one.autolayoutHeight = self.autolayoutHeight;
     one.size = self.size;
     one.placeholder = [self.placeholder copy];
@@ -87,7 +87,7 @@
 }
 
 + (LWHTMLImageConfig *)defaultsConfig {
-    static LWHTMLImageConfig* config;
+    static LWHTMLImageConfig *config;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         config = [[LWHTMLImageConfig alloc] init];

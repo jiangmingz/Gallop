@@ -49,14 +49,14 @@ typedef NSMutableDictionary<NSString *, id> LWOperationsDictionary;
     if (key) {
         [self lw_cancelImageLoadOperationWithKey:key];
         if (operation) {
-            LWOperationsDictionary* operationDictionary = [self operationDictionary];
+            LWOperationsDictionary *operationDictionary = [self operationDictionary];
             operationDictionary[key] = operation;
         }
     }
 }
 
 - (void)lw_cancelImageLoadOperationWithKey:(nullable NSString *)key {
-    LWOperationsDictionary* operationDictionary = [self operationDictionary];
+    LWOperationsDictionary *operationDictionary = [self operationDictionary];
     id operations = operationDictionary[key];
     if (operations) {
         if ([operations isKindOfClass:[NSArray class]]) {
@@ -65,8 +65,8 @@ typedef NSMutableDictionary<NSString *, id> LWOperationsDictionary;
                     [operation cancel];
                 }
             }
-        } else if ([operations conformsToProtocol:@protocol(SDWebImageOperation)]){
-            [(id<SDWebImageOperation>) operations cancel];
+        } else if ([operations conformsToProtocol:@protocol(SDWebImageOperation)]) {
+            [(id <SDWebImageOperation>) operations cancel];
         }
         [operationDictionary removeObjectForKey:key];
     }
@@ -74,7 +74,7 @@ typedef NSMutableDictionary<NSString *, id> LWOperationsDictionary;
 
 - (void)lw_removeImageLoadOperationWithKey:(nullable NSString *)key {
     if (key) {
-        LWOperationsDictionary* operationDictionary = [self operationDictionary];
+        LWOperationsDictionary *operationDictionary = [self operationDictionary];
         [operationDictionary removeObjectForKey:key];
     }
 }

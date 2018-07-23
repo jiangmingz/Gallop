@@ -35,18 +35,20 @@
 
 @interface LWAsyncDisplayLayer : CALayer
 
-@property (nonatomic,assign) BOOL displaysAsynchronously;//是否异步绘制，默认是YES
-@property (nonatomic,strong,readonly) LWFlag* displayFlag;//一个自增的标识类，用于取消绘制。
+@property(nonatomic, assign) BOOL displaysAsynchronously;//是否异步绘制，默认是YES
+@property(nonatomic, strong, readonly) LWFlag *displayFlag;//一个自增的标识类，用于取消绘制。
 
 
 /**
  *  立即绘制，在主线程
  */
 - (void)displayImmediately;
+
 /**
  *  取消异步绘制
  */
 - (void)cancelAsyncDisplay;
+
 /**
  *  LWAsyncDisplayLayer异步绘制时都会指定一个dispatch_queue_t，这个方法可以获取那个dispatch_queue_t
  *
@@ -61,9 +63,9 @@
  */
 @interface LWAsyncDisplayTransaction : NSObject
 
-@property (nonatomic,copy) LWAsyncDisplayWillDisplayBlock willDisplayBlock;//即将要开始绘制
-@property (nonatomic,copy) LWAsyncDisplayBlock displayBlock;//绘制的具体实现
-@property (nonatomic,copy) LWAsyncDisplayDidDisplayBlock didDisplayBlock;//绘制已经完成
+@property(nonatomic, copy) LWAsyncDisplayWillDisplayBlock willDisplayBlock;//即将要开始绘制
+@property(nonatomic, copy) LWAsyncDisplayBlock displayBlock;//绘制的具体实现
+@property(nonatomic, copy) LWAsyncDisplayDidDisplayBlock didDisplayBlock;//绘制已经完成
 
 @end
 

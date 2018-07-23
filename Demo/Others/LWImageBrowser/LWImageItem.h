@@ -33,16 +33,17 @@
 @optional
 
 - (void)didClickedItemToHide;
+
 - (void)didFinishedDownLoadHDImage;
 
 @end
 
 @interface LWImageItem : UIScrollView
 
-@property (nonatomic,weak) id <LWImageItemEventDelegate> eventDelegate;
-@property (nonatomic,strong) LWImageBrowserModel* imageModel;
-@property (nonatomic,strong) UIImageView* imageView;
-@property (nonatomic,assign,getter=isFirstShow) BOOL firstShow;
+@property(nonatomic, weak) id <LWImageItemEventDelegate> eventDelegate;
+@property(nonatomic, strong) LWImageBrowserModel *imageModel;
+@property(nonatomic, strong) UIImageView *imageView;
+@property(nonatomic, assign, getter=isFirstShow) BOOL firstShow;
 
 - (void)loadHdImage:(BOOL)animated;
 

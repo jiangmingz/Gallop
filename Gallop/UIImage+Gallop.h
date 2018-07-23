@@ -91,7 +91,7 @@
  *  按给定的方向旋转图片
  *
  */
-- (UIImage*)lw_rotate:(UIImageOrientation)orient;
+- (UIImage *)lw_rotate:(UIImageOrientation)orient;
 
 /**
  *  垂直翻转
@@ -153,7 +153,7 @@
  * 将两个图片生成一张图片
  *
  */
-+ (UIImage*)lw_mergeImage:(UIImage*)firstImage withImage:(UIImage*)secondImage;
++ (UIImage *)lw_mergeImage:(UIImage *)firstImage withImage:(UIImage *)secondImage;
 
 /**
  * 图片模糊处理

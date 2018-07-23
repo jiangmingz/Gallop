@@ -27,22 +27,23 @@
 #import "LWTextAttachment.h"
 #import "LWTextRunDelegate.h"
 
-@implementation NSMutableAttributedString(Gallop)
+@implementation NSMutableAttributedString (Gallop)
 
 #pragma mark -
+
 - (void)setTextColor:(UIColor *)textColor range:(NSRange)range {
     [self setAttribute:NSForegroundColorAttributeName value:textColor range:range];
 }
 
 - (void)setTextBackgroundColor:(UIColor *)backgroundColor range:(NSRange)range {
-    LWTextBackgroundColor* textBackground = [[LWTextBackgroundColor alloc] init];
+    LWTextBackgroundColor *textBackground = [[LWTextBackgroundColor alloc] init];
     textBackground.backgroundColor = backgroundColor;
     textBackground.range = range;
     [self setAttribute:LWTextBackgroundColorAttributedName value:textBackground range:range];
 }
 
 - (void)setTextBoundingStrokeColor:(UIColor *)boundingStrokeColor range:(NSRange)range {
-    LWTextBoundingStroke* boundingStroke = [[LWTextBoundingStroke alloc] init];
+    LWTextBoundingStroke *boundingStroke = [[LWTextBoundingStroke alloc] init];
     boundingStroke.strokeColor = boundingStrokeColor;
     boundingStroke.range = range;
     [self setAttribute:LWTextBoundingStrokeAttributedName value:boundingStroke range:range];
@@ -53,9 +54,9 @@
 }
 
 - (void)setCharacterSpacing:(unichar)characterSpacing range:(NSRange)range {
-    CFNumberRef charSpacingNum =  CFNumberCreate(kCFAllocatorDefault,kCFNumberSInt8Type,&characterSpacing);
+    CFNumberRef charSpacingNum = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt8Type, &characterSpacing);
     if (charSpacingNum != nil) {
-        [self setAttribute:(NSString *)kCTKernAttributeName value:(__bridge id)charSpacingNum range:range];
+        [self setAttribute:(NSString *) kCTKernAttributeName value:(__bridge id) charSpacingNum range:range];
         CFRelease(charSpacingNum);
     }
 }
@@ -66,7 +67,7 @@
 }
 
 - (void)setStrokeColor:(UIColor *)strokeColor strokeWidth:(CGFloat)strokeWidth range:(NSRange)range {
-    LWTextStroke* textStroke = [[LWTextStroke alloc] init];
+    LWTextStroke *textStroke = [[LWTextStroke alloc] init];
     textStroke.strokeColor = strokeColor;
     textStroke.strokeWidth = strokeWidth;
     textStroke.range = range;
@@ -74,18 +75,18 @@
 }
 
 #pragma mark - ParagraphStyle
+
 - (void)setLineSpacing:(CGFloat)lineSpacing range:(NSRange)range {
     [self enumerateAttribute:NSParagraphStyleAttributeName
                      inRange:range
                      options:kNilOptions
-                  usingBlock: ^(NSParagraphStyle* value, NSRange subRange, BOOL *stop) {
+                  usingBlock:^(NSParagraphStyle *value, NSRange subRange, BOOL *stop) {
                       if (value) {
-                          NSMutableParagraphStyle* style = value.mutableCopy;
+                          NSMutableParagraphStyle *style = value.mutableCopy;
                           [style setLineSpacing:lineSpacing];
                           [self setParagraphStyle:style range:subRange];
-                      }
-                      else {
-                          NSMutableParagraphStyle* style = [[NSMutableParagraphStyle alloc] init];
+                      } else {
+                          NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
                           [style setLineSpacing:lineSpacing];
                           [self setParagraphStyle:style range:subRange];
                       }
@@ -96,14 +97,13 @@
     [self enumerateAttribute:NSParagraphStyleAttributeName
                      inRange:range
                      options:kNilOptions
-                  usingBlock: ^(NSParagraphStyle* value, NSRange subRange, BOOL *stop) {
+                  usingBlock:^(NSParagraphStyle *value, NSRange subRange, BOOL *stop) {
                       if (value) {
-                          NSMutableParagraphStyle* style = value.mutableCopy;
+                          NSMutableParagraphStyle *style = value.mutableCopy;
                           [style setAlignment:textAlignment];
                           [self setParagraphStyle:style range:subRange];
-                      }
-                      else {
-                          NSMutableParagraphStyle* style = [[NSMutableParagraphStyle alloc] init];
+                      } else {
+                          NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
                           [style setAlignment:textAlignment];
                           [self setParagraphStyle:style range:subRange];
                       }
@@ -114,14 +114,13 @@
     [self enumerateAttribute:NSParagraphStyleAttributeName
                      inRange:range
                      options:kNilOptions
-                  usingBlock: ^(NSParagraphStyle* value, NSRange subRange, BOOL *stop) {
+                  usingBlock:^(NSParagraphStyle *value, NSRange subRange, BOOL *stop) {
                       if (value) {
-                          NSMutableParagraphStyle* style = value.mutableCopy;
+                          NSMutableParagraphStyle *style = value.mutableCopy;
                           [style setLineBreakMode:lineBreakMode];
                           [self setParagraphStyle:style range:subRange];
-                      }
-                      else {
-                          NSMutableParagraphStyle* style = [[NSMutableParagraphStyle alloc] init];
+                      } else {
+                          NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
                           [style setLineBreakMode:lineBreakMode];
                           [self setParagraphStyle:style range:subRange];
                       }
@@ -136,18 +135,18 @@
 #pragma mark - Link & Attachment
 
 - (void)addLinkForWholeTextWithData:(id)data linkColor:(UIColor *)linkColor highLightColor:(UIColor *)highLightColor {
-    LWTextHighlight* highlight = [[LWTextHighlight alloc] init];
+    LWTextHighlight *highlight = [[LWTextHighlight alloc] init];
     highlight.hightlightColor = highLightColor;
     highlight.linkColor = linkColor;
     highlight.content = data;
     highlight.type = LWTextHighLightTypeWholeText;
-    
+
     NSRange range;
-    NSMutableArray* existLinkRanges = [[NSMutableArray alloc] init];
-    CTFramesetterRef ctFrameSetter = CTFramesetterCreateWithAttributedString((CFTypeRef)self);
+    NSMutableArray *existLinkRanges = [[NSMutableArray alloc] init];
+    CTFramesetterRef ctFrameSetter = CTFramesetterCreateWithAttributedString((CFTypeRef) self);
     CGMutablePathRef cgPath = CGPathCreateMutable();
-    CGPathAddRect(cgPath, NULL, CGRectMake(0, 0,CGFLOAT_MAX,CGFLOAT_MAX));
-    CTFrameRef ctFrame = CTFramesetterCreateFrame(ctFrameSetter,CFRangeMake(0, self.length),cgPath,NULL);
+    CGPathAddRect(cgPath, NULL, CGRectMake(0, 0, CGFLOAT_MAX, CGFLOAT_MAX));
+    CTFrameRef ctFrame = CTFramesetterCreateFrame(ctFrameSetter, CFRangeMake(0, self.length), cgPath, NULL);
     CFRelease(cgPath);
     CFRelease(ctFrameSetter);
     CFArrayRef ctLines = CTFrameGetLines(ctFrame);
@@ -156,49 +155,48 @@
         CTLineRef ctLine = CFArrayGetValueAtIndex(ctLines, i);
         CFArrayRef ctRuns = CTLineGetGlyphRuns(ctLine);
         CFIndex runCount = CFArrayGetCount(ctRuns);
-        if (!ctRuns || runCount == 0){
+        if (!ctRuns || runCount == 0) {
             continue;
         }
-        for (NSUInteger i = 0; i < runCount; i ++) {
+        for (NSUInteger i = 0; i < runCount; i++) {
             CTRunRef run = CFArrayGetValueAtIndex(ctRuns, i);
             CFIndex glyphCount = CTRunGetGlyphCount(run);
             if (glyphCount == 0) {
                 continue;
             }
-            NSDictionary* attributes = (id)CTRunGetAttributes(run);
-            LWTextHighlight* highlight = [attributes objectForKey:LWTextLinkAttributedName];
+            NSDictionary *attributes = (id) CTRunGetAttributes(run);
+            LWTextHighlight *highlight = [attributes objectForKey:LWTextLinkAttributedName];
             if (!highlight) {
                 continue;
             }
             NSRange existLinkRange = highlight.range;
-            NSValue* rValue = [NSValue valueWithRange:existLinkRange];
+            NSValue *rValue = [NSValue valueWithRange:existLinkRange];
             if (![existLinkRanges containsObject:rValue]) {
                 [existLinkRanges addObject:rValue];
             }
         }
     }
     if (existLinkRanges.count != 0) {
-        for (NSInteger i = 0; i < existLinkRanges.count; i ++) {
-            NSValue* value = existLinkRanges[i];
+        for (NSInteger i = 0; i < existLinkRanges.count; i++) {
+            NSValue *value = existLinkRanges[i];
             NSRange currentRange = [value rangeValue];
             NSRange nextRange;
             if (i + 1 < existLinkRanges.count) {
                 nextRange = [existLinkRanges[i + 1] rangeValue];
                 NSInteger length = nextRange.location - (currentRange.location + currentRange.length) - 1;
                 NSInteger location = (currentRange.location + currentRange.length);
-                range = NSMakeRange(location,length);
+                range = NSMakeRange(location, length);
             } else {
                 NSInteger location = (currentRange.location + currentRange.length);
                 NSInteger length = self.length - (currentRange.location + currentRange.length);
-                range = NSMakeRange(location,length);
+                range = NSMakeRange(location, length);
             }
             [self setAttribute:LWTextLinkAttributedName value:highlight range:range];
             if (linkColor) {
                 [self setAttribute:NSForegroundColorAttributeName value:linkColor range:range];
             }
         }
-    }
-    else {
+    } else {
         NSRange range = NSMakeRange(0, self.length);
         [self setAttribute:LWTextLinkAttributedName value:highlight range:range];
         if (linkColor) {
@@ -211,16 +209,16 @@
 }
 
 - (void)addLongPressActionWithData:(id)data highLightColor:(UIColor *)highLightColor {
-    LWTextHighlight* highlight = [[LWTextHighlight alloc] init];
+    LWTextHighlight *highlight = [[LWTextHighlight alloc] init];
     highlight.hightlightColor = highLightColor;
     highlight.content = data;
     highlight.type = LWTextHighLightTypeLongPress;
-    highlight.range = NSMakeRange(0,self.length);
-    [self setAttribute:LWTextLongPressAttributedName value:highlight range:NSMakeRange(0,self.length)];
+    highlight.range = NSMakeRange(0, self.length);
+    [self setAttribute:LWTextLongPressAttributedName value:highlight range:NSMakeRange(0, self.length)];
 }
 
 - (void)addLinkWithData:(id)data range:(NSRange)range linkColor:(UIColor *)linkColor highLightColor:(UIColor *)highLightColor {
-    LWTextHighlight* highlight = [[LWTextHighlight alloc] init];
+    LWTextHighlight *highlight = [[LWTextHighlight alloc] init];
     highlight.hightlightColor = highLightColor;
     highlight.linkColor = linkColor;
     highlight.content = data;
@@ -236,19 +234,19 @@
                                                           descent:(CGFloat)descent
                                                             width:(CGFloat)width {
     unichar objectReplacementChar = 0xFFFC;
-    NSString* contentString = [NSString stringWithCharacters:&objectReplacementChar length:1];
-    NSMutableAttributedString* space = [[NSMutableAttributedString alloc] initWithString:contentString];
-    LWTextAttachment* attachment = [[LWTextAttachment alloc] init];
+    NSString *contentString = [NSString stringWithCharacters:&objectReplacementChar length:1];
+    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:contentString];
+    LWTextAttachment *attachment = [[LWTextAttachment alloc] init];
     attachment.content = content;
     attachment.contentMode = contentMode;
     [space addAttribute:LWTextAttachmentAttributeName value:attachment range:NSMakeRange(0, space.length)];
-    LWTextRunDelegate* delegate = [[LWTextRunDelegate alloc] init];
+    LWTextRunDelegate *delegate = [[LWTextRunDelegate alloc] init];
     delegate.width = width;
     delegate.ascent = ascent;
     delegate.descent = descent;
     CTRunDelegateRef delegateRef = delegate.CTRunDelegate;
-    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, space.length),
-                                   kCTRunDelegateAttributeName, delegateRef);
+    CFAttributedStringSetAttribute((CFMutableAttributedStringRef) space, CFRangeMake(0, space.length),
+            kCTRunDelegateAttributeName, delegateRef);
     if (delegate) {
         CFRelease(delegateRef);
     }
@@ -262,20 +260,20 @@
                                                           descent:(CGFloat)descent
                                                             width:(CGFloat)width {
     unichar objectReplacementChar = 0xFFFC;
-    NSString* contentString = [NSString stringWithCharacters:&objectReplacementChar length:1];
-    NSMutableAttributedString* space = [[NSMutableAttributedString alloc] initWithString:contentString];
-    LWTextAttachment* attachment = [[LWTextAttachment alloc] init];
+    NSString *contentString = [NSString stringWithCharacters:&objectReplacementChar length:1];
+    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:contentString];
+    LWTextAttachment *attachment = [[LWTextAttachment alloc] init];
     attachment.content = content;
     attachment.contentMode = contentMode;
     attachment.userInfo = userInfo;
     [space addAttribute:LWTextAttachmentAttributeName value:attachment range:NSMakeRange(0, space.length)];
-    LWTextRunDelegate* delegate = [[LWTextRunDelegate alloc] init];
+    LWTextRunDelegate *delegate = [[LWTextRunDelegate alloc] init];
     delegate.width = width;
     delegate.ascent = ascent;
     delegate.descent = descent;
     CTRunDelegateRef delegateRef = delegate.CTRunDelegate;
-    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, space.length),
-                                   kCTRunDelegateAttributeName, delegateRef);
+    CFAttributedStringSetAttribute((CFMutableAttributedStringRef) space, CFRangeMake(0, space.length),
+            kCTRunDelegateAttributeName, delegateRef);
     if (delegate) {
         CFRelease(delegateRef);
     }
@@ -285,12 +283,12 @@
 #pragma mark -
 
 - (void)setAttribute:(NSString *)name value:(id)value range:(NSRange)range {
-    if (!name || [NSNull isEqual:name]){
+    if (!name || [NSNull isEqual:name]) {
         return;
     }
     if (value && ![NSNull isEqual:value]) {
         [self addAttribute:name value:value range:range];
-    }else {
+    } else {
         [self removeAttribute:name range:range];
     }
 }

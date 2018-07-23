@@ -27,15 +27,15 @@
 #import <objc/message.h>
 
 
-
 @interface LWAsyncDisplayTransactionOperation : NSObject
 
-@property (nonatomic,strong) id target;
-@property (nonatomic,assign) SEL selector;
-@property (nonatomic,strong) id object;
-@property (nonatomic,copy) LWAsyncTransactionOperationCompletionBlock completion;
+@property(nonatomic, strong) id target;
+@property(nonatomic, assign) SEL selector;
+@property(nonatomic, strong) id object;
+@property(nonatomic, copy) LWAsyncTransactionOperationCompletionBlock completion;
 
 - (id)initWithCompletion:(LWAsyncTransactionOperationCompletionBlock)completion;
+
 - (void)callAndReleaseCompletionBlock:(BOOL)canceled;
 
 
@@ -53,8 +53,8 @@
 }
 
 - (void)callAndReleaseCompletionBlock:(BOOL)canceled {
-    void (*objc_msgSendToPerform)(id, SEL, id) = (void*)objc_msgSend;
-    objc_msgSendToPerform(self.target,self.selector,self.object);
+    void (*objc_msgSendToPerform)(id, SEL, id) = (void *) objc_msgSend;
+    objc_msgSendToPerform(self.target, self.selector, self.object);
     if (self.completion) {
         self.completion(canceled);
         self.completion = nil;
@@ -69,10 +69,10 @@
 
 @interface LWTransaction ()
 
-@property (nonatomic,strong) dispatch_queue_t callbackQueue;
-@property (nonatomic,copy) LWAsyncTransactionCompletionBlock completionBlock;
-@property (nonatomic,assign) LWAsyncTransactionState state;
-@property (nonatomic,strong) NSMutableArray* operations;
+@property(nonatomic, strong) dispatch_queue_t callbackQueue;
+@property(nonatomic, copy) LWAsyncTransactionCompletionBlock completionBlock;
+@property(nonatomic, assign) LWAsyncTransactionState state;
+@property(nonatomic, strong) NSMutableArray *operations;
 
 @end
 
@@ -82,7 +82,7 @@
 #pragma mark - LifeCycle
 
 - (LWTransaction *)initWithCallbackQueue:(dispatch_queue_t)callbackQueue
-            completionBlock:(LWAsyncTransactionCompletionBlock)completionBlock {
+                         completionBlock:(LWAsyncTransactionCompletionBlock)completionBlock {
     if ((self = [self init])) {
         if (callbackQueue == NULL) {
             callbackQueue = dispatch_get_main_queue();
@@ -100,8 +100,8 @@
                            selector:(SEL)selector
                              object:(id)object
                          completion:(LWAsyncTransactionOperationCompletionBlock)operationComletion {
-    LWAsyncDisplayTransactionOperation* operation = [[LWAsyncDisplayTransactionOperation alloc]
-                                                     initWithCompletion:operationComletion];
+    LWAsyncDisplayTransactionOperation *operation = [[LWAsyncDisplayTransactionOperation alloc]
+            initWithCompletion:operationComletion];
     operation.target = target;
     operation.selector = selector;
     operation.object = object;
@@ -126,7 +126,7 @@
 - (void)completeTransaction {
     if (_state != LWAsyncTransactionStateComplete) {
         BOOL isCanceled = (_state == LWAsyncTransactionStateCanceled);
-        for (LWAsyncDisplayTransactionOperation* operation in self.operations) {
+        for (LWAsyncDisplayTransactionOperation *operation in self.operations) {
             [operation callAndReleaseCompletionBlock:isCanceled];
         }
         self.state = LWAsyncTransactionStateComplete;
@@ -137,6 +137,7 @@
 }
 
 #pragma mark - Getter
+
 - (NSMutableArray *)operations {
     if (_operations) {
         return _operations;

@@ -43,8 +43,8 @@
  *  @param data             添加点击链接时所附带的信息。
  */
 - (void)lw_htmlDisplayView:(LWHTMLDisplayView *)asyncDisplayView
-   didCilickedTextStorage:(LWTextStorage *)textStorage
-                 linkdata:(id)data;
+    didCilickedTextStorage:(LWTextStorage *)textStorage
+                  linkdata:(id)data;
 
 /**
  *  点击LWImageStorage时，可以在这个代理方法里收到回调
@@ -83,10 +83,10 @@
  */
 @interface LWHTMLDisplayView : UITableView
 
-@property (nonatomic,strong) LWHTMLLayout* layout;//布局模型
-@property (nonatomic,weak) id <LWHTMLDisplayViewDelegate> displayDelegate;//代理对象
-@property (nonatomic,strong,readonly) LWStorageBuilder* storageBuilder;//用于解析HTML创建LWStorage
-@property (nonatomic,strong) NSData* data;//HTML文件
+@property(nonatomic, strong) LWHTMLLayout *layout;//布局模型
+@property(nonatomic, weak) id <LWHTMLDisplayViewDelegate> displayDelegate;//代理对象
+@property(nonatomic, strong, readonly) LWStorageBuilder *storageBuilder;//用于解析HTML创建LWStorage
+@property(nonatomic, strong) NSData *data;//HTML文件
 
 @end
 

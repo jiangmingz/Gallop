@@ -38,15 +38,16 @@
 #endif
 
 #ifndef RGB
-#define RGB(A,B,C,D) [UIColor colorWithRed:A/255.0f green:B/255.0f blue:C/255.0f alpha:D]
+#define RGB(A, B, C, D) [UIColor colorWithRed:A/255.0f green:B/255.0f blue:C/255.0f alpha:D]
 #endif
 
 
 @interface LWActiveIncatorAnimationView : UIView
 
-@property (nonatomic,strong) UIColor* animationTintColor;
+@property(nonatomic, strong) UIColor *animationTintColor;
 
 - (void)animationBegin;
+
 - (void)animationStop;
 
 @end

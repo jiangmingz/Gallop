@@ -24,7 +24,7 @@
 
 #import <UIKit/UIKit.h>
 
-static const NSString* kLWImageProcessorPrefixKey = @"kLWImageProcessorPrefixKey";
+static const NSString *kLWImageProcessorPrefixKey = @"kLWImageProcessorPrefixKey";
 
 /**
  *  这个类用于处理图片，生成缓存的key
@@ -59,6 +59,6 @@ static const NSString* kLWImageProcessorPrefixKey = @"kLWImageProcessorPrefixKey
  *
  *  @return 经过圆角半径绘制后的图片
  */
-+ (UIImage *)lw_cornerRadiusImageWithImage:(UIImage*)image withKey:(NSString *)key;
++ (UIImage *)lw_cornerRadiusImageWithImage:(UIImage *)image withKey:(NSString *)key;
 
 @end

@@ -32,12 +32,12 @@
 const CGFloat cellHeight = 60.0f;
 
 
-@interface LWActionSheetView ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
+@interface LWActionSheetView () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
-@property (nonatomic,strong) UIImageView* screenshotImageView;
-@property (nonatomic,copy) NSArray* dataSource;
-@property (nonatomic,strong) UITableView* tableView;
-@property (nonatomic,assign) NSInteger titlesCount;
+@property(nonatomic, strong) UIImageView *screenshotImageView;
+@property(nonatomic, copy) NSArray *dataSource;
+@property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, assign) NSInteger titlesCount;
 
 @end
 
@@ -49,10 +49,10 @@ const CGFloat cellHeight = 60.0f;
         self.delegate = delegate;
         self.titlesCount = titles.count;
         self.dataSource = titles;
-        
-        UIWindow* window = [UIApplication sharedApplication].keyWindow;
-        UIImage* screenshot = [self _screenshotFromView:window];
-        
+
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        UIImage *screenshot = [self _screenshotFromView:window];
+
         self.screenshotImageView = [[UIImageView alloc] initWithFrame:SCREEN_BOUNDS];
         self.screenshotImageView.backgroundColor = [UIColor blackColor];
         self.screenshotImageView.image = [screenshot applyBlurWithRadius:20
@@ -60,11 +60,11 @@ const CGFloat cellHeight = 60.0f;
                                                    saturationDeltaFactor:1.4
                                                                maskImage:nil];
         [self addSubview:self.screenshotImageView];
-        
+
         self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f,
-                                                                       SCREEN_HEIGHT  - cellHeight * self.titlesCount ,
-                                                                       SCREEN_WIDTH,
-                                                                       cellHeight * self.titlesCount)
+                        SCREEN_HEIGHT - cellHeight * self.titlesCount,
+                        SCREEN_WIDTH,
+                        cellHeight * self.titlesCount)
                                                       style:UITableViewStylePlain];
         self.tableView.backgroundColor = [UIColor clearColor];
         self.tableView.delegate = self;
@@ -78,28 +78,28 @@ const CGFloat cellHeight = 60.0f;
 #pragma mark -
 
 - (void)show {
-    UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:self];
-    
-    NSArray* cells = [self.tableView visibleCells];
-    for (NSInteger i = 0;i < cells.count;i ++) {
-        LWActionSheetTableViewCell* cell = cells[i];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(i * 0.09f * NSEC_PER_SEC)),
-                       dispatch_get_main_queue(), ^{
-                           [cell show];
-                       });
+
+    NSArray *cells = [self.tableView visibleCells];
+    for (NSInteger i = 0; i < cells.count; i++) {
+        LWActionSheetTableViewCell *cell = cells[i];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (i * 0.09f * NSEC_PER_SEC)),
+                dispatch_get_main_queue(), ^{
+                    [cell show];
+                });
     }
 }
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch* touch = [touches anyObject];
+    UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInView:self];
     if (CGRectContainsPoint(CGRectMake(0.0f,
-                                       0.0f,
-                                       SCREEN_WIDTH,
-                                       SCREEN_HEIGHT - cellHeight * self.titlesCount ),
-                            point)) {
+            0.0f,
+                    SCREEN_WIDTH,
+                    SCREEN_HEIGHT - cellHeight * self.titlesCount),
+            point)) {
         [self _hide];
     }
 }
@@ -111,8 +111,8 @@ const CGFloat cellHeight = 60.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString* cellIdentifier = @"cellIdentifier";
-    LWActionSheetTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"cellIdentifier";
+    LWActionSheetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
         cell = [[LWActionSheetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
@@ -130,7 +130,7 @@ const CGFloat cellHeight = 60.0f;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     [self _hide];
     if ([self.delegate respondsToSelector:@selector(lwActionSheet:didSelectedButtonWithIndex:)]
-        &&[self.delegate conformsToProtocol:@protocol(LWActionSheetViewDelegate)]) {
+            && [self.delegate conformsToProtocol:@protocol(LWActionSheetViewDelegate)]) {
         [self.delegate lwActionSheet:self didSelectedButtonWithIndex:indexPath.row];
     }
 }
@@ -143,25 +143,26 @@ const CGFloat cellHeight = 60.0f;
     __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.2f animations:^{
         weakSelf.tableView.frame = CGRectMake(0.0f,
-                                              SCREEN_HEIGHT,
-                                              SCREEN_WIDTH,
-                                              cellHeight * self.titlesCount);
+                SCREEN_HEIGHT,
+                SCREEN_WIDTH,
+                cellHeight * self.titlesCount);
         weakSelf.screenshotImageView.alpha = 0.0f;
-    } completion:^(BOOL finished) {
+    }                completion:^(BOOL finished) {
         [weakSelf removeFromSuperview];
     }];
 }
 
 
 - (UIImage *)_screenshotFromView:(UIView *)aView {
-    UIGraphicsBeginImageContextWithOptions(aView.bounds.size,NO,[UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContextWithOptions(aView.bounds.size, NO, [UIScreen mainScreen].scale);
     [aView.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage* screenshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *screenshotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return screenshotImage;
 }
 
 #pragma mark - UIGestrueDelegate
+
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }

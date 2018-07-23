@@ -25,7 +25,6 @@
 #import <Foundation/Foundation.h>
 
 
-
 /**
  *  这个类是对libxml的封装，用于解析HTML
  */
@@ -33,18 +32,26 @@
 @class LWHTMLParser;
 
 
-@protocol LWHTMLParserDelegate<NSObject>
+@protocol LWHTMLParserDelegate <NSObject>
 
 @optional
 
 - (void)parserDidStartDocument:(LWHTMLParser *)parser;
+
 - (void)parserDidEndDocument:(LWHTMLParser *)parser;
+
 - (void)parser:(LWHTMLParser *)parser didStartElement:(NSString *)elementName attributes:(NSDictionary *)attributeDict;
+
 - (void)parser:(LWHTMLParser *)parser didEndElement:(NSString *)elementName;
+
 - (void)parser:(LWHTMLParser *)parser foundCharacters:(NSString *)string;
+
 - (void)parser:(LWHTMLParser *)parser foundComment:(NSString *)comment;
+
 - (void)parser:(LWHTMLParser *)parser foundCDATA:(NSData *)CDATABlock;
+
 - (void)parser:(LWHTMLParser *)parser foundProcessingInstructionWithTarget:(NSString *)target data:(NSString *)data;
+
 - (void)parser:(LWHTMLParser *)parser parseErrorOccurred:(NSError *)parseError;
 
 @end
@@ -52,16 +59,18 @@
 
 @interface LWHTMLParser : NSObject
 
-@property (nonatomic,weak) id <LWHTMLParserDelegate> delegate;
-@property (nonatomic,readonly) NSInteger columnNumber;
-@property (nonatomic,readonly) NSInteger lineNumber;
-@property (nonatomic,readonly) NSString* publicID;
-@property (nonatomic,readonly) NSString* systemID;
-@property (nonatomic,strong,readonly) NSError* parserError;
+@property(nonatomic, weak) id <LWHTMLParserDelegate> delegate;
+@property(nonatomic, readonly) NSInteger columnNumber;
+@property(nonatomic, readonly) NSInteger lineNumber;
+@property(nonatomic, readonly) NSString *publicID;
+@property(nonatomic, readonly) NSString *systemID;
+@property(nonatomic, strong, readonly) NSError *parserError;
 
 
 - (id)initWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
+
 - (BOOL)startSearchWithXPathQuery:(NSString *)xpath;
+
 - (void)stopParsing;
 
 @end
