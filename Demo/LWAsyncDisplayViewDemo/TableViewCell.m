@@ -1,8 +1,6 @@
 
 
 
-
-
 /********************* 有任何问题欢迎反馈给我 liuweiself@126.com ****************************************/
 /***************  https://github.com/waynezxcv/Gallop 持续更新 ***************************/
 /******************** 正在不断完善中，谢谢~  Enjoy ******************************************************/
@@ -21,16 +19,14 @@
 #import "LWAlertView.h"
 
 
+@interface TableViewCell () <LWAsyncDisplayViewDelegate>
 
 
-@interface TableViewCell ()<LWAsyncDisplayViewDelegate>
-
-
-@property (nonatomic,strong) LWAsyncDisplayView* asyncDisplayView;
-@property (nonatomic,strong) UIButton* menuButton;
-@property (nonatomic,strong) Menu* menu;
-@property (nonatomic,strong) UIView* line;
-@property (nonatomic,copy) NSString* preCopyText;
+@property(nonatomic, strong) LWAsyncDisplayView *asyncDisplayView;
+@property(nonatomic, strong) UIButton *menuButton;
+@property(nonatomic, strong) Menu *menu;
+@property(nonatomic, strong) UIView *line;
+@property(nonatomic, copy) NSString *preCopyText;
 
 @end
 
@@ -60,7 +56,7 @@
         CGContextMoveToPoint(context, 0.0f, self.bounds.size.height);
         CGContextAddLineToPoint(context, self.bounds.size.width, self.bounds.size.height);
         CGContextSetLineWidth(context, 0.2f);
-        CGContextSetStrokeColorWithColor(context,RGB(220.0f, 220.0f, 220.0f, 1).CGColor);
+        CGContextSetStrokeColorWithColor(context, RGB(220.0f, 220.0f, 220.0f, 1).CGColor);
         CGContextStrokePath(context);
         if ([self.cellLayout.statusModel.type isEqualToString:MESSAGE_TYPE_WEBSITE]) {
             CGContextAddRect(context, self.cellLayout.websitePosition);
@@ -69,10 +65,11 @@
         }
     }
 }
+
 //点击LWImageStorage
 - (void)lwAsyncDisplayView:(LWAsyncDisplayView *)asyncDisplayView
    didCilickedImageStorage:(LWImageStorage *)imageStorage
-                     touch:(UITouch *)touch{
+                     touch:(UITouch *)touch {
     NSInteger tag = imageStorage.tag;
     //tag 0~8 是图片，9是头像
     switch (tag) {
@@ -84,16 +81,18 @@
         case 5:
         case 6:
         case 7:
-        case 8:{
+        case 8: {
             if (self.clickedImageCallback) {
-                self.clickedImageCallback(self,tag);
+                self.clickedImageCallback(self, tag);
             }
-        }break;
+        }
+            break;
         case 9: {
             if (self.clickedAvatarCallback) {
                 self.clickedAvatarCallback(self);
             }
-        }break;
+        }
+            break;
     }
 }
 
@@ -104,23 +103,22 @@
     //回复评论
     if ([data isKindOfClass:[CommentModel class]]) {
         if (self.clickedReCommentCallback) {
-            self.clickedReCommentCallback(self,data);
+            self.clickedReCommentCallback(self, data);
         }
-    }
-    else if ([data isKindOfClass:[NSString class]]) {
+    } else if ([data isKindOfClass:[NSString class]]) {
         //折叠Cell
         if ([data isEqualToString:@"close"]) {
             if (self.clickedCloseCellCallback) {
                 self.clickedCloseCellCallback(self);
             }
         }
-        //展开Cell
+            //展开Cell
         else if ([data isEqualToString:@"open"]) {
             if (self.clickedOpenCellCallback) {
                 self.clickedOpenCellCallback(self);
             }
         }
-        //其他
+            //其他
         else {
             [LWAlertView shoWithMessage:data];
         }
@@ -131,10 +129,10 @@
 //长按内容文字
 - (void)lwAsyncDisplayView:(LWAsyncDisplayView *)asyncDisplayView didLongpressedTextStorage:(LWTextStorage *)textStorage linkdata:(id)data {
     [self becomeFirstResponder];
-    UIMenuItem* copyLink = [[UIMenuItem alloc] initWithTitle:@"复制"
+    UIMenuItem *copyLink = [[UIMenuItem alloc] initWithTitle:@"复制"
                                                       action:@selector(copyText)];
     [[UIMenuController sharedMenuController] setMenuItems:[NSArray arrayWithObjects:copyLink, nil]];
-    
+
     CGRect rect = CGRectMake(textStorage.center.x - 50.0f, textStorage.top, 100.0f, 50.0f);
     [UIMenuController sharedMenuController].arrowDirection = UIMenuControllerArrowDown;
     [[UIMenuController sharedMenuController] setTargetRect:rect inView:self];
@@ -144,16 +142,16 @@
 
 //复制
 - (void)copyText {
-    UIPasteboard* pasteboard = [UIPasteboard generalPasteboard];
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     pasteboard.string = self.preCopyText;
-    
+
     [self resignFirstResponder];
     [self.asyncDisplayView removeHighlightIfNeed];
-    
+
 }
 
-- (BOOL)canPerformAction:(SEL)action withSender:(id)sender{
-    if(action == @selector(copyText)){
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    if (action == @selector(copyText)) {
         return YES;
     }
     return [super canPerformAction:action withSender:sender];
@@ -164,6 +162,7 @@
 }
 
 #pragma mark - Actions
+
 //点击菜单按钮
 - (void)didClickedMenuButton {
     [self.menu clickedMenu];
@@ -184,7 +183,7 @@
         __strong typeof(weakSelf) sself = weakSelf;
         [sself.menu menuHide];
         if (sself.clickedLikeButtonCallback) {
-            sself.clickedLikeButtonCallback(sself,!sself.cellLayout.statusModel.isLike);
+            sself.clickedLikeButtonCallback(sself, !sself.cellLayout.statusModel.isLike);
         }
     }];
 }
@@ -193,39 +192,40 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.asyncDisplayView.frame = CGRectMake(0,0,SCREEN_WIDTH,self.cellLayout.cellHeight);
-    
+    self.asyncDisplayView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.cellLayout.cellHeight);
+
     //主线程runloop空闲时执行
-    LWTransaction* layerAsyncTransaction = self.layer.lw_asyncTransaction;
+    LWTransaction *layerAsyncTransaction = self.layer.lw_asyncTransaction;
     [layerAsyncTransaction
-     addAsyncOperationWithTarget:self
-     selector:@selector(_layouSubViews)
-     object:nil
-     completion:^(BOOL canceled) {}];
+            addAsyncOperationWithTarget:self
+                               selector:@selector(_layouSubViews)
+                                 object:nil
+                             completion:^(BOOL canceled) {
+                             }];
 }
 
 - (void)_layouSubViews {
     self.menuButton.frame = self.cellLayout.menuPosition;
     self.menu.frame = CGRectMake(self.cellLayout.menuPosition.origin.x - 5.0f,
-                                 self.cellLayout.menuPosition.origin.y - 9.0f + 14.5f,0.0f,34.0f);
+            self.cellLayout.menuPosition.origin.y - 9.0f + 14.5f, 0.0f, 34.0f);
     self.line.frame = self.cellLayout.lineRect;
 }
 
 - (void)setCellLayout:(CellLayout *)cellLayout {
-    
+
     [self.menu menuHide];
-    
+
     if (_cellLayout != cellLayout) {
         _cellLayout = cellLayout;
         self.asyncDisplayView.layout = self.cellLayout;
-        
+
         //主线程runloop空闲时执行
-        LWTransaction* layerAsyncTransaction = self.layer.lw_asyncTransaction;
-        [layerAsyncTransaction
-         addAsyncOperationWithTarget:self
-         selector:@selector(_setCellLayout)
-         object:nil
-         completion:^(BOOL canceled) {}];
+        LWTransaction *layerAsyncTransaction = self.layer.lw_asyncTransaction;
+        [layerAsyncTransaction addAsyncOperationWithTarget:self
+                                                  selector:@selector(_setCellLayout)
+                                                    object:nil
+                                                completion:^(BOOL canceled) {
+                                                }];
     }
 }
 

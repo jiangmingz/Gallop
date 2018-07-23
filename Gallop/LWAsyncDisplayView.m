@@ -47,7 +47,6 @@
 @property(nonatomic, assign) CGPoint touchBeganPoint;//记录触摸开始的坐标
 @property(nonatomic, strong, readonly) LWFlag *displayFlag;//一个自增的标识类，用于取消绘制。
 
-
 @end
 
 
@@ -143,7 +142,7 @@
     [self.displayFlag increment];
 
     for (NSInteger i = 0; i < self.imageContainers.count; i++) {
-        LWAsyncImageView *container = [self.imageContainers objectAtIndex:i];
+        LWAsyncImageView *container = self.imageContainers[i];
         container.image = nil;
         container.gifImage = nil;
         container.hidden = YES;
@@ -524,9 +523,7 @@
     if (_longPressGesture) {
         return _longPressGesture;
     }
-    _longPressGesture = [[UILongPressGestureRecognizer alloc]
-            initWithTarget:self
-                    action:@selector(longPressHandler:)];
+    _longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressHandler:)];
     _longPressGesture.minimumPressDuration = 0.5f;
     return _longPressGesture;
 }

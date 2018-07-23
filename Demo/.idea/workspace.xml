@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/CALayer+LWTransaction.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/CALayer+LWTransaction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWCGRectTransform.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWCGRectTransform.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWCGRectTransform.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWCGRectTransform.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWHTMLLayout.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWHTMLLayout.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWHTMLNode.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWHTMLNode.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWTextAttachment.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWTextAttachment.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWTextAttachment.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWTextAttachment.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWTextLayout.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWTextLayout.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWTextLine.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWTextLine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWTextRunDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWTextRunDelegate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,79 +17,49 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_9d66ec6c4d21eeb1eec54e40768eee427902f691" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LWAsyncDisplayView.m" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LWAsyncDisplayView.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7088">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="292">
+              <caret line="526" column="82" selection-start-line="526" selection-start-column="82" selection-end-line="526" selection-end-column="82" />
+              <folding>
+                <element signature="e#1142#1172#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="LWAsyncDisplayView.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.h">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="LWAsyncImageView.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MomentsViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10973" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableViewCell.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewCell.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="248" column="35" selection-start-line="248" selection-start-column="35" selection-end-line="248" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LWAsyncImageView.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5288">
-              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            <state relative-caret-position="466">
+              <caret line="290" column="108" selection-start-line="290" selection-start-column="108" selection-end-line="290" selection-end-column="108" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWTransactionGroup.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWTransactionGroup.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-668">
-              <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GallopDefine.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/GallopDefine.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-962">
-              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GallopUtils.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/GallopUtils.h">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="GallopUtils.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/GallopUtils.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-203">
-              <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWTextParser.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWTextParser.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2603">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWTextParser.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWTextParser.h">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="LWAsyncDisplayLayer.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayLayer.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4013" />
           </provider>
         </entry>
       </file>
@@ -118,10 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Gallop/SDWebImageManager+Gallop.m" />
-        <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.h" />
-        <option value="$PROJECT_DIR$/../Gallop/CALayer+WebCache.h" />
-        <option value="$PROJECT_DIR$/../Gallop/LWTextContainer.m" />
         <option value="$PROJECT_DIR$/../Gallop/LWTextContainer.h" />
         <option value="$PROJECT_DIR$/../Gallop/LWTextGlyph.h" />
         <option value="$PROJECT_DIR$/../Gallop/LWTextGlyph.m" />
@@ -169,6 +128,10 @@
         <option value="$PROJECT_DIR$/../Gallop/LWHTMLLayout.m" />
         <option value="$PROJECT_DIR$/../Gallop/LWHTMLNode.m" />
         <option value="$PROJECT_DIR$/../Gallop/CALayer+LWTransaction.h" />
+        <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewCell.m" />
+        <option value="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.h" />
+        <option value="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m" />
       </list>
     </option>
   </component>
@@ -193,8 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,49 +166,13 @@
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
+              <item name="Demo" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="CoreText" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="Hook" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="HTMLParser" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="ImageDisplay" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="Transactions" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="Utils" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="Views" type="fcab9f18:XcodeViewNode" />
+              <item name="Demo" type="fcab9f18:XcodeViewNode" />
+              <item name="Feeds" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -257,6 +182,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,6 +226,7 @@
       <workItem from="1532348443746" duration="126000" />
       <workItem from="1532348575319" duration="1224000" />
       <workItem from="1532349922788" duration="184000" />
+      <workItem from="1532350111128" duration="555000" />
     </task>
     <task id="LOCAL-00001" summary="修复图片网络访问超时崩溃，格式化代码">
       <created>1532346887254</created>
@@ -342,14 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532349398549</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="修复图片网络访问超时崩溃，格式化代码">
+      <created>1532350248689</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532350248689</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5186000" />
+    <option name="totallyTimeSpent" value="5741000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="23" width="1239" height="777" extended-state="6" />
+    <frame x="41" y="23" width="1239" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="2" />
@@ -374,21 +309,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24958949" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -403,20 +338,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修复图片网络访问超时崩溃，格式化代码" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWTextLayout.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3833">
-          <caret line="583" column="19" lean-forward="true" selection-start-line="583" selection-start-column="19" selection-end-line="583" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWTextLine.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWTextRunDelegate.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -590,15 +511,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWTransactionGroup.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-668">
-          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        <state relative-caret-position="450">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/GallopDefine.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-962">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state relative-caret-position="315">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -607,15 +528,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/GallopUtils.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="420">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWTextParser.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2603">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="420">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -623,24 +544,41 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayLayer.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4013" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7088">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5288">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="466">
+          <caret line="290" column="108" selection-start-line="290" selection-start-column="108" selection-end-line="290" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10973" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="248" column="35" selection-start-line="248" selection-start-column="35" selection-end-line="248" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="526" column="82" selection-start-line="526" selection-start-column="82" selection-end-line="526" selection-end-column="82" />
+          <folding>
+            <element signature="e#1142#1172#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
