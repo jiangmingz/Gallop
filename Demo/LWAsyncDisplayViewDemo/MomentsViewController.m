@@ -5,16 +5,8 @@
 /***************  https://github.com/waynezxcv/Gallop 持续更新 ***************************/
 /******************** 正在不断完善中，谢谢~  Enjoy ******************************************************/
 
-
-
-
-
-
-
-
-
-
 #import "MomentsViewController.h"
+
 #import "LWImageBrowser.h"
 #import "TableViewCell.h"
 #import "TableViewHeader.h"
@@ -25,9 +17,7 @@
 #import "LWAlertView.h"
 
 
-@interface MomentsViewController ()
-
-        <UITableViewDataSource, UITableViewDelegate>
+@interface MomentsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSArray *fakeDatasource;
 @property(nonatomic, strong) UITableView *tableView;
