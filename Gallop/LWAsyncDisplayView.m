@@ -38,14 +38,14 @@
 
 @interface LWAsyncDisplayView () <LWAsyncDisplayLayerDelegate>
 
-@property(nonatomic, strong) NSMutableArray *reusePool;//这个数组用来存放暂时不使用的LWAsyncImageView
-@property(nonatomic, strong) NSMutableArray *imageContainers;//这个数组用来存放正在使用的LWAsyncImageView
-@property(nonatomic, strong) UILongPressGestureRecognizer *longPressGesture;//长按手势
-@property(nonatomic, assign) BOOL showingHighlight;//是否正在高亮显示
-@property(nonatomic, strong) LWTextHighlight *highlight;//当前的高亮显示
-@property(nonatomic, assign) CGPoint highlightAdjustPoint;//高亮的坐标偏移点
-@property(nonatomic, assign) CGPoint touchBeganPoint;//记录触摸开始的坐标
-@property(nonatomic, strong, readonly) LWFlag *displayFlag;//一个自增的标识类，用于取消绘制。
+@property(nonatomic, strong) NSMutableArray *reusePool; //这个数组用来存放暂时不使用的LWAsyncImageView
+@property(nonatomic, strong) NSMutableArray *imageContainers; //这个数组用来存放正在使用的LWAsyncImageView
+@property(nonatomic, strong) UILongPressGestureRecognizer *longPressGesture; //长按手势
+@property(nonatomic, assign) BOOL showingHighlight; //是否正在高亮显示
+@property(nonatomic, strong) LWTextHighlight *highlight; //当前的高亮显示
+@property(nonatomic, assign) CGPoint highlightAdjustPoint; //高亮的坐标偏移点
+@property(nonatomic, assign) CGPoint touchBeganPoint; //记录触摸开始的坐标
+@property(nonatomic, strong, readonly) LWFlag *displayFlag; //一个自增的标识类，用于取消绘制。
 
 @end
 

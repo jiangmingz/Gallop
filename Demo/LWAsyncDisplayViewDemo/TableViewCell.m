@@ -129,9 +129,8 @@
 //长按内容文字
 - (void)lwAsyncDisplayView:(LWAsyncDisplayView *)asyncDisplayView didLongpressedTextStorage:(LWTextStorage *)textStorage linkdata:(id)data {
     [self becomeFirstResponder];
-    UIMenuItem *copyLink = [[UIMenuItem alloc] initWithTitle:@"复制"
-                                                      action:@selector(copyText)];
-    [[UIMenuController sharedMenuController] setMenuItems:[NSArray arrayWithObjects:copyLink, nil]];
+    UIMenuItem *copyLink = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(copyText)];
+    [[UIMenuController sharedMenuController] setMenuItems:@[copyLink]];
 
     CGRect rect = CGRectMake(textStorage.center.x - 50.0f, textStorage.top, 100.0f, 50.0f);
     [UIMenuController sharedMenuController].arrowDirection = UIMenuControllerArrowDown;
