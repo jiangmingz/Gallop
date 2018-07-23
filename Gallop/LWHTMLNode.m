@@ -109,7 +109,7 @@
         self.attributeDict = [[NSMutableDictionary alloc] init];
         self.children = [[NSMutableArray alloc] init];
         for (NSString *key in attributeDict) {
-            [self.attributeDict setObject:attributeDict[key] forKey:key];
+            self.attributeDict[key] = attributeDict[key];
         }
     }
     return self;

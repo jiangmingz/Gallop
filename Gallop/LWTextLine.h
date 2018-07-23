@@ -41,21 +41,21 @@
 @property(nonatomic, assign, readonly) CGFloat width; //frame.size.width
 @property(nonatomic, assign, readonly) CGFloat height; //frame.size.height
 @property(nonatomic, assign, readonly) CGFloat top; //frame.origin.y
-@property(nonatomic, assign, readonly) CGFloat bottom;//frame.origin.y + frame.size.height
-@property(nonatomic, assign, readonly) CGFloat left;//frame.origin.x
-@property(nonatomic, assign, readonly) CGFloat right;//frame.origin.x + frame.size.width
-@property(nonatomic, assign, readonly) CGPoint lineOrigin;//CTLine的原点位置,UIKit坐标系
+@property(nonatomic, assign, readonly) CGFloat bottom; //frame.origin.y + frame.size.height
+@property(nonatomic, assign, readonly) CGFloat left; //frame.origin.x
+@property(nonatomic, assign, readonly) CGFloat right; //frame.origin.x + frame.size.width
+@property(nonatomic, assign, readonly) CGPoint lineOrigin; //CTLine的原点位置,UIKit坐标系
 @property(nonatomic, assign, readonly) CGFloat ascent; //line ascent 上部距离
-@property(nonatomic, assign, readonly) CGFloat descent;//line descent 下部距离
-@property(nonatomic, assign, readonly) CGFloat leading;// line leading 行距
-@property(nonatomic, assign, readonly) CGFloat lineWidth;// line width 行宽
-@property(nonatomic, assign, readonly) CGFloat trailingWhitespaceWidth;//尾部空白的宽度
-@property(nonatomic, copy, readonly) NSArray<LWTextGlyph *> *glyphs;//保存CGGlyph封装对象的数组
-@property(nonatomic, copy, readonly) NSArray<LWTextAttachment *> *attachments;//包含文本附件的数组
-@property(nonatomic, copy, readonly) NSArray<NSValue *> *attachmentRanges;//包含文本附件在文本中位置信息的数组
-@property(nonatomic, copy, readonly) NSArray<NSValue *> *attachmentRects;//包含文本附件在LWAsyncDisplayView上位置CGRect信息的数组
-@property(nonatomic) NSUInteger index;//ctline在CTFrameGetLines数组中的index
-@property(nonatomic) NSUInteger row;//行数
+@property(nonatomic, assign, readonly) CGFloat descent; //line descent 下部距离
+@property(nonatomic, assign, readonly) CGFloat leading; // line leading 行距
+@property(nonatomic, assign, readonly) CGFloat lineWidth; // line width 行宽
+@property(nonatomic, assign, readonly) CGFloat trailingWhitespaceWidth; //尾部空白的宽度
+@property(nonatomic, copy, readonly) NSArray<LWTextGlyph *> *glyphs; //保存CGGlyph封装对象的数组
+@property(nonatomic, copy, readonly) NSArray<LWTextAttachment *> *attachments; //包含文本附件的数组
+@property(nonatomic, copy, readonly) NSArray<NSValue *> *attachmentRanges; //包含文本附件在文本中位置信息的数组
+@property(nonatomic, copy, readonly) NSArray<NSValue *> *attachmentRects; //包含文本附件在LWAsyncDisplayView上位置CGRect信息的数组
+@property(nonatomic) NSUInteger index; //ctline在CTFrameGetLines数组中的index
+@property(nonatomic) NSUInteger row; //行数
 
 /**
  *  构造方法

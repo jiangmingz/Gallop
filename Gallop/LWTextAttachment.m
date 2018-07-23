@@ -242,12 +242,6 @@
 @end
 
 
-
-
-
-
-
-
 //*** Text描边 ***//
 
 @implementation LWTextStroke
@@ -305,7 +299,6 @@
 /**
  *  文本边框
  */
-
 @implementation LWTextBoundingStroke
 
 - (id)init {

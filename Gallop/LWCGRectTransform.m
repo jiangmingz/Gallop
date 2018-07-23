@@ -59,17 +59,17 @@
                 size.width *= scale;
                 size.height *= scale;
                 rect.size = size;
-                rect.origin = CGPointMake(center.x - size.width * 0.5, center.y - size.height * 0.5);
+                rect.origin = CGPointMake(center.x - size.width * 0.5f, center.y - size.height * 0.5f);
             }
         }
             break;
         case UIViewContentModeCenter: {
             rect.size = size;
-            rect.origin = CGPointMake(center.x - size.width * 0.5, center.y - size.height * 0.5);
+            rect.origin = CGPointMake(center.x - size.width * 0.5f, center.y - size.height * 0.5f);
         }
             break;
         case UIViewContentModeTop: {
-            rect.origin.x = center.x - size.width * 0.5;
+            rect.origin.x = center.x - size.width * 0.5f;
             rect.size = size;
         }
             break;
@@ -116,6 +116,7 @@
             rect = rect;
         }
     }
+
     return rect;
 }
 

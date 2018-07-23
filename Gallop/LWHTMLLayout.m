@@ -76,13 +76,13 @@
         NSInteger index = [self.items indexOfObject:lastObject];
         NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:lastObject];
         [tmp addObject:storage];
-        [self.items replaceObjectAtIndex:index withObject:[tmp copy]];
+        self.items[index] = [tmp copy];
     } else if ([lastObject isKindOfClass:[LWStorage class]]) {
         NSInteger index = [self.items indexOfObject:lastObject];
         NSMutableArray *tmp = [[NSMutableArray alloc] init];
         [tmp addObject:lastObject];
         [tmp addObject:storage];
-        [self.items replaceObjectAtIndex:index withObject:[tmp copy]];
+        self.items[index] = [tmp copy];
     }
 }
 
@@ -95,13 +95,13 @@
         NSInteger index = [self.items indexOfObject:lastObject];
         NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:lastObject];
         [tmp addObjectsFromArray:storages];
-        [self.items replaceObjectAtIndex:index withObject:[tmp copy]];
+        self.items[index] = [tmp copy];
     } else if ([lastObject isKindOfClass:[LWStorage class]]) {
         NSInteger index = [self.items indexOfObject:lastObject];
         NSMutableArray *tmp = [[NSMutableArray alloc] init];
         [tmp addObject:lastObject];
         [tmp addObjectsFromArray:storages];
-        [self.items replaceObjectAtIndex:index withObject:[tmp copy]];
+        self.items[index] = [tmp copy];
     }
 }
 
