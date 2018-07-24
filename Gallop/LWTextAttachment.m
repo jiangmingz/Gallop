@@ -23,9 +23,15 @@
  */
 
 #import "LWTextAttachment.h"
+
 #import <objc/runtime.h>
-#import "GallopUtils.h"
-#import "GallopDefine.h"
+
+NSString *const LWTextAttachmentAttributeName = @"LWTextAttachmentAttributeName";
+NSString *const LWTextLinkAttributedName = @"LWTextLinkAttributedName";
+NSString *const LWTextLongPressAttributedName = @"LWTextLongPressAttributedName";
+NSString *const LWTextBackgroundColorAttributedName = @"LWTextBackgroundColorAttributedName";
+NSString *const LWTextStrokeAttributedName = @"LWTextStrokeAttributedName";
+NSString *const LWTextBoundingStrokeAttributedName = @"LWTextBoundingStrokeAttributedName";
 
 
 @implementation LWTextAttachment

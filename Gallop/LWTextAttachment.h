@@ -25,13 +25,13 @@
 #import <UIKit/UIKit.h>
 
 
-#define LWTextAttachmentAttributeName @"LWTextAttachmentKey"
-#define LWTextLinkAttributedName @"LWTextLinkAttributedName"
-#define LWTextLongPressAttributedName @"LWTextLongPressAttributedName"
-#define LWTextBackgroundColorAttributedName @"LWTextBackgroundColorAttributedName"
-#define LWTextStrokeAttributedName @"LWTextStrokeAttributedName"
-#define LWTextBoundingStrokeAttributedName @"LWTextBoundingStrokeAttributedName"
-
+extern NSString *const LWTextAttachmentAttributeName;
+extern NSString *const LWTextLinkAttributedName;
+extern NSString *const LWTextLongPressAttributedName;
+extern NSString *const LWTextBackgroundColorAttributedName;
+extern NSString *const LWTextStrokeAttributedName;
+extern NSString *const LWTextStrokeAttributedName;
+extern NSString *const LWTextBoundingStrokeAttributedName;
 
 typedef NS_ENUM(NSUInteger, LWTextHighLightType) {
     LWTextHighLightTypeNormal,
@@ -105,7 +105,6 @@ typedef NS_ENUM(NSUInteger, LWTextHighLightType) {
 @property(nonatomic, strong) NSDictionary *userInfo; //自定义的一些信息
 
 @end
-
 
 /**
  *  文本边框
