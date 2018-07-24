@@ -136,7 +136,6 @@
     });
 }
 
-
 - (void)_cleanImageViewAddToReusePool {
 
     [self.displayFlag increment];
@@ -150,7 +149,6 @@
     }
 
     [self.imageContainers removeAllObjects];
-
 }
 
 
@@ -176,7 +174,6 @@
                     imageStorage.localImageType == LWLocalImageDrawInLWAsyncDisplayView) {
                 continue;
             }
-
 
             LWAsyncImageView *container = [self _dequeueReusableImageContainerWithIdentifier:imageStorage.identifier];
             if (!container) {
@@ -226,9 +223,7 @@
         }
     };
 
-    transaction.displayBlock = ^(CGContextRef context,
-            CGSize size,
-            LWAsyncDisplayIsCanclledBlock isCancelledBlock) {
+    transaction.displayBlock = ^(CGContextRef context, CGSize size, LWAsyncDisplayIsCanclledBlock isCancelledBlock) {
         [self _drawStoragesInContext:context
                          inCancelled:isCancelledBlock];
     };
@@ -385,8 +380,7 @@
             break;
         }
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
-            (int64_t) (0.15f * NSEC_PER_SEC)),
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (0.15f * NSEC_PER_SEC)),
             dispatch_get_main_queue(), ^{
                 _highlight = nil;
                 [self _hideHighlight];

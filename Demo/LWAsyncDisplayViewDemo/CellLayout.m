@@ -97,7 +97,7 @@
                 [self addStorage:openStorage];
                 contentBottom = openStorage.bottom;
             }
-            //解析表情和主题
+
             //解析表情、主题、网址
             [LWTextParser parseEmojiWithTextStorage:contentTextStorage];
             [LWTextParser parseTopicWithLWTextStorage:contentTextStorage
@@ -135,7 +135,7 @@
                     imageStorage.clipsToBounds = YES;
                     imageStorage.frame = imageRect;
                     imageStorage.backgroundColor = RGB(240, 240, 240, 1);
-                    NSString* URLString = [statusModel.imgs objectAtIndex:0];
+                    NSString* URLString = statusModel.imgs[0];
                     imageStorage.contents = [NSURL URLWithString:URLString];
                     [imageStorageArray addObject:imageStorage];
                 } else {
@@ -153,7 +153,7 @@
                         imageStorage.tag = i;
                         imageStorage.frame = imageRect;
                         imageStorage.backgroundColor = RGB(240, 240, 240, 1);
-                        NSString* URLString = [statusModel.imgs objectAtIndex:i];
+                        NSString* URLString = statusModel.imgs[i];
                         imageStorage.contents = [NSURL URLWithString:URLString];
                         [imageStorageArray addObject:imageStorage];
                         column = column + 1;
@@ -175,7 +175,7 @@
                 
                 //左边的图片
                 LWImageStorage* imageStorage = [[LWImageStorage alloc] initWithIdentifier:WEBSITE_COVER_IDENTIFIER];
-                NSString* URLString = [statusModel.imgs objectAtIndex:0];
+                NSString* URLString = statusModel.imgs[0];
                 imageStorage.contents = [NSURL URLWithString:URLString];
                 imageStorage.clipsToBounds = YES;
                 imageStorage.contentMode = UIViewContentModeScaleAspectFill;
@@ -554,7 +554,7 @@
                 
                 //左边的图片
                 LWImageStorage* imageStorage = [[LWImageStorage alloc] initWithIdentifier:WEBSITE_COVER_IDENTIFIER];
-                NSString* URLString = [statusModel.imgs objectAtIndex:0];
+                NSString* URLString = statusModel.imgs[0];
                 imageStorage.contents = [NSURL URLWithString:URLString];
                 imageStorage.clipsToBounds = YES;
                 imageStorage.contentMode = UIViewContentModeScaleAspectFill;

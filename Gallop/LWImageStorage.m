@@ -134,7 +134,6 @@
 }
 
 - (void)lw_drawInContext:(CGContextRef)context isCancelled:(LWAsyncDisplayIsCanclledBlock)isCancelld {
-
     if (isCancelld()) {
         return;
     }
@@ -145,7 +144,6 @@
 
     if ([self.contents isKindOfClass:[UIImage class]] &&
             self.localImageType == LWLocalImageDrawInLWAsyncDisplayView) {
-
 
         UIImage *image = (UIImage *) self.contents;
         BOOL isOpaque = self.opaque;
@@ -199,8 +197,6 @@
             [cornerBorderColor setStroke];
             [cornerPath stroke];
         }
-
-
     }
 }
 

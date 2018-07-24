@@ -24,6 +24,7 @@
 
 
 #import "NSMutableAttributedString+Gallop.h"
+
 #import "LWTextAttachment.h"
 #import "LWTextRunDelegate.h"
 

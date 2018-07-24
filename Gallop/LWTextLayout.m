@@ -24,9 +24,11 @@
 
 
 #import "LWTextLayout.h"
+
+#import <objc/runtime.h>
+
 #import "LWTextLine.h"
 #import "CALayer+WebCache.h"
-#import <objc/runtime.h>
 #import "GallopUtils.h"
 #import "GallopDefine.h"
 #import "NSMutableAttributedString+Gallop.h"
