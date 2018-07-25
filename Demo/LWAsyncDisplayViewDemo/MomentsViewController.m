@@ -255,14 +255,14 @@ const CGFloat kRefreshBoundary = 170.0f;
     [self coverScreenshotAndDelayRemoveWithCell:cell cellHeight:newLayout.cellHeight];
 
 
-    [self.dataSource replaceObjectAtIndex:cell.indexPath.row withObject:newLayout];
+    self.dataSource[cell.indexPath.row] = newLayout;
     [self.tableView reloadRowsAtIndexPaths:@[cell.indexPath]
                           withRowAnimation:UITableViewRowAnimationNone];
 }
 
 //折叠Cell
 - (void)closeTableViewCell:(TableViewCell *)cell {
-    CellLayout *layout = [self.dataSource objectAtIndex:cell.indexPath.row];
+    CellLayout *layout = self.dataSource[cell.indexPath.row];
     StatusModel *model = layout.statusModel;
     CellLayout *newLayout = [[CellLayout alloc] initWithStatusModel:model
                                                               index:cell.indexPath.row
@@ -271,7 +271,7 @@ const CGFloat kRefreshBoundary = 170.0f;
     [self coverScreenshotAndDelayRemoveWithCell:cell cellHeight:newLayout.cellHeight];
 
 
-    [self.dataSource replaceObjectAtIndex:cell.indexPath.row withObject:newLayout];
+    self.dataSource[cell.indexPath.row] = newLayout;
     [self.tableView reloadRowsAtIndexPaths:@[cell.indexPath]
                           withRowAnimation:UITableViewRowAnimationNone];
 }
@@ -279,7 +279,7 @@ const CGFloat kRefreshBoundary = 170.0f;
 //发表评论
 - (void)postCommentWithCommentModel:(CommentModel *)model {
 
-    CellLayout *layout = [self.dataSource objectAtIndex:model.index];
+    CellLayout *layout = self.dataSource[model.index];
     NSMutableArray *newCommentLists = [[NSMutableArray alloc] initWithArray:layout.statusModel.commentList];
     NSDictionary *newComment = @{@"from": model.from,
             @"to": model.to,
@@ -293,7 +293,7 @@ const CGFloat kRefreshBoundary = 170.0f;
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:model.index inSection:0]];
     [self coverScreenshotAndDelayRemoveWithCell:cell cellHeight:newLayout.cellHeight];
 
-    [self.dataSource replaceObjectAtIndex:model.index withObject:newLayout];
+    self.dataSource[model.index] = newLayout;
     [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:model.index inSection:0]]
                           withRowAnimation:UITableViewRowAnimationNone];
 }
@@ -322,7 +322,7 @@ const CGFloat kRefreshBoundary = 170.0f;
 
 - (void)keyboardDidAppearNotifications:(NSNotification *)notifications {
     NSDictionary *userInfo = [notifications userInfo];
-    CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    CGSize keyboardSize = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     CGFloat keyboardHeight = keyboardSize.height;
     self.commentView.frame = CGRectMake(0.0f, SCREEN_HEIGHT - 44.0f - keyboardHeight, SCREEN_WIDTH, 44.0f);
 }

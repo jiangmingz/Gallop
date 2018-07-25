@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,32 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_9d66ec6c4d21eeb1eec54e40768eee427902f691" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LWAsyncDisplayView.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
+      <file leaf-file-name="MomentsViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7500">
-              <caret line="500" column="27" selection-start-line="500" selection-start-column="27" selection-end-line="500" selection-end-column="27" />
-              <folding>
-                <element signature="e#1142#1172#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWAsyncImageView+WebCache.m" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LWAsyncImageView.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3135">
-              <caret line="209" column="19" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
+            <state relative-caret-position="240">
+              <caret line="324" column="36" selection-start-line="324" selection-start-column="36" selection-end-line="324" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -94,7 +71,6 @@
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWProgeressHUD.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" />
-        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m" />
         <option value="$PROJECT_DIR$/../Gallop/LWCGRectTransform.m" />
@@ -116,6 +92,7 @@
         <option value="$PROJECT_DIR$/../Gallop/LWTextAttachment.h" />
         <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.h" />
         <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" />
       </list>
     </option>
   </component>
@@ -152,19 +129,25 @@
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
+              <item name="Demo" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="CoreText" type="fcab9f18:XcodeViewNode" />
+              <item name="Demo" type="fcab9f18:XcodeViewNode" />
+              <item name="Feeds" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
-              <item name="Views" type="fcab9f18:XcodeViewNode" />
+              <item name="Demo" type="fcab9f18:XcodeViewNode" />
+              <item name="Gif" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
+              <item name="Demo" type="fcab9f18:XcodeViewNode" />
+              <item name="Vendors" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -224,7 +207,7 @@
       <workItem from="1532501939014" duration="360000" />
       <workItem from="1532510158781" duration="242000" />
       <workItem from="1532510405718" duration="310000" />
-      <workItem from="1532520004098" duration="397000" />
+      <workItem from="1532520004098" duration="548000" />
     </task>
     <task id="LOCAL-00001" summary="修复图片网络访问超时崩溃，格式化代码">
       <created>1532346887254</created>
@@ -310,18 +293,25 @@
       <option name="project" value="LOCAL" />
       <updated>1532520043387</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="修复gif图片访问错误">
+      <created>1532520467726</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1532520467727</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11898000" />
+    <option name="totallyTimeSpent" value="12049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1239" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20771757" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20771757" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -372,11 +362,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修复gif图片访问错误" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWHTMLImageConfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWHTMLImageConfig.m">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -518,9 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/NSMutableAttributedString+Gallop.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -624,6 +606,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="e#1140#1168#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -631,16 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7500">
-          <caret line="500" column="27" selection-start-line="500" selection-start-column="27" selection-end-line="500" selection-end-column="27" />
-          <folding>
-            <element signature="e#1142#1172#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -653,8 +628,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+        <state relative-caret-position="287">
+          <caret line="137" column="47" lean-forward="true" selection-start-line="137" selection-start-column="47" selection-end-line="137" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7725">
+          <caret line="515" column="17" lean-forward="true" selection-start-line="515" selection-start-column="17" selection-end-line="515" selection-end-column="17" />
+          <folding>
+            <element signature="e#1142#1172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="324" column="36" selection-start-line="324" selection-start-column="36" selection-end-line="324" selection-end-column="36" />
         </state>
       </provider>
     </entry>

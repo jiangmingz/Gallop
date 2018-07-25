@@ -110,8 +110,7 @@ static char imageURLKey;
                                   }
                                   
                                   dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                                      SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:data];
-                                      if (imageFormat == SDImageFormatGIF) {
+                                      if ([NSData sd_imageFormatForImageData:data] == SDImageFormatGIF) {
                                           //GIF
                                           LWGIFImage *gif = [[LWGIFImage alloc] initWithGIFData:data];
                                           dispatch_main_async_safe(^{
