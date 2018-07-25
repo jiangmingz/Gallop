@@ -29,8 +29,24 @@
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
     self.title = @"LWImageStorage使用示例";
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Test"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(test)];
+    
 }
 
+- (void)test {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Test"
+                                                                             message:@"当 present 出 UIAlertController时, 界面上显示的图片全部不显示了"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+    }];
+    [alertController addAction:alertAction];
+    [self presentViewController:alertController animated:YES completion:NULL];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSource.count;

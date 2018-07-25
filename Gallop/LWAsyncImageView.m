@@ -81,6 +81,15 @@
 
 @implementation LWAsyncImageView
 
+- (void)dealloc {
+    if (self.displayLink) {
+        [self.displayLink invalidate];
+        self.displayLink = nil;
+    }
+
+//    [self.layer removeObserver:self forKeyPath:@"contents"];
+}
+
 #pragma mark - Init
 
 - (id)initWithImage:(UIImage *)image {
@@ -117,8 +126,14 @@
 
 - (void)setup {
     self.animationRunLoopMode = [self defaultAnimatitonRunLoopMode];
+//    [self.layer addObserver:self forKeyPath:@"contents" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+//    if ([keyPath isEqualToString:@"contents"]) {
+//        NSLog(@"%@", object);
+//    }
+//}
 
 #pragma mark - UIView LifeCycle
 
@@ -127,17 +142,9 @@
     [self animateIfNeed];
 }
 
-
 - (void)didMoveToWindow {
     [super didMoveToWindow];
     [self animateIfNeed];
-}
-
-- (void)dealloc {
-    if (self.displayLink) {
-        [self.displayLink invalidate];
-        self.displayLink = nil;
-    }
 }
 
 #pragma mark - Orverride
@@ -197,6 +204,8 @@
 
 
 - (void)setImage:(UIImage *)image {
+    [super setImage:image];
+    
     //清除image
     if (!image) {
         if (self.image) {
@@ -227,7 +236,7 @@
     if ([_gifImage isEqual:gifImage]) {
         return;
     }
-    
+
     //清除gifImage
     if (!gifImage) {
         if (self.gifImage) {
@@ -345,7 +354,6 @@
 
     //从timesForIndex字典中取得帧的显示时间
     NSNumber *delayTimeNumber = [self.gifImage.timesForIndex objectForKey:@(self.gifCurrentFrameIndex)];
-
     if (delayTimeNumber) {
         NSTimeInterval delayTime = [delayTimeNumber floatValue];
 
