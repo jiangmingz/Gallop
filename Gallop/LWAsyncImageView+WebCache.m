@@ -27,15 +27,29 @@
 
 
 #import "LWAsyncImageView+WebCache.h"
+
+#import <objc/runtime.h>
+
 #import "LWAsyncImageView+WebCacheOperation.h"
 #import "NSData+ImageContentType.h"
-#import <objc/runtime.h>
 #import "LWGIFImage.h"
 
 
 static char imageURLKey;
 
 #define LWAsyncImageVeiewLoadKey @"LWAsyncImageVeiewLoadKey"
+
+@implementation UIImage (gifData)
+
+- (NSData *)sd_GifData {
+    return objc_getAssociatedObject(self, @selector(sd_GifData));
+}
+
+- (void)setSd_GifData:(NSData *)gifData {
+    objc_setAssociatedObject(self, @selector(sd_GifData), gifData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+@end
 
 @implementation LWAsyncImageView (WebCache)
 
@@ -88,7 +102,13 @@ static char imageURLKey;
                                       completedBlock(image, data, error);
                                       return;
                                   }
-
+                                  
+                                  if(image.sd_GifData) {
+                                      data = image.sd_GifData;
+                                  } else if(data) {
+                                      image.sd_GifData = data;
+                                  }
+                                  
                                   dispatch_async(dispatch_get_global_queue(0, 0), ^{
                                       SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:data];
                                       if (imageFormat == SDImageFormatGIF) {

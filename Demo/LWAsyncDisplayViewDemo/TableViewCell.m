@@ -184,6 +184,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
     self.asyncDisplayView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.cellLayout.cellHeight);
 
     //主线程runloop空闲时执行

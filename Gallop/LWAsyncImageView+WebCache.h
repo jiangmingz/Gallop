@@ -23,10 +23,15 @@
  */
 
 #import "LWAsyncImageView.h"
+
 #import "GallopDefine.h"
-#import "SDWebImageCompat.h"
 #import "SDWebImageManager+Gallop.h"
 
+@interface UIImage (gifData)
+
+@property (nonatomic, strong, nullable) NSData *sd_GifData;
+
+@end
 
 /*
  *

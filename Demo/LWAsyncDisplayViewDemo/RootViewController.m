@@ -10,6 +10,7 @@
 #import "ArticleListViewController.h"
 #import "ImageDemoViewController.h"
 #import "KMCGeigerCounter.h"
+#import "GifViewController.h"
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -39,7 +40,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -61,7 +62,11 @@
         case 3:
             cell.textLabel.text = @"使用Gallop进行HTML解析示例";
             break;
+        case 4:
+            cell.textLabel.text = @"使用Gif示例";
+            break;
     }
+    
     return cell;
 }
 
@@ -86,6 +91,10 @@
             break;
         case 3: {
             ArticleListViewController *vc = [[ArticleListViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        case 4: {
+            GifViewController *vc = [[GifViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

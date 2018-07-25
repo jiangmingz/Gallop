@@ -91,6 +91,7 @@
 		B92307882105FDAE008C943F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B92307872105FDAE008C943F /* libxml2.tbd */; };
 		B923078A2105FDB6008C943F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92307892105FDB6008C943F /* CoreText.framework */; };
 		B923078C2105FDCE008C943F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B923078B2105FDCE008C943F /* Launch Screen.storyboard */; };
+		B923079321087FEE008C943F /* GifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B923079221087FEE008C943F /* GifViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -259,6 +260,8 @@
 		B92307872105FDAE008C943F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		B92307892105FDB6008C943F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B923078B2105FDCE008C943F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B923079121087FEE008C943F /* GifViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifViewController.h; sourceTree = "<group>"; };
+		B923079221087FEE008C943F /* GifViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +321,7 @@
 		011DFA1C1C987CD6000410D7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				B923079021087FB1008C943F /* Gif */,
 				B085B3441CB69C7B00087739 /* Vendors */,
 				0134D12A1D16BDEE00FB91FF /* Root */,
 				01F58BBD1D85AA1D0089DB02 /* LWTextStorageDemo */,
@@ -631,6 +635,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B923079021087FB1008C943F /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				B923079121087FEE008C943F /* GifViewController.h */,
+				B923079221087FEE008C943F /* GifViewController.m */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
 		C06956B931D70ACF6BB834A9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -768,6 +781,7 @@
 				012EDE061D931DED009AFA90 /* LWTransaction.m in Sources */,
 				01BE57F61E584D4800A2A266 /* LWAsyncImageView+WebCacheOperation.m in Sources */,
 				B0F991CC1D937EA000D7B529 /* LWAlertContentView.m in Sources */,
+				B923079321087FEE008C943F /* GifViewController.m in Sources */,
 				012EDE471D931FB1009AFA90 /* LWHTMLDisplayView.m in Sources */,
 				01BE57FF1E5865DD00A2A266 /* CALayer+WebCacheOperation.m in Sources */,
 				B0C9A92B1D2270C000DFAA44 /* ArticleListViewController.m in Sources */,

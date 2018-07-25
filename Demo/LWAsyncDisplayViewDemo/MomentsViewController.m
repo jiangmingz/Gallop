@@ -352,8 +352,7 @@ const CGFloat kRefreshBoundary = 170.0f;
         [self.dataSource removeAllObjects];
         for (NSInteger i = 0; i < 10; i++) {//让数据更多
             for (NSInteger i = 0; i < self.fakeDatasource.count; i++) {
-                LWLayout *layout = [self layoutWithStatusModel:
-                                [[StatusModel alloc] initWithDict:self.fakeDatasource[i]]
+                LWLayout *layout = [self layoutWithStatusModel:[[StatusModel alloc] initWithDict:self.fakeDatasource[i]]
                                                          index:i];
                 [self.dataSource addObject:layout];
             }

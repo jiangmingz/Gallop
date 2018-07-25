@@ -227,6 +227,7 @@
     if ([_gifImage isEqual:gifImage]) {
         return;
     }
+    
     //清除gifImage
     if (!gifImage) {
         if (self.gifImage) {
@@ -249,7 +250,6 @@
         //初始化为第一帧
         self.gifCurrentFrame = gifImage.coverImage;
         self.gifCurrentFrameIndex = 0;
-
 
         if (gifImage.loopCount > 0) {
             self.loopCountdown = gifImage.loopCount;
