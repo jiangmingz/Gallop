@@ -4,12 +4,7 @@
     <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewCell.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/SDWebImageManager+Gallop.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/SDWebImageManager+Gallop.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +19,8 @@
       <file leaf-file-name="LWAsyncDisplayView.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="500" column="27" lean-forward="true" selection-start-line="500" selection-start-column="27" selection-end-line="500" selection-end-column="27" />
+            <state relative-caret-position="7500">
+              <caret line="500" column="27" selection-start-line="500" selection-start-column="27" selection-end-line="500" selection-end-column="27" />
               <folding>
                 <element signature="e#1142#1172#0" expanded="true" />
               </folding>
@@ -36,8 +31,8 @@
       <file leaf-file-name="LWAsyncImageView+WebCache.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+            <state relative-caret-position="242">
+              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
@@ -46,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3135">
-              <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
+              <caret line="209" column="19" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -147,7 +142,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,6 +174,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,6 +224,7 @@
       <workItem from="1532501939014" duration="360000" />
       <workItem from="1532510158781" duration="242000" />
       <workItem from="1532510405718" duration="310000" />
+      <workItem from="1532520004098" duration="397000" />
     </task>
     <task id="LOCAL-00001" summary="修复图片网络访问超时崩溃，格式化代码">
       <created>1532346887254</created>
@@ -307,18 +303,25 @@
       <option name="project" value="LOCAL" />
       <updated>1532439501140</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修复gif图片访问错误">
+      <created>1532520043387</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1532520043387</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11501000" />
+    <option name="totallyTimeSpent" value="11898000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="27" width="1239" height="777" extended-state="6" />
+    <frame x="41" y="23" width="1239" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20771757" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20771757" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -339,21 +342,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20771757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32876712" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -365,7 +368,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修复图片网络访问超时崩溃，格式化代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复图片网络访问超时崩溃，格式化代码" />
+    <MESSAGE value="修复gif图片访问错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复gif图片访问错误" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Gallop/LWHTMLImageConfig.h">
@@ -620,9 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="e#1140#1168#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -635,8 +636,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="500" column="27" lean-forward="true" selection-start-line="500" selection-start-column="27" selection-end-line="500" selection-end-column="27" />
+        <state relative-caret-position="7500">
+          <caret line="500" column="27" selection-start-line="500" selection-start-column="27" selection-end-line="500" selection-end-column="27" />
           <folding>
             <element signature="e#1142#1172#0" expanded="true" />
           </folding>
@@ -646,14 +647,14 @@
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3135">
-          <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
+          <caret line="209" column="19" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+        <state relative-caret-position="242">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
         </state>
       </provider>
     </entry>

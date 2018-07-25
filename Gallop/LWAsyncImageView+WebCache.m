@@ -102,17 +102,16 @@ static char imageURLKey;
                                       completedBlock(image, data, error);
                                       return;
                                   }
-                                  
+
                                   if(image.sd_GifData) {
                                       data = image.sd_GifData;
-                                  } else if(data) {
+                                  } else if(data && [NSData sd_imageFormatForImageData:data] == SDImageFormatGIF) {
                                       image.sd_GifData = data;
                                   }
                                   
                                   dispatch_async(dispatch_get_global_queue(0, 0), ^{
                                       SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:data];
                                       if (imageFormat == SDImageFormatGIF) {
-
                                           //GIF
                                           LWGIFImage *gif = [[LWGIFImage alloc] initWithGIFData:data];
                                           dispatch_main_async_safe(^{
