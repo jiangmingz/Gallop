@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+    <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="修复gif图片访问错误">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewHeader.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewHeader.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +16,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_9d66ec6c4d21eeb1eec54e40768eee427902f691" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MomentsViewController.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MomentsViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="324" column="36" selection-start-line="324" selection-start-column="36" selection-end-line="324" selection-end-column="36" />
+            <state relative-caret-position="222">
+              <caret line="306" column="51" selection-start-line="306" selection-start-column="51" selection-end-line="306" selection-end-column="51" />
+              <folding>
+                <element signature="e#285#318#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableViewHeader.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewHeader.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="67" column="80" selection-start-line="67" selection-start-column="80" selection-end-line="67" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -61,9 +72,11 @@
       <find>tableView</find>
       <find>;//</find>
       <find>lw_drawInContext</find>
+      <find>cellHeight</find>
+      <find>CommentView</find>
     </findStrings>
     <replaceStrings>
-      <replace />
+      <replace>; //</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -72,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Gallop/LWTextRunDelegate.m" />
         <option value="$PROJECT_DIR$/../Gallop/NSMutableAttributedString+Gallop.m" />
         <option value="$PROJECT_DIR$/../Gallop/NSMutableAttributedString+Gallop.h" />
         <option value="$PROJECT_DIR$/../Gallop/NSString+HTML.m" />
@@ -123,6 +135,7 @@
         <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.h" />
         <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewHeader.m" />
       </list>
     </option>
   </component>
@@ -237,7 +250,7 @@
       <workItem from="1532501939014" duration="360000" />
       <workItem from="1532510158781" duration="242000" />
       <workItem from="1532510405718" duration="310000" />
-      <workItem from="1532520004098" duration="812000" />
+      <workItem from="1532520004098" duration="1088000" />
     </task>
     <task id="LOCAL-00001" summary="修复图片网络访问超时崩溃，格式化代码">
       <created>1532346887254</created>
@@ -337,11 +350,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532520854642</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="修复gif图片访问错误">
+      <created>1532520957941</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1532520957941</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12313000" />
+    <option name="totallyTimeSpent" value="12589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1239" height="777" extended-state="6" />
@@ -399,9 +419,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修复gif图片访问错误" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWHTMLImageConfig.m">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWHTMLLayout.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -689,8 +706,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="324" column="36" selection-start-line="324" selection-start-column="36" selection-end-line="324" selection-end-column="36" />
+        <state relative-caret-position="222">
+          <caret line="306" column="51" selection-start-line="306" selection-start-column="51" selection-end-line="306" selection-end-column="51" />
+          <folding>
+            <element signature="e#285#318#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewHeader.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="67" column="80" selection-start-line="67" selection-start-column="80" selection-end-line="67" selection-end-column="80" />
         </state>
       </provider>
     </entry>
