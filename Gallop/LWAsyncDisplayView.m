@@ -223,9 +223,11 @@
         }
     };
 
-    transaction.displayBlock = ^(CGContextRef context, CGSize size, LWAsyncDisplayIsCanclledBlock isCancelledBlock) {
+    transaction.displayBlock = ^(CALayer *layer, CGContextRef context, CGSize size, LWAsyncDisplayIsCanclledBlock isCancelledBlock) {
         [self _drawStoragesInContext:context
-                         inCancelled:isCancelledBlock];
+                         inCancelled:isCancelledBlock
+                               layer:layer
+                                size:size];
     };
 
     transaction.didDisplayBlock = ^(CALayer *layer, BOOL finished) {
@@ -238,7 +240,7 @@
     return transaction;
 }
 
-- (void)_drawStoragesInContext:(CGContextRef)context inCancelled:(LWAsyncDisplayIsCanclledBlock)isCancelledBlock {
+- (void)_drawStoragesInContext:(CGContextRef)context inCancelled:(LWAsyncDisplayIsCanclledBlock)isCancelledBlock layer:(CALayer *)layer size:(CGSize)size {
 
     if ([self.delegate respondsToSelector:@selector(extraAsyncDisplayIncontext:size:isCancelled:)]) {
         if (isCancelledBlock()) {
@@ -246,7 +248,7 @@
         }
 
         //这个代理方法调用需要用户额外绘制的内容
-        [self.delegate extraAsyncDisplayIncontext:context size:self.bounds.size isCancelled:isCancelledBlock];
+        [self.delegate extraAsyncDisplayIncontext:context size:size isCancelled:isCancelledBlock];
     }
 
     //绘制图片内容
@@ -263,7 +265,7 @@
                                          size:CGSizeZero
                                         point:textStorage.frame.origin
                                 containerView:self
-                               containerLayer:self.layer
+                               containerLayer:layer
                                   isCancelled:isCancelledBlock];
     }
 

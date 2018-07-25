@@ -149,13 +149,13 @@
         });
     }
 
+    CGSize size = self.bounds.size;
 
     //把内容尽可能多的绘制在同一个CALayer上，然后赋值给contents
     if (asynchronously) {
         if (transaction.willDisplayBlock) {
             transaction.willDisplayBlock(self);
         }
-
 
         LWFlag *displayFlag = _displayFlag;
         int32_t value = displayFlag.value;
@@ -164,7 +164,6 @@
             return value != displayFlag.value;
         };
 
-        CGSize size = self.bounds.size;
         BOOL opaque = self.opaque;
         CGFloat scale = self.contentsScale;
         CGColorRef backgroundColor = (opaque && self.backgroundColor) ?
@@ -209,7 +208,7 @@
                 CGContextRestoreGState(context);
                 CGColorRelease(backgroundColor);
             }
-            transaction.displayBlock(context, size, isCancelledBlock);
+            transaction.displayBlock(self, context, size, isCancelledBlock);
             if (isCancelledBlock()) {
                 UIGraphicsEndImageContext();
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -258,10 +257,9 @@
             transaction.willDisplayBlock(self);
         }
 
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, self.contentsScale);
+        UIGraphicsBeginImageContextWithOptions(size, self.opaque, self.contentsScale);
         CGContextRef context = UIGraphicsGetCurrentContext();
         if (self.opaque) {
-            CGSize size = self.bounds.size;
             size.width *= self.contentsScale;
             size.height *= self.contentsScale;
             CGContextSaveGState(context);
@@ -281,7 +279,7 @@
         }
 
 
-        transaction.displayBlock(context, self.bounds.size, ^{
+        transaction.displayBlock(self, context, size, ^{
             return NO;
         });
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -296,7 +294,6 @@
 - (void)cancelAsyncDisplay {
     [self.displayFlag increment];
 }
-
 
 @end
 

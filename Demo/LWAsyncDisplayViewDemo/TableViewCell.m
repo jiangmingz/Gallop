@@ -46,8 +46,8 @@
                               size:(CGSize)size
                        isCancelled:(LWAsyncDisplayIsCanclledBlock)isCancelled {
     if (!isCancelled()) {
-        CGContextMoveToPoint(context, 0.0f, self.bounds.size.height);
-        CGContextAddLineToPoint(context, self.bounds.size.width, self.bounds.size.height);
+        CGContextMoveToPoint(context, 0.0f,size.height);
+        CGContextAddLineToPoint(context,size.width,size.height);
         CGContextSetLineWidth(context, 0.2f);
         CGContextSetStrokeColorWithColor(context, RGB(220.0f, 220.0f, 220.0f, 1).CGColor);
         CGContextStrokePath(context);

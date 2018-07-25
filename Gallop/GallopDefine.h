@@ -103,7 +103,7 @@ typedef BOOL(^LWAsyncDisplayIsCanclledBlock)(void);
 
 typedef void(^LWAsyncDisplayWillDisplayBlock)(CALayer *layer);
 
-typedef void(^LWAsyncDisplayBlock)(CGContextRef context, CGSize size, LWAsyncDisplayIsCanclledBlock isCancelledBlock);
+typedef void(^LWAsyncDisplayBlock)(CALayer *layer, CGContextRef context, CGSize size, LWAsyncDisplayIsCanclledBlock isCancelledBlock);
 
 typedef void(^LWAsyncDisplayDidDisplayBlock)(CALayer *layer, BOOL finished);
 
