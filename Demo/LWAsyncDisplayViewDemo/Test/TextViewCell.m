@@ -23,6 +23,7 @@
         
         self.backgroundColor = [UIColor whiteColor];
         self.displayView = [[LWAsyncDisplayView alloc] initWithFrame:CGRectZero];
+        self.displayView.backgroundColor = [UIColor yellowColor];
         [self.contentView addSubview:self.displayView];
         
     }

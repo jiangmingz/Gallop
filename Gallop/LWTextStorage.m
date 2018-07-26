@@ -168,7 +168,7 @@
     self.lineBreakMode = NSLineBreakByWordWrapping;
     self.underlineStyle = NSUnderlineStyleNone;
     self.linespacing = 1.0f;
-    self.characterSpacing = 0.0f;
+    self.characterSpacing = 0;
     self.textDrawMode = LWTextDrawModeFill;
     self.strokeColor = [UIColor blackColor];
     self.strokeWidth = 1.0f;
@@ -565,7 +565,6 @@
 
 - (CGPoint)center {
     return CGPointMake(self.textLayout.cgPathBox.origin.x + self.position.x + self.textLayout.cgPathBox.size.width * 0.5f,
-
             self.textLayout.cgPathBox.origin.y + self.position.y + self.textLayout.cgPathBox.size.height * 0.5f);
 }
 
