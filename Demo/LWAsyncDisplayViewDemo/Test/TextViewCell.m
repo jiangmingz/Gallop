@@ -1,25 +1,21 @@
-/********************* 有任何问题欢迎反馈给我 liuweiself@126.com ****************************************/
-/***************  https://github.com/waynezxcv/Gallop 持续更新 ***************************/
-/******************** 正在不断完善中，谢谢~  Enjoy ******************************************************/
+//
+//  TextViewCell.m
+//  LWAsyncDisplayViewDemo
+//
+//  Created by Jiangmingz on 2018/7/26.
+//  Copyright © 2018年 WayneInc. All rights reserved.
+//
+
+#import "TextViewCell.h"
 
 
-
-
-
-
-#import "ImageDemoTableViewCell.h"
-
-
-@interface ImageDemoTableViewCell ()
+@interface TextViewCell ()
 
 @property (nonatomic,strong) LWAsyncDisplayView* displayView;
 
 @end
 
-
-@implementation ImageDemoTableViewCell
-
-
+@implementation TextViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

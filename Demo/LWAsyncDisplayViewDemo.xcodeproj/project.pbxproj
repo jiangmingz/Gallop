@@ -92,6 +92,8 @@
 		B923078A2105FDB6008C943F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92307892105FDB6008C943F /* CoreText.framework */; };
 		B923078C2105FDCE008C943F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B923078B2105FDCE008C943F /* Launch Screen.storyboard */; };
 		B923079321087FEE008C943F /* GifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B923079221087FEE008C943F /* GifViewController.m */; };
+		B923079721096D2B008C943F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B923079621096D2B008C943F /* TestViewController.m */; };
+		B923079A21096D99008C943F /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B923079921096D99008C943F /* TextViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,6 +264,10 @@
 		B923078B2105FDCE008C943F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B923079121087FEE008C943F /* GifViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifViewController.h; sourceTree = "<group>"; };
 		B923079221087FEE008C943F /* GifViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifViewController.m; sourceTree = "<group>"; };
+		B923079521096D2B008C943F /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		B923079621096D2B008C943F /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		B923079821096D99008C943F /* TextViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewCell.h; sourceTree = "<group>"; };
+		B923079921096D99008C943F /* TextViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +327,7 @@
 		011DFA1C1C987CD6000410D7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				B923079421096CEE008C943F /* Test */,
 				B923079021087FB1008C943F /* Gif */,
 				B085B3441CB69C7B00087739 /* Vendors */,
 				0134D12A1D16BDEE00FB91FF /* Root */,
@@ -644,6 +651,17 @@
 			path = Gif;
 			sourceTree = "<group>";
 		};
+		B923079421096CEE008C943F /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				B923079521096D2B008C943F /* TestViewController.h */,
+				B923079621096D2B008C943F /* TestViewController.m */,
+				B923079821096D99008C943F /* TextViewCell.h */,
+				B923079921096D99008C943F /* TextViewCell.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		C06956B931D70ACF6BB834A9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -775,6 +793,7 @@
 				012EDE4A1D931FB1009AFA90 /* LWHTMLNode.m in Sources */,
 				011DFA221C987CD6000410D7 /* AppDelegate.m in Sources */,
 				01F51A0E1CA1B1CE00463571 /* CoreData.xcdatamodeld in Sources */,
+				B923079A21096D99008C943F /* TextViewCell.m in Sources */,
 				B0B7DF891DEFCAAE0050BFB1 /* LWCGRectTransform.m in Sources */,
 				012EDDFB1D931D8B009AFA90 /* LWTextLayout.m in Sources */,
 				B0ACEC051CEDC9A50019074F /* CommentView.m in Sources */,
@@ -783,6 +802,7 @@
 				B0F991CC1D937EA000D7B529 /* LWAlertContentView.m in Sources */,
 				B923079321087FEE008C943F /* GifViewController.m in Sources */,
 				012EDE471D931FB1009AFA90 /* LWHTMLDisplayView.m in Sources */,
+				B923079721096D2B008C943F /* TestViewController.m in Sources */,
 				01BE57FF1E5865DD00A2A266 /* CALayer+WebCacheOperation.m in Sources */,
 				B0C9A92B1D2270C000DFAA44 /* ArticleListViewController.m in Sources */,
 				B0F991D11D937EA000D7B529 /* LWImageBrowserModel.m in Sources */,

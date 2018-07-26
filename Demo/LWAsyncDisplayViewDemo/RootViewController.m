@@ -11,6 +11,7 @@
 #import "ImageDemoViewController.h"
 #import "KMCGeigerCounter.h"
 #import "GifViewController.h"
+#import "TestViewController.h"
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -27,7 +28,8 @@
     NSDictionary *attributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.navigationController.navigationBar.titleTextAttributes = attributes;
 
-    self.title = @"Gallop";
+    self.title = @"测试";
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -40,7 +42,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,13 +59,16 @@
             cell.textLabel.text = @"LWImageStorage使用示例";
             break;
         case 2:
-            cell.textLabel.text = @"使用Gallop构建Feed List 示例";
+            cell.textLabel.text = @"Feed List 示例";
             break;
         case 3:
-            cell.textLabel.text = @"使用Gallop进行HTML解析示例";
+            cell.textLabel.text = @"进行HTML解析示例";
             break;
         case 4:
             cell.textLabel.text = @"使用Gif示例";
+            break;
+        case 5:
+            cell.textLabel.text = @"异步性能示例";
             break;
     }
     
@@ -95,6 +100,10 @@
         }
         case 4: {
             GifViewController *vc = [[GifViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        case 5: {
+            TestViewController *vc = [TestViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
