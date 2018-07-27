@@ -10,8 +10,9 @@
 #import "ArticleListViewController.h"
 #import "ImageDemoViewController.h"
 #import "KMCGeigerCounter.h"
-#import "GifViewController.h"
+#import "GifController.h"
 #import "TestViewController.h"
+#import "GifListController.h"
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -29,7 +30,7 @@
     self.navigationController.navigationBar.titleTextAttributes = attributes;
 
     self.title = @"测试";
-    
+
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -42,7 +43,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -68,10 +69,14 @@
             cell.textLabel.text = @"使用Gif示例";
             break;
         case 5:
+            cell.textLabel.text = @"使用GifList示例";
+            break;
+        case 6:
             cell.textLabel.text = @"异步性能示例";
             break;
+        default:break;
     }
-    
+
     return cell;
 }
 
@@ -82,30 +87,40 @@
         case 0: {
             RichTextDemo1ViewController *vc = [[RichTextDemo1ViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
-        }
             break;
+        }
         case 1: {
             ImageDemoViewController *vc = [[ImageDemoViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
-        }
             break;
+        }
         case 2: {
             MomentsViewController *vc = [[MomentsViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
-        }
             break;
+        }
         case 3: {
             ArticleListViewController *vc = [[ArticleListViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+            break;
         }
         case 4: {
-            GifViewController *vc = [[GifViewController alloc] init];
+            GifController *vc = [[GifController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+            break;
         }
         case 5: {
+            GifListController *vc = [[GifListController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 6: {
             TestViewController *vc = [TestViewController new];
             [self.navigationController pushViewController:vc animated:YES];
+            break;
         }
+
+        default:
             break;
     }
 }
