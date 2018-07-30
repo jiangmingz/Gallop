@@ -9,7 +9,6 @@
 #import "MomentsViewController.h"
 #import "ArticleListViewController.h"
 #import "ImageDemoViewController.h"
-#import "KMCGeigerCounter.h"
 #import "GifController.h"
 #import "TestViewController.h"
 #import "GifListController.h"
@@ -35,8 +34,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-
-    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
 }
 
 #pragma mark -
@@ -74,7 +71,8 @@
         case 6:
             cell.textLabel.text = @"异步性能示例";
             break;
-        default:break;
+        default:
+            break;
     }
 
     return cell;

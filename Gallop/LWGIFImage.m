@@ -455,9 +455,7 @@ static NSHashTable *allGIFImagesWeak;
 
 - (NSMutableIndexSet *)frameIndexesToCache {
 
-
     NSMutableIndexSet *indexesToCache = nil;
-
 
     if (self.frameCacheSizeCurrent == self.frameCount) {
         indexesToCache = [self.allFramesIndexSet mutableCopy];
@@ -530,7 +528,6 @@ static NSHashTable *allGIFImagesWeak;
     proxy.target = object;
     return proxy;
 }
-
 
 - (id)forwardingTargetForSelector:(SEL)selector {
     return _target;

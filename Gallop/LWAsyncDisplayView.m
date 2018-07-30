@@ -106,9 +106,9 @@
 
     __weak typeof(self) weakSelf = self;
     [self setImageStoragesResizeBlock:^(LWImageStorage *imageStorage, CGFloat delta) {
-        __strong typeof(weakSelf) swself = weakSelf;
-        if (swself.auotoLayoutCallback) {
-            swself.auotoLayoutCallback(imageStorage, delta);
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf.auotoLayoutCallback) {
+            strongSelf.auotoLayoutCallback(imageStorage, delta);
         }
     }];
 }

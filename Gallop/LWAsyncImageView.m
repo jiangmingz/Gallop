@@ -139,11 +139,13 @@
 
 - (void)didMoveToSuperview {
     [super didMoveToSuperview];
+
     [self animateIfNeed];
 }
 
 - (void)didMoveToWindow {
     [super didMoveToWindow];
+
     [self animateIfNeed];
 }
 
@@ -167,6 +169,7 @@
 
 - (void)_setHidden:(NSNumber *)hidden {
     [super setHidden:[hidden boolValue]];
+
     [self animateIfNeed];
 }
 
@@ -290,11 +293,9 @@
         //因为LWAsyncImageView包含了strong的dislayLink对象，displayLink又会持有target，会造成循环引用
 
         if (!self.displayLink) {
-
             LWProxy *proxy = [LWProxy proxyWithObject:self];
             self.displayLink = [CADisplayLink displayLinkWithTarget:proxy selector:@selector(displayLinkFired:)];
             [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:self.animationRunLoopMode];
-
         }
 
         self.displayLink.frameInterval = (NSInteger) MAX([self frameDelayGreatestCommonDivisor] * kDisplayRefreshRate, 1);

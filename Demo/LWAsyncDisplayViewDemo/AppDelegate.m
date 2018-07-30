@@ -8,8 +8,10 @@
 
 #import "AppDelegate.h"
 
-#import "RootViewController.h"
+#import "LXDAppFluencyMonitor.h"
+#import "LXDFPSMonitor.h"
 
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +21,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [FLUENCYMONITOR startMonitoring];
+    [FPS_MONITOR startMonitoring];
+
+
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     RootViewController *rootVC = [[RootViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootVC];

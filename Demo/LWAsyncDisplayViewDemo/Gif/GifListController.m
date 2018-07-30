@@ -118,7 +118,7 @@ static CGFloat gifSize = 30;
             [mutableString appendFormat:@"%@ ", name];
         }
 
-        NSLog(@"%@",mutableString);
+//        NSLog(@"%@",mutableString);
         [_dataSource addObject:layout];
     }
 

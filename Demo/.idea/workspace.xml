@@ -2,131 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/49.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/56.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/59.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/61.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/62.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/63.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/65.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/67.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/68.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/69.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/72.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/72.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Crash/LXDCrashLogger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Crash/LXDCrashLogger.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Crash/LXDCrashMonitor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Crash/LXDCrashMonitor.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/FPS/LXDFPSDisplayer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/FPS/LXDFPSDisplayer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/FPS/LXDFPSMonitor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/FPS/LXDFPSMonitor.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/FPS/LXDWeakProxy.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/FPS/LXDWeakProxy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Fluency/LXDAppFluencyMonitor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Fluency/LXDAppFluencyMonitor.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Intercept/LXDDNSInterceptor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Intercept/LXDDNSInterceptor.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Intercept/LXDHostFilterRule.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Intercept/LXDHostFilterRule.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Intercept/LXDHostMapper.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Intercept/LXDHostMapper.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Intercept/NSURLProtocol+WebKitSupport.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Intercept/NSURLProtocol+WebKitSupport.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDApplicationCPU.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDApplicationCPU.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDApplicationMemory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDApplicationMemory.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDCPUDisplayer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDCPUDisplayer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDMemoryDisplayer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDMemoryDisplayer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDResourceMonitor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDResourceMonitor.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDSystemCPU.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDSystemCPU.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDSystemMemory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Resource/LXDSystemMemory.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Backtrace/LXDBacktraceLogger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Backtrace/LXDBacktraceLogger.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Dispatch/LXDDispatchAsync.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Dispatch/LXDDispatchAsync.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Dispatch/LXDDispatchOperation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Dispatch/LXDDispatchOperation.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Performance/LXDTransaction.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Performance/LXDTransaction.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Timer/LXDGlobalTimer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/Timer/LXDGlobalTimer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/UI/LXDAsyncLabel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/UI/LXDAsyncLabel.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/UI/LXDMonitorUI.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/UI/LXDTopWindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/UI/LXDTopWindow.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/UI/UIApplication+LXDTool.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LXDAppMonitor/Tool/UI/UIApplication+LXDTool.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/KMCGeigerCounter/KMCGeigerCounter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/KMCGeigerCounter/KMCGeigerCounter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounter.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounterTick.aiff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/KMCGeigerCounter/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/KMCGeigerCounter/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/FLAnimatedImage.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/FLAnimatedImage.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/KMCGeigerCounter.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/Pods-LWAsyncDisplayViewDemo.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/Pods-LWAsyncDisplayViewDemo.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/SDWebImage.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/SDWebImage.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/KMCGeigerCounter/KMCGeigerCounter-dummy.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/KMCGeigerCounter/KMCGeigerCounter-prefix.pch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/KMCGeigerCounter/KMCGeigerCounter.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo-acknowledgements.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo-acknowledgements.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo-resources.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo-resources.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo.release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+Display.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+Display.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gallop/LWGIFImage.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWGIFImage.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -138,88 +98,104 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_9d66ec6c4d21eeb1eec54e40768eee427902f691" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TextViewCell.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.h">
+      <file leaf-file-name="LWAsyncDisplayView.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1893">
+              <caret line="109" column="42" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="42" />
+              <folding>
+                <element signature="e#1142#1172#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding>
+                <element signature="e#286#309#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LXDFPSMonitor.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LXDAppMonitor/FPS/LXDFPSMonitor.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <folding>
+                <element signature="e#283#313#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextViewCell.m" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.m">
+      <file leaf-file-name="Podfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Podfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LWAsyncDisplayView.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.h">
+      <file leaf-file-name="LXDAppFluencyMonitor.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LXDAppMonitor/Fluency/LXDAppFluencyMonitor.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GifListController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m">
+      <file leaf-file-name="LXDAppFluencyMonitor.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LXDAppMonitor/Fluency/LXDAppFluencyMonitor.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1635">
-              <caret line="109" column="64" selection-start-line="109" selection-start-column="64" selection-end-line="109" selection-end-column="64" />
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#153#185#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LWGIFImage.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWGIFImage.m">
+      <file leaf-file-name="LXDBacktraceLogger.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LXDAppMonitor/Tool/Backtrace/LXDBacktraceLogger.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="156" column="1" selection-start-line="156" selection-start-column="1" selection-end-line="156" selection-end-column="1" />
+            <state relative-caret-position="239">
+              <caret line="135" column="37" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LWGIFImage.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/LWGIFImage.h">
+      <file leaf-file-name="LWAsyncImageView.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="58" column="40" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GallopDefine.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Gallop/GallopDefine.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TableViewCell.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewCell.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3465">
-              <caret line="231" column="5" selection-start-line="231" selection-start-column="5" selection-end-line="231" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageDemoTableViewCell.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/ImageDemoTableViewCell.m">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="ImageDemoViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/ImageDemoViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="92" column="68" selection-start-line="89" selection-start-column="8" selection-end-line="92" selection-end-column="68" />
+            <state relative-caret-position="2069">
+              <caret line="403" selection-start-line="403" selection-end-line="403" />
             </state>
           </provider>
         </entry>
@@ -239,6 +215,8 @@
       <find>backgroundColor</find>
       <find>size</find>
       <find>displaysAsynchronously</find>
+      <find>auotoLayoutCallback</find>
+      <find>startAnimating</find>
     </findStrings>
     <replaceStrings>
       <replace>; //</replace>
@@ -250,7 +228,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWAlertView.m" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWImageBrowser.h" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWImageBrowser.m" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWImageBrowserButton.m" />
@@ -263,7 +240,6 @@
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWImageItem.m" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWProgeressHUD.h" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/LWProgeressHUD.m" />
-        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.h" />
         <option value="$PROJECT_DIR$/Others/LWImageBrowser/UIImage+ImageEffects.m" />
         <option value="$PROJECT_DIR$/../Gallop/LWCGRectTransform.m" />
@@ -285,22 +261,24 @@
         <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/TableViewHeader.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/HTMLParsingViewController.m" />
-        <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" />
-        <option value="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m" />
         <option value="$PROJECT_DIR$/../Gallop/LWAsyncDisplayLayer.m" />
         <option value="$PROJECT_DIR$/../Gallop/LWTextStorage.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TestViewController.m" />
-        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifViewController.h" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifController.h" />
-        <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+Display.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifController.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" />
         <option value="$PROJECT_DIR$/../Gallop/GallopDefine.h" />
         <option value="$PROJECT_DIR$/../Gallop/LWGIFImage.h" />
-        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m" />
-        <option value="$PROJECT_DIR$/../Gallop/LWGIFImage.m" />
         <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.m" />
+        <option value="$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m" />
+        <option value="$PROJECT_DIR$/../Gallop/LWGIFImage.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m" />
+        <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView+Display.m" />
+        <option value="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m" />
+        <option value="$PROJECT_DIR$/Podfile" />
+        <option value="$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m" />
       </list>
     </option>
   </component>
@@ -315,8 +293,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="46" />
-    <option name="y" value="28" />
+    <option name="x" value="63" />
+    <option name="y" value="52" />
     <option name="width" value="1239" />
     <option name="height" value="777" />
   </component>
@@ -344,24 +322,7 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
               <item name="Demo" type="fcab9f18:XcodeViewNode" />
-              <item name="Feeds" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Demo" type="fcab9f18:XcodeViewNode" />
-              <item name="Gif" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Demo" type="fcab9f18:XcodeViewNode" />
-              <item name="LWImageStorageDemo" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="LWAsyncDisplayViewDemo" type="1d218c8b:XcodeProjectNode" />
-              <item name="Gallop" type="fcab9f18:XcodeViewNode" />
+              <item name="Vendors" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -424,7 +385,7 @@
       <workItem from="1532525094159" duration="5712000" />
       <workItem from="1532584582470" duration="483000" />
       <workItem from="1532662748152" duration="8955000" />
-      <workItem from="1532941011892" duration="473000" />
+      <workItem from="1532941011892" duration="4221000" />
     </task>
     <task id="LOCAL-00001" summary="修复图片网络访问超时崩溃，格式化代码">
       <created>1532346887254</created>
@@ -580,14 +541,28 @@
       <option name="project" value="LOCAL" />
       <updated>1532941485457</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="增加gif性能测试">
+      <created>1532941533458</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1532941533458</updated>
+    </task>
+    <task id="LOCAL-00024" summary="增加gif性能测试">
+      <created>1532941681148</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1532941681148</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29198000" />
+    <option name="totallyTimeSpent" value="32946000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="23" width="1239" height="777" extended-state="6" />
+    <frame x="51" y="23" width="1239" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="2" />
@@ -595,10 +570,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -607,26 +583,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20771757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
       <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -644,60 +619,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加gif性能测试" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/AutoFitSizeTextView.m">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/AutoFitSizeTextView.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/articlelist.plist">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWCGRectTransform.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWTextContainer.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWTextContainer.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="12" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWTextAttachment.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWTextAttachment.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="137" column="47" lean-forward="true" selection-start-line="137" selection-start-column="47" selection-end-line="137" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -726,13 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="52" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="228" column="16" selection-start-line="228" selection-start-column="16" selection-end-line="228" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -771,16 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2775">
-          <caret line="185" column="53" selection-start-line="185" selection-start-column="53" selection-end-line="185" selection-end-column="53" />
-          <folding>
-            <element signature="e#1142#1172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/CellLayout.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7725">
@@ -799,13 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8115">
           <caret line="541" selection-start-line="541" selection-end-line="541" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWLayout.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -830,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -857,27 +751,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+Display.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding>
-            <element signature="e#1141#1177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSData.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Gallop/LWImageStorage.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -919,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
@@ -964,24 +834,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m">
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="109" column="64" selection-start-line="109" selection-start-column="64" selection-end-line="109" selection-end-column="64" />
+        <state relative-caret-position="150">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+WebCache.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="120" column="63" lean-forward="true" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWLayout.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWLayout.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-293">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Gallop/LWGIFImage.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="156" column="1" selection-start-line="156" selection-start-column="1" selection-end-line="156" selection-end-column="1" />
+        <state relative-caret-position="7532">
+          <caret line="524" selection-start-line="524" selection-end-line="524" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.m">
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        <state relative-caret-position="409">
+          <caret line="113" column="32" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWImageStorage.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView+Display.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          <folding>
+            <element signature="e#1141#1177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-488" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2069">
+          <caret line="403" selection-start-line="403" selection-end-line="403" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncDisplayView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1893">
+          <caret line="109" column="42" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="42" />
+          <folding>
+            <element signature="e#1142#1172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LXDAppMonitor/FPS/LXDFPSMonitor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="e#286#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LXDAppMonitor/Tool/Backtrace/LXDBacktraceLogger.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="135" column="37" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LXDAppMonitor/Fluency/LXDAppFluencyMonitor.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#153#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/RootViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#283#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LXDAppMonitor/Fluency/LXDAppFluencyMonitor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>

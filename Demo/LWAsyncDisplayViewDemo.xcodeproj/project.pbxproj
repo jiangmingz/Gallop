@@ -97,6 +97,31 @@
 		B99D0CEE210ACACD00AC008B /* emotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B99D0C5C210ACACC00AC008B /* emotions.plist */; };
 		B99D0D81210ACC7600AC008B /* GifListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0D80210ACC7600AC008B /* GifListController.m */; };
 		B99D0D83210B1ED000AC008B /* EmoticonQQ.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B99D0D82210B1ED000AC008B /* EmoticonQQ.bundle */; };
+		B99D0DCD210F1B0200AC008B /* LXDDNSInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0D90210F1B0100AC008B /* LXDDNSInterceptor.m */; };
+		B99D0DCE210F1B0200AC008B /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0D92210F1B0100AC008B /* NSURLProtocol+WebKitSupport.m */; };
+		B99D0DCF210F1B0200AC008B /* LXDHostMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0D94210F1B0100AC008B /* LXDHostMapper.m */; };
+		B99D0DD0210F1B0200AC008B /* LXDHostFilterRule.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0D97210F1B0200AC008B /* LXDHostFilterRule.m */; };
+		B99D0DD1210F1B0200AC008B /* LXDCrashMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0D99210F1B0200AC008B /* LXDCrashMonitor.m */; };
+		B99D0DD2210F1B0200AC008B /* LXDCrashLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0D9C210F1B0200AC008B /* LXDCrashLogger.m */; };
+		B99D0DD3210F1B0200AC008B /* LXDAppFluencyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0D9E210F1B0200AC008B /* LXDAppFluencyMonitor.m */; };
+		B99D0DD4210F1B0200AC008B /* LXDMemoryDisplayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DA6210F1B0200AC008B /* LXDMemoryDisplayer.m */; };
+		B99D0DD5210F1B0200AC008B /* LXDCPUDisplayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DA8210F1B0200AC008B /* LXDCPUDisplayer.m */; };
+		B99D0DD6210F1B0200AC008B /* LXDApplicationMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DA9210F1B0200AC008B /* LXDApplicationMemory.m */; };
+		B99D0DD7210F1B0200AC008B /* LXDResourceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DAA210F1B0200AC008B /* LXDResourceMonitor.m */; };
+		B99D0DD8210F1B0200AC008B /* LXDSystemMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DAB210F1B0200AC008B /* LXDSystemMemory.m */; };
+		B99D0DD9210F1B0200AC008B /* LXDApplicationCPU.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DAC210F1B0200AC008B /* LXDApplicationCPU.m */; };
+		B99D0DDA210F1B0200AC008B /* LXDSystemCPU.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DAD210F1B0200AC008B /* LXDSystemCPU.m */; };
+		B99D0DDB210F1B0200AC008B /* LXDFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DB1210F1B0200AC008B /* LXDFPSMonitor.m */; };
+		B99D0DDC210F1B0200AC008B /* LXDFPSDisplayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DB4210F1B0200AC008B /* LXDFPSDisplayer.m */; };
+		B99D0DDD210F1B0200AC008B /* LXDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DB5210F1B0200AC008B /* LXDWeakProxy.m */; };
+		B99D0DDE210F1B0200AC008B /* LXDAsyncLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DBC210F1B0200AC008B /* LXDAsyncLabel.m */; };
+		B99D0DDF210F1B0200AC008B /* LXDTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DBD210F1B0200AC008B /* LXDTopWindow.m */; };
+		B99D0DE0210F1B0200AC008B /* UIApplication+LXDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DBE210F1B0200AC008B /* UIApplication+LXDTool.m */; };
+		B99D0DE1210F1B0200AC008B /* LXDBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DC0210F1B0200AC008B /* LXDBacktraceLogger.m */; };
+		B99D0DE2210F1B0200AC008B /* LXDDispatchAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DC4210F1B0200AC008B /* LXDDispatchAsync.m */; };
+		B99D0DE3210F1B0200AC008B /* LXDDispatchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DC5210F1B0200AC008B /* LXDDispatchOperation.m */; };
+		B99D0DE4210F1B0200AC008B /* LXDGlobalTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DC8210F1B0200AC008B /* LXDGlobalTimer.m */; };
+		B99D0DE5210F1B0200AC008B /* LXDTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B99D0DCC210F1B0200AC008B /* LXDTransaction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -275,6 +300,57 @@
 		B99D0D7F210ACC7600AC008B /* GifListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifListController.h; sourceTree = "<group>"; };
 		B99D0D80210ACC7600AC008B /* GifListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifListController.m; sourceTree = "<group>"; };
 		B99D0D82210B1ED000AC008B /* EmoticonQQ.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EmoticonQQ.bundle; sourceTree = "<group>"; };
+		B99D0D90210F1B0100AC008B /* LXDDNSInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDDNSInterceptor.m; sourceTree = "<group>"; };
+		B99D0D91210F1B0100AC008B /* LXDHostMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDHostMapper.h; sourceTree = "<group>"; };
+		B99D0D92210F1B0100AC008B /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
+		B99D0D93210F1B0100AC008B /* LXDHostFilterRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDHostFilterRule.h; sourceTree = "<group>"; };
+		B99D0D94210F1B0100AC008B /* LXDHostMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDHostMapper.m; sourceTree = "<group>"; };
+		B99D0D95210F1B0200AC008B /* LXDDNSInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDDNSInterceptor.h; sourceTree = "<group>"; };
+		B99D0D96210F1B0200AC008B /* NSURLProtocol+WebKitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WebKitSupport.h"; sourceTree = "<group>"; };
+		B99D0D97210F1B0200AC008B /* LXDHostFilterRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDHostFilterRule.m; sourceTree = "<group>"; };
+		B99D0D99210F1B0200AC008B /* LXDCrashMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDCrashMonitor.m; sourceTree = "<group>"; };
+		B99D0D9A210F1B0200AC008B /* LXDCrashLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDCrashLogger.h; sourceTree = "<group>"; };
+		B99D0D9B210F1B0200AC008B /* LXDCrashMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDCrashMonitor.h; sourceTree = "<group>"; };
+		B99D0D9C210F1B0200AC008B /* LXDCrashLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDCrashLogger.m; sourceTree = "<group>"; };
+		B99D0D9E210F1B0200AC008B /* LXDAppFluencyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDAppFluencyMonitor.m; sourceTree = "<group>"; };
+		B99D0D9F210F1B0200AC008B /* LXDAppFluencyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDAppFluencyMonitor.h; sourceTree = "<group>"; };
+		B99D0DA1210F1B0200AC008B /* LXDResourceMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDResourceMonitor.h; sourceTree = "<group>"; };
+		B99D0DA2210F1B0200AC008B /* LXDCPUDisplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDCPUDisplayer.h; sourceTree = "<group>"; };
+		B99D0DA3210F1B0200AC008B /* LXDApplicationMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDApplicationMemory.h; sourceTree = "<group>"; };
+		B99D0DA4210F1B0200AC008B /* LXDApplicationCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDApplicationCPU.h; sourceTree = "<group>"; };
+		B99D0DA5210F1B0200AC008B /* LXDSystemMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDSystemMemory.h; sourceTree = "<group>"; };
+		B99D0DA6210F1B0200AC008B /* LXDMemoryDisplayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDMemoryDisplayer.m; sourceTree = "<group>"; };
+		B99D0DA7210F1B0200AC008B /* LXDSystemCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDSystemCPU.h; sourceTree = "<group>"; };
+		B99D0DA8210F1B0200AC008B /* LXDCPUDisplayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDCPUDisplayer.m; sourceTree = "<group>"; };
+		B99D0DA9210F1B0200AC008B /* LXDApplicationMemory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDApplicationMemory.m; sourceTree = "<group>"; };
+		B99D0DAA210F1B0200AC008B /* LXDResourceMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDResourceMonitor.m; sourceTree = "<group>"; };
+		B99D0DAB210F1B0200AC008B /* LXDSystemMemory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDSystemMemory.m; sourceTree = "<group>"; };
+		B99D0DAC210F1B0200AC008B /* LXDApplicationCPU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDApplicationCPU.m; sourceTree = "<group>"; };
+		B99D0DAD210F1B0200AC008B /* LXDSystemCPU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDSystemCPU.m; sourceTree = "<group>"; };
+		B99D0DAE210F1B0200AC008B /* LXDMemoryDisplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDMemoryDisplayer.h; sourceTree = "<group>"; };
+		B99D0DB0210F1B0200AC008B /* LXDFPSDisplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDFPSDisplayer.h; sourceTree = "<group>"; };
+		B99D0DB1210F1B0200AC008B /* LXDFPSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDFPSMonitor.m; sourceTree = "<group>"; };
+		B99D0DB2210F1B0200AC008B /* LXDWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDWeakProxy.h; sourceTree = "<group>"; };
+		B99D0DB3210F1B0200AC008B /* LXDFPSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDFPSMonitor.h; sourceTree = "<group>"; };
+		B99D0DB4210F1B0200AC008B /* LXDFPSDisplayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDFPSDisplayer.m; sourceTree = "<group>"; };
+		B99D0DB5210F1B0200AC008B /* LXDWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDWeakProxy.m; sourceTree = "<group>"; };
+		B99D0DB8210F1B0200AC008B /* LXDAsyncLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDAsyncLabel.h; sourceTree = "<group>"; };
+		B99D0DB9210F1B0200AC008B /* LXDMonitorUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDMonitorUI.h; sourceTree = "<group>"; };
+		B99D0DBA210F1B0200AC008B /* LXDTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDTopWindow.h; sourceTree = "<group>"; };
+		B99D0DBB210F1B0200AC008B /* UIApplication+LXDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+LXDTool.h"; sourceTree = "<group>"; };
+		B99D0DBC210F1B0200AC008B /* LXDAsyncLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDAsyncLabel.m; sourceTree = "<group>"; };
+		B99D0DBD210F1B0200AC008B /* LXDTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDTopWindow.m; sourceTree = "<group>"; };
+		B99D0DBE210F1B0200AC008B /* UIApplication+LXDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+LXDTool.m"; sourceTree = "<group>"; };
+		B99D0DC0210F1B0200AC008B /* LXDBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDBacktraceLogger.m; sourceTree = "<group>"; };
+		B99D0DC1210F1B0200AC008B /* LXDBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDBacktraceLogger.h; sourceTree = "<group>"; };
+		B99D0DC3210F1B0200AC008B /* LXDDispatchOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDDispatchOperation.h; sourceTree = "<group>"; };
+		B99D0DC4210F1B0200AC008B /* LXDDispatchAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDDispatchAsync.m; sourceTree = "<group>"; };
+		B99D0DC5210F1B0200AC008B /* LXDDispatchOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDDispatchOperation.m; sourceTree = "<group>"; };
+		B99D0DC6210F1B0200AC008B /* LXDDispatchAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDDispatchAsync.h; sourceTree = "<group>"; };
+		B99D0DC8210F1B0200AC008B /* LXDGlobalTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDGlobalTimer.m; sourceTree = "<group>"; };
+		B99D0DC9210F1B0200AC008B /* LXDGlobalTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDGlobalTimer.h; sourceTree = "<group>"; };
+		B99D0DCB210F1B0200AC008B /* LXDTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDTransaction.h; sourceTree = "<group>"; };
+		B99D0DCC210F1B0200AC008B /* LXDTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDTransaction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -545,6 +621,7 @@
 		B085B3441CB69C7B00087739 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				B99D0D8E210F1B0100AC008B /* LXDAppMonitor */,
 				B0F991B51D937E4C00D7B529 /* LWImageBrowser */,
 				B0E7F39B1D212B6400877644 /* LWActiveIndicator */,
 			);
@@ -681,6 +758,152 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		B99D0D8E210F1B0100AC008B /* LXDAppMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0D8F210F1B0100AC008B /* Intercept */,
+				B99D0D98210F1B0200AC008B /* Crash */,
+				B99D0D9D210F1B0200AC008B /* Fluency */,
+				B99D0DA0210F1B0200AC008B /* Resource */,
+				B99D0DAF210F1B0200AC008B /* FPS */,
+				B99D0DB6210F1B0200AC008B /* Tool */,
+			);
+			path = LXDAppMonitor;
+			sourceTree = "<group>";
+		};
+		B99D0D8F210F1B0100AC008B /* Intercept */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0D90210F1B0100AC008B /* LXDDNSInterceptor.m */,
+				B99D0D91210F1B0100AC008B /* LXDHostMapper.h */,
+				B99D0D92210F1B0100AC008B /* NSURLProtocol+WebKitSupport.m */,
+				B99D0D93210F1B0100AC008B /* LXDHostFilterRule.h */,
+				B99D0D94210F1B0100AC008B /* LXDHostMapper.m */,
+				B99D0D95210F1B0200AC008B /* LXDDNSInterceptor.h */,
+				B99D0D96210F1B0200AC008B /* NSURLProtocol+WebKitSupport.h */,
+				B99D0D97210F1B0200AC008B /* LXDHostFilterRule.m */,
+			);
+			path = Intercept;
+			sourceTree = "<group>";
+		};
+		B99D0D98210F1B0200AC008B /* Crash */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0D99210F1B0200AC008B /* LXDCrashMonitor.m */,
+				B99D0D9A210F1B0200AC008B /* LXDCrashLogger.h */,
+				B99D0D9B210F1B0200AC008B /* LXDCrashMonitor.h */,
+				B99D0D9C210F1B0200AC008B /* LXDCrashLogger.m */,
+			);
+			path = Crash;
+			sourceTree = "<group>";
+		};
+		B99D0D9D210F1B0200AC008B /* Fluency */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0D9E210F1B0200AC008B /* LXDAppFluencyMonitor.m */,
+				B99D0D9F210F1B0200AC008B /* LXDAppFluencyMonitor.h */,
+			);
+			path = Fluency;
+			sourceTree = "<group>";
+		};
+		B99D0DA0210F1B0200AC008B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0DA1210F1B0200AC008B /* LXDResourceMonitor.h */,
+				B99D0DA2210F1B0200AC008B /* LXDCPUDisplayer.h */,
+				B99D0DA3210F1B0200AC008B /* LXDApplicationMemory.h */,
+				B99D0DA4210F1B0200AC008B /* LXDApplicationCPU.h */,
+				B99D0DA5210F1B0200AC008B /* LXDSystemMemory.h */,
+				B99D0DA6210F1B0200AC008B /* LXDMemoryDisplayer.m */,
+				B99D0DA7210F1B0200AC008B /* LXDSystemCPU.h */,
+				B99D0DA8210F1B0200AC008B /* LXDCPUDisplayer.m */,
+				B99D0DA9210F1B0200AC008B /* LXDApplicationMemory.m */,
+				B99D0DAA210F1B0200AC008B /* LXDResourceMonitor.m */,
+				B99D0DAB210F1B0200AC008B /* LXDSystemMemory.m */,
+				B99D0DAC210F1B0200AC008B /* LXDApplicationCPU.m */,
+				B99D0DAD210F1B0200AC008B /* LXDSystemCPU.m */,
+				B99D0DAE210F1B0200AC008B /* LXDMemoryDisplayer.h */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B99D0DAF210F1B0200AC008B /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0DB0210F1B0200AC008B /* LXDFPSDisplayer.h */,
+				B99D0DB1210F1B0200AC008B /* LXDFPSMonitor.m */,
+				B99D0DB2210F1B0200AC008B /* LXDWeakProxy.h */,
+				B99D0DB3210F1B0200AC008B /* LXDFPSMonitor.h */,
+				B99D0DB4210F1B0200AC008B /* LXDFPSDisplayer.m */,
+				B99D0DB5210F1B0200AC008B /* LXDWeakProxy.m */,
+			);
+			path = FPS;
+			sourceTree = "<group>";
+		};
+		B99D0DB6210F1B0200AC008B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0DB7210F1B0200AC008B /* UI */,
+				B99D0DBF210F1B0200AC008B /* Backtrace */,
+				B99D0DC2210F1B0200AC008B /* Dispatch */,
+				B99D0DC7210F1B0200AC008B /* Timer */,
+				B99D0DCA210F1B0200AC008B /* Performance */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B99D0DB7210F1B0200AC008B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0DB8210F1B0200AC008B /* LXDAsyncLabel.h */,
+				B99D0DB9210F1B0200AC008B /* LXDMonitorUI.h */,
+				B99D0DBA210F1B0200AC008B /* LXDTopWindow.h */,
+				B99D0DBB210F1B0200AC008B /* UIApplication+LXDTool.h */,
+				B99D0DBC210F1B0200AC008B /* LXDAsyncLabel.m */,
+				B99D0DBD210F1B0200AC008B /* LXDTopWindow.m */,
+				B99D0DBE210F1B0200AC008B /* UIApplication+LXDTool.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B99D0DBF210F1B0200AC008B /* Backtrace */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0DC0210F1B0200AC008B /* LXDBacktraceLogger.m */,
+				B99D0DC1210F1B0200AC008B /* LXDBacktraceLogger.h */,
+			);
+			path = Backtrace;
+			sourceTree = "<group>";
+		};
+		B99D0DC2210F1B0200AC008B /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0DC3210F1B0200AC008B /* LXDDispatchOperation.h */,
+				B99D0DC4210F1B0200AC008B /* LXDDispatchAsync.m */,
+				B99D0DC5210F1B0200AC008B /* LXDDispatchOperation.m */,
+				B99D0DC6210F1B0200AC008B /* LXDDispatchAsync.h */,
+			);
+			path = Dispatch;
+			sourceTree = "<group>";
+		};
+		B99D0DC7210F1B0200AC008B /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0DC8210F1B0200AC008B /* LXDGlobalTimer.m */,
+				B99D0DC9210F1B0200AC008B /* LXDGlobalTimer.h */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		B99D0DCA210F1B0200AC008B /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				B99D0DCB210F1B0200AC008B /* LXDTransaction.h */,
+				B99D0DCC210F1B0200AC008B /* LXDTransaction.m */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
 		C06956B931D70ACF6BB834A9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -701,7 +924,6 @@
 				011DFA161C987CD6000410D7 /* Sources */,
 				011DFA171C987CD6000410D7 /* Frameworks */,
 				011DFA181C987CD6000410D7 /* Resources */,
-				8D861863E2EDD40994EA0877 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -780,24 +1002,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D861863E2EDD40994EA0877 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo-resources.sh",
-				"${PODS_ROOT}/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounterTick.aiff",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KMCGeigerCounterTick.aiff",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LWAsyncDisplayViewDemo/Pods-LWAsyncDisplayViewDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -807,13 +1011,17 @@
 			files = (
 				B0F991CE1D937EA000D7B529 /* LWImageBrowser.m in Sources */,
 				B0B7DF8F1DEFCC500050BFB1 /* NSString+HTML.m in Sources */,
+				B99D0DE3210F1B0200AC008B /* LXDDispatchOperation.m in Sources */,
 				012EDDD31D931C98009AFA90 /* LWAsyncDisplayLayer.m in Sources */,
 				012EDE071D931DED009AFA90 /* LWTransactionGroup.m in Sources */,
 				01571FC11D93004B002D71A5 /* LWActiveIncatorAnimationView.m in Sources */,
 				01571FC21D93004B002D71A5 /* LWActiveIncator.m in Sources */,
+				B99D0DE4210F1B0200AC008B /* LXDGlobalTimer.m in Sources */,
 				012EDE4A1D931FB1009AFA90 /* LWHTMLNode.m in Sources */,
 				011DFA221C987CD6000410D7 /* AppDelegate.m in Sources */,
 				01F51A0E1CA1B1CE00463571 /* CoreData.xcdatamodeld in Sources */,
+				B99D0DD1210F1B0200AC008B /* LXDCrashMonitor.m in Sources */,
+				B99D0DD9210F1B0200AC008B /* LXDApplicationCPU.m in Sources */,
 				B923079A21096D99008C943F /* TextViewCell.m in Sources */,
 				B0B7DF891DEFCAAE0050BFB1 /* LWCGRectTransform.m in Sources */,
 				012EDDFB1D931D8B009AFA90 /* LWTextLayout.m in Sources */,
@@ -821,6 +1029,8 @@
 				012EDE061D931DED009AFA90 /* LWTransaction.m in Sources */,
 				01BE57F61E584D4800A2A266 /* LWAsyncImageView+WebCacheOperation.m in Sources */,
 				B0F991CC1D937EA000D7B529 /* LWAlertContentView.m in Sources */,
+				B99D0DCE210F1B0200AC008B /* NSURLProtocol+WebKitSupport.m in Sources */,
+				B99D0DE5210F1B0200AC008B /* LXDTransaction.m in Sources */,
 				B923079321087FEE008C943F /* GifController.m in Sources */,
 				012EDE471D931FB1009AFA90 /* LWHTMLDisplayView.m in Sources */,
 				B923079721096D2B008C943F /* TestViewController.m in Sources */,
@@ -834,25 +1044,34 @@
 				012EDE4D1D931FB1009AFA90 /* LWStorageBuilder.m in Sources */,
 				012EDDFC1D931D8B009AFA90 /* LWTextLine.m in Sources */,
 				0106E7D61E57764300C5A3C6 /* LWAsyncImageView.m in Sources */,
+				B99D0DD5210F1B0200AC008B /* LXDCPUDisplayer.m in Sources */,
 				01AFD9891CF4D32700BF46D0 /* LikeButton.m in Sources */,
 				012EDE481D931FB1009AFA90 /* LWHTMLImageConfig.m in Sources */,
+				B99D0DDB210F1B0200AC008B /* LXDFPSMonitor.m in Sources */,
 				012EDDDF1D931CB8009AFA90 /* LWImageStorage.m in Sources */,
 				B0F991D31D937EA000D7B529 /* LWProgeressHUD.m in Sources */,
+				B99D0DD6210F1B0200AC008B /* LXDApplicationMemory.m in Sources */,
 				012EDDEA1D931D08009AFA90 /* LWImageProcessor.m in Sources */,
 				012EDE4B1D931FB1009AFA90 /* LWHTMLParser.m in Sources */,
 				B0F991CD1D937EA000D7B529 /* LWAlertView.m in Sources */,
 				B0C9A92E1D2272DD00DFAA44 /* ArticleListTableViewCell.m in Sources */,
+				B99D0DD8210F1B0200AC008B /* LXDSystemMemory.m in Sources */,
 				012EDDFA1D931D8B009AFA90 /* LWTextContainer.m in Sources */,
+				B99D0DCD210F1B0200AC008B /* LXDDNSInterceptor.m in Sources */,
 				B0ACEC041CEDC9A50019074F /* CommentModel.m in Sources */,
 				B0ACEC091CEDC9A50019074F /* TableViewCell.m in Sources */,
 				012EDE4C1D931FB1009AFA90 /* LWHTMLTextConfig.m in Sources */,
 				B0ACEC0B1CEDC9A50019074F /* MomentsViewController.m in Sources */,
 				0106E7DC1E57A9D600C5A3C6 /* LWAsyncImageView+Display.m in Sources */,
+				B99D0DDA210F1B0200AC008B /* LXDSystemCPU.m in Sources */,
 				B0F991DD1D93859000D7B529 /* UIImage+Gallop.m in Sources */,
 				B0ACEC031CEDC9A50019074F /* CellLayout.m in Sources */,
 				B0F991DA1D93802E00D7B529 /* UIImage+ImageEffects.m in Sources */,
 				B0F991D01D937EA000D7B529 /* LWImageBrowserFlowLayout.m in Sources */,
 				B0F991CA1D937EA000D7B529 /* LWActionSheetTableViewCell.m in Sources */,
+				B99D0DD0210F1B0200AC008B /* LXDHostFilterRule.m in Sources */,
+				B99D0DE0210F1B0200AC008B /* UIApplication+LXDTool.m in Sources */,
+				B99D0DDE210F1B0200AC008B /* LXDAsyncLabel.m in Sources */,
 				B0F991D21D937EA000D7B529 /* LWImageItem.m in Sources */,
 				011DFA1F1C987CD6000410D7 /* main.m in Sources */,
 				012EDDE31D931CB8009AFA90 /* NSManagedObject+LWLayout.m in Sources */,
@@ -862,11 +1081,15 @@
 				012EDDEB1D931D08009AFA90 /* SDImageCache+Gallop.m in Sources */,
 				012EDE171D931E60009AFA90 /* LWTextParser.m in Sources */,
 				0134D1201D16B64A00FB91FF /* HTMLParsingViewController.m in Sources */,
+				B99D0DD4210F1B0200AC008B /* LXDMemoryDisplayer.m in Sources */,
 				B0F423171D476C0D007E8FD0 /* README.md in Sources */,
 				012EDDFD1D931D8B009AFA90 /* LWTextRunDelegate.m in Sources */,
+				B99D0DCF210F1B0200AC008B /* LXDHostMapper.m in Sources */,
 				012EDDEC1D931D08009AFA90 /* SDWebImageManager+Gallop.m in Sources */,
 				019141C01E58BA8500587074 /* LWGIFImage.m in Sources */,
+				B99D0DDD210F1B0200AC008B /* LXDWeakProxy.m in Sources */,
 				01FFE22E1E5A070100D05DFE /* ImageDemoTableViewCell.m in Sources */,
+				B99D0DDF210F1B0200AC008B /* LXDTopWindow.m in Sources */,
 				B0ACEC0A1CEDC9A50019074F /* TableViewHeader.m in Sources */,
 				B0C9A9321D2273EF00DFAA44 /* ArticleListModel.m in Sources */,
 				B0E7F39A1D210CE300877644 /* WebViewController.m in Sources */,
@@ -875,17 +1098,23 @@
 				B99D0D81210ACC7600AC008B /* GifListController.m in Sources */,
 				01BE57FC1E5865C400A2A266 /* CALayer+WebCache.m in Sources */,
 				B0B7DF8C1DEFCBF00050BFB1 /* LWFlag.m in Sources */,
+				B99D0DE2210F1B0200AC008B /* LXDDispatchAsync.m in Sources */,
 				01F58BC01D85AA8C0089DB02 /* RichTextDemo1ViewController.m in Sources */,
+				B99D0DDC210F1B0200AC008B /* LXDFPSDisplayer.m in Sources */,
 				B0F991CF1D937EA000D7B529 /* LWImageBrowserCell.m in Sources */,
 				012EDDF91D931D8B009AFA90 /* LWTextAttachment.m in Sources */,
 				B0ACEC021CEDC9A50019074F /* AutoFitSizeTextView.m in Sources */,
 				012EDDE11D931CB8009AFA90 /* LWStorage.m in Sources */,
+				B99D0DD3210F1B0200AC008B /* LXDAppFluencyMonitor.m in Sources */,
 				B0ACEC081CEDC9A50019074F /* StatusModel.m in Sources */,
 				01BE57F91E584F4500A2A266 /* LWAsyncImageView+WebCache.m in Sources */,
+				B99D0DD2210F1B0200AC008B /* LXDCrashLogger.m in Sources */,
 				01609CA41D982A380025A285 /* LWTextGlyph.m in Sources */,
+				B99D0DE1210F1B0200AC008B /* LXDBacktraceLogger.m in Sources */,
 				01D14EF41CDCFA780028714A /* RootViewController.m in Sources */,
 				012EDE051D931DED009AFA90 /* CALayer+LWTransaction.m in Sources */,
 				B0F991D71D937FBD00D7B529 /* LWImageBrowserButton.m in Sources */,
+				B99D0DD7210F1B0200AC008B /* LXDResourceMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

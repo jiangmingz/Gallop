@@ -42,7 +42,6 @@ static void _croppedImageBackingSizeAndDrawRectInBounds(CGSize sourceImageSize, 
 
 
 - (void)lw_setImageWihtImageStorage:(LWImageStorage *)imageStorage resize:(LWHTMLImageResizeBlock)resizeBlock completion:(LWAsyncCompleteBlock)completion {
-
     if ([imageStorage.contents isKindOfClass:[UIImage class]]) {
         [self _setLocalImageWithImageStorage:imageStorage resize:resizeBlock completion:completion];
     } else {
