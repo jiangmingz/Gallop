@@ -13,6 +13,7 @@
 
 #import "LWLayout.h"
 #import "LWAsyncDisplayView.h"
+#import "LWGIFImage.h"
 
 @interface GifController ()
 
@@ -37,11 +38,11 @@
 //    imageStorage.contents = [NSURL URLWithString:@"http://ww3.sinaimg.cn/bmiddle/006qdyzsly1fctmnzwqcwg307505pasc.gif"];
 //    imageStorage.contents = [NSURL URLWithString:@"http://img4.bitautoimg.com/autoalbum/files/20101220/862/13374086240035_1469891_15.JPG"];
 //    imageStorage.frame = CGRectMake(0.0, 0.0, 100, 100);
-    imageStorage.contents = [UIImage imageNamed:@"1.gif"];
-    imageStorage.frame = CGRectMake(0.0, 0.0, 28, 28);
-    imageStorage.backgroundColor = [UIColor grayColor];
-    imageStorage.contentMode = UIViewContentModeScaleAspectFill;
 
+    imageStorage.contents = [LWGIFImage gifNamed:@"1.gif"];
+    imageStorage.frame = CGRectMake(0.0, 0.0, 28, 28);
+    imageStorage.localImageType = LWLocalImageTypeDrawInLWAsyncImageView;
+    imageStorage.contentMode = UIViewContentModeScaleAspectFill;
 
     self.layout = [[LWLayout alloc] init];
     [self.layout addStorage:imageStorage];

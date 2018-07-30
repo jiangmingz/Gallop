@@ -61,6 +61,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "011DFA191C987CD6000410D7"
+            BuildableName = "LWAsyncDisplayViewDemo.app"
+            BlueprintName = "LWAsyncDisplayViewDemo"
+            ReferencedContainer = "container:LWAsyncDisplayViewDemo.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

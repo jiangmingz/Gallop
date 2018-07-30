@@ -192,8 +192,8 @@ const CGFloat kRefreshBoundary = 170.0f;
     for (NSInteger i = 0; i < cell.cellLayout.imagePostions.count; i++) {
         LWImageBrowserModel *model = [[LWImageBrowserModel alloc]
                 initWithplaceholder:nil
-                       thumbnailURL:[NSURL URLWithString:[cell.cellLayout.statusModel.imgs objectAtIndex:i]]
-                              HDURL:[NSURL URLWithString:[cell.cellLayout.statusModel.imgs objectAtIndex:i]]
+                       thumbnailURL:[NSURL URLWithString:cell.cellLayout.statusModel.imgs[i]]
+                              HDURL:[NSURL URLWithString:cell.cellLayout.statusModel.imgs[i]]
                       containerView:cell.contentView
                 positionInContainer:CGRectFromString(cell.cellLayout.imagePostions[i])
                               index:i];
@@ -240,7 +240,7 @@ const CGFloat kRefreshBoundary = 170.0f;
 - (void)tableViewCell:(TableViewCell *)cell didClickedLikeButtonWithIsLike:(BOOL)isLike {
 
 
-    CellLayout *layout = [self.dataSource objectAtIndex:cell.indexPath.row];
+    CellLayout *layout = self.dataSource[cell.indexPath.row];
     NSMutableArray *newLikeList = [[NSMutableArray alloc] initWithArray:layout.statusModel.likeList];
     if (isLike) {
         [newLikeList addObject:@"waynezxcv的粉丝"];
@@ -255,7 +255,7 @@ const CGFloat kRefreshBoundary = 170.0f;
 
     [self coverScreenshotAndDelayRemoveWithCell:cell cellHeight:layout.cellHeight];
 
-    [self.dataSource replaceObjectAtIndex:cell.indexPath.row withObject:layout];
+    self.dataSource[cell.indexPath.row] = layout;
     [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:cell.indexPath.row inSection:0]]
                           withRowAnimation:UITableViewRowAnimationNone];
 }
@@ -263,7 +263,7 @@ const CGFloat kRefreshBoundary = 170.0f;
 
 //展开Cell
 - (void)openTableViewCell:(TableViewCell *)cell {
-    CellLayout *layout = [self.dataSource objectAtIndex:cell.indexPath.row];
+    CellLayout *layout = self.dataSource[cell.indexPath.row];
     StatusModel *model = layout.statusModel;
     CellLayout *newLayout = [[CellLayout alloc] initContentOpendLayoutWithStatusModel:model
                                                                                 index:cell.indexPath.row
@@ -406,6 +406,7 @@ const CGFloat kRefreshBoundary = 170.0f;
         case 1:
             self.displaysAsynchronously = NO;
             break;
+        default:break;
     }
 }
 

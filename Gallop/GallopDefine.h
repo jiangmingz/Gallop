@@ -53,11 +53,11 @@
 #endif
 
 //DEBUG模式下打印
-#ifdef DEBUG
-#define NSLog(...) NSLog(@"\n ---- \n [FUNC:%s 第%d行] \n [LOG:%@] \n ---- \n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
-#else
-#define NSLog(...)
-#endif
+//#ifdef DEBUG
+//#define NSLog(...) NSLog(@"\n ---- \n [FUNC:%s 第%d行] \n [LOG:%@] \n ---- \n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+//#else
+//#define NSLog(...)
+//#endif
 
 
 //获取iOS版本号

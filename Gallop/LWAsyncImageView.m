@@ -406,9 +406,7 @@
     self.needAnimate = self.gifImage && isVisible;
 }
 
-
 - (NSTimeInterval)frameDelayGreatestCommonDivisor {
-
     const NSTimeInterval kGreatestCommonDivisorPrecision = 2.0 / kLWGIFDelayTimeIntervalMinimumValue;
     NSArray *delays = self.gifImage.timesForIndex.allValues;
     NSUInteger scaledGCD = lrint([delays.firstObject floatValue] * kGreatestCommonDivisorPrecision);

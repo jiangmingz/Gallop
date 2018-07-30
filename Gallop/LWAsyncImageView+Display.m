@@ -24,9 +24,11 @@
 
 
 #import "LWAsyncImageView+Display.h"
+
 #import "LWAsyncImageView+WebCache.h"
 #import "CALayer+LWTransaction.h"
 #import "UIImage+Gallop.h"
+#import "LWGIFImage.h"
 
 
 static CGSize _sizeFitWithAspectRatio(CGFloat aspectRatio, CGSize constraints);
@@ -65,7 +67,12 @@ static void _croppedImageBackingSizeAndDrawRectInBounds(CGSize sourceImageSize, 
 
     } else {
         UIImage *image = (UIImage *) imageStorage.contents;
-        self.image = image;
+        if ([image isKindOfClass:[LWGIFImage class]]) {
+            self.gifImage = (LWGIFImage *) image;
+        } else {
+            self.image = image;
+        }
+
         if (resizeBlock) {
             resizeBlock(imageStorage, 0);
         }

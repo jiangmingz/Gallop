@@ -32,11 +32,8 @@
  *  如果是本地图片，可以选择是直接绘制在LWAsyncDisplayView上还是新建一个LWAsyncImageView并add到LWAsyncDisplayView上
  */
 typedef NS_ENUM(NSUInteger, LWLocalImageType) {
-    // 直接绘制在LWAsyncDisplayView上
-            LWLocalImageDrawInLWAsyncDisplayView,
-
-    // 绘制在LWAsyncImageView上
-            LWLocalImageTypeDrawInLWAsyncImageView,
+    LWLocalImageDrawInLWAsyncDisplayView, // 直接绘制在LWAsyncDisplayView上
+    LWLocalImageTypeDrawInLWAsyncImageView, // 绘制在LWAsyncImageView上
 };
 
 

@@ -54,6 +54,12 @@
 /**
  * 构造方法
  */
++ (id)gifNamed:(NSString *)name;
+
++ (id)gifNamed:(NSString *)name inDirect:(NSString *)inDirect;
+
++ (id)gifWithLocalPath:(NSString *)localPath;
+
 - (id)initWithGIFData:(NSData *)data;
 
 /**

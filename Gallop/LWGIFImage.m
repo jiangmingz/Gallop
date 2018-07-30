@@ -158,6 +158,33 @@ static NSHashTable *allGIFImagesWeak;
     }
 }
 
++ (id)gifNamed:(NSString *)name {
+    return [LWGIFImage gifNamed:name inDirect:nil];
+}
+
++ (id)gifNamed:(NSString *)name inDirect:(NSString *)inDirect {
+    if ([[name lowercaseString] hasSuffix:@".gif"]) {
+        name = [name substringWithRange:NSMakeRange(0, name.length - 4)];
+    }
+
+    NSString *localPath = [[NSBundle mainBundle] pathForResource:name ofType:@"gif" inDirectory:inDirect];
+    return [LWGIFImage gifWithLocalPath:localPath];
+}
+
++ (id)gifWithLocalPath:(NSString *)localPath {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:localPath]) {
+        return nil;
+    }
+
+    NSData *data = [NSData dataWithContentsOfFile:localPath];
+    if (!data) {
+        return nil;
+    }
+
+    LWGIFImage *gifImage = [[LWGIFImage alloc] initWithGIFData:data];
+    return gifImage;
+}
 
 - (id)initWithGIFData:(NSData *)data {
     if (data.length == 0) {
@@ -171,7 +198,6 @@ static NSHashTable *allGIFImagesWeak;
         self.predrawingEnabled = YES;
         NSUInteger optimalFrameCacheSize = 0;
 
-
         self.imageSource = CGImageSourceCreateWithData((__bridge CFDataRef) data,
                 (__bridge CFDictionaryRef) @{(NSString *) kCGImageSourceShouldCache: @NO});//创建CGImageSourceRef，并设置系统不缓存
         if (!self.imageSource) {
@@ -184,7 +210,7 @@ static NSHashTable *allGIFImagesWeak;
         }
 
         NSDictionary *imageProperties = (__bridge_transfer NSDictionary *) CGImageSourceCopyProperties(self.imageSource, NULL);
-        _loopCount = [[[imageProperties objectForKey:(id) kCGImagePropertyGIFDictionary] objectForKey:(id) kCGImagePropertyGIFLoopCount] unsignedIntegerValue];
+        _loopCount = [[imageProperties[(__bridge id) kCGImagePropertyGIFDictionary] objectForKey:(id) kCGImagePropertyGIFLoopCount] unsignedIntegerValue];
 
         //遍历图片ImageSourceRef，获取每一帧的信息，并保存
         size_t imageCount = CGImageSourceGetCount(self.imageSource);
@@ -202,18 +228,18 @@ static NSHashTable *allGIFImagesWeak;
                         if (!self.coverImage) {
                             self.coverImage = frameImage;
                             self.coverImageFrameIndex = i;
-                            [self.cachedFramesForIndexes setObject:self.coverImage forKey:@(self.coverImageFrameIndex)];
+                            self.cachedFramesForIndexes[@(self.coverImageFrameIndex)] = self.coverImage;
                             [self.cachedFrameIndexes addIndex:self.coverImageFrameIndex];
                         }
 
 
                         NSDictionary *frameProperties = (__bridge_transfer NSDictionary *) CGImageSourceCopyPropertiesAtIndex(_imageSource, i, NULL);
-                        NSDictionary *framePropertiesGIF = [frameProperties objectForKey:(id) kCGImagePropertyGIFDictionary];
+                        NSDictionary *framePropertiesGIF = frameProperties[(__bridge id) kCGImagePropertyGIFDictionary];
 
                         //获取每一帧的显示时间
-                        NSNumber *time = [framePropertiesGIF objectForKey:(id) kCGImagePropertyGIFUnclampedDelayTime];
+                        NSNumber *time = framePropertiesGIF[(__bridge id) kCGImagePropertyGIFUnclampedDelayTime];
                         if (!time) {
-                            time = [framePropertiesGIF objectForKey:(id) kCGImagePropertyGIFDelayTime];
+                            time = framePropertiesGIF[(__bridge id) kCGImagePropertyGIFDelayTime];
                         }
 
                         const NSTimeInterval kDelayTimeIntervalDefault = 0.1;
@@ -276,6 +302,7 @@ static NSHashTable *allGIFImagesWeak;
             [allGIFImagesWeak addObject:self];
         }
     }
+
     return self;
 }
 
