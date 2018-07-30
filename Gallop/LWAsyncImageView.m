@@ -205,7 +205,7 @@
 
 - (void)setImage:(UIImage *)image {
     [super setImage:image];
-    
+
     //清除image
     if (!image) {
         if (self.image) {
@@ -297,7 +297,7 @@
 
         }
 
-        self.displayLink.frameInterval = MAX([self frameDelayGreatestCommonDivisor] * kDisplayRefreshRate, 1);
+        self.displayLink.frameInterval = (NSInteger) MAX([self frameDelayGreatestCommonDivisor] * kDisplayRefreshRate, 1);
         self.displayLink.paused = NO;
 
     } else {
@@ -353,7 +353,7 @@
     }
 
     //从timesForIndex字典中取得帧的显示时间
-    NSNumber *delayTimeNumber = [self.gifImage.timesForIndex objectForKey:@(self.gifCurrentFrameIndex)];
+    NSNumber *delayTimeNumber = self.gifImage.timesForIndex[@(self.gifCurrentFrameIndex)];
     if (delayTimeNumber) {
         NSTimeInterval delayTime = [delayTimeNumber floatValue];
 

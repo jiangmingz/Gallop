@@ -2,166 +2,131 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="342bbaef-4f38-49da-bd25-64e54b3a188c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/LWAsyncDisplayViewDemo.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcodeproj/xcuserdata/jiangmingz.xcuserdatad/xcschemes/LWAsyncDisplayViewDemo.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo.xcworkspace/xcuserdata/jiangmingz.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Gif/GifListController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/MomentsViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/010@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/011@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/011@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/012@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/012@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/013@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/013@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/014@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/014@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/015@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/015@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/016@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/016@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/017@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/017@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/018@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/018@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/019@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/019@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/020@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/020@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/021@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/021@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/022@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/022@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/023@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/023@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/024@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/024@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/025@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/025@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/026@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/026@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/027@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/027@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/028@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/028@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/029@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/029@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/030@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/030@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/031@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/031@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/032@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/032@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/033@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/033@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/034@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/034@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/035@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/035@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/036@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/036@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/037@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/037@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/038@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/038@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/039@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/039@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/040@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/040@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/041@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/041@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/042@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/042@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/043@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/043@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/044@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/044@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/045@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/045@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/046@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/046@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/047@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/047@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/048@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/048@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/049@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/049@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/050@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/050@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/051@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/051@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/052@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/052@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/053@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/053@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/054@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/054@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/055@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/055@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/056@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/056@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/057@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/057@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/058@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/058@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/059@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/059@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/060@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/060@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/061@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/061@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/062@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/062@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/063@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/063@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/064@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/064@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/065@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/065@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/066@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/066@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/067@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/067@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/068@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/068@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/069@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/069@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/070@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/070@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/071@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/071@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/072@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/072@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/emotions.plist" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotions.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/001.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/10.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/010.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/002.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/002.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/003.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/003.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/4.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/004.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/004.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/5.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/005.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/005.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/6.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/006.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/006.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/7.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/007.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/007.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/8.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/008.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/008.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/9.gif" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/009.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/EmoticonQQ.bundle/009.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/GallopDefine.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/GallopDefine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+Display.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView+Display.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWAsyncImageView.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWGIFImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWGIFImage.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWGIFImage.m" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWGIFImage.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gallop/LWImageStorage.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Gallop/LWImageStorage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/72.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LWAsyncDisplayViewDemo/Resource/emotionGifs/gif/72.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -185,8 +150,8 @@
       <file leaf-file-name="TextViewCell.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+            <state relative-caret-position="330">
+              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -361,6 +326,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -404,8 +371,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,7 +424,7 @@
       <workItem from="1532525094159" duration="5712000" />
       <workItem from="1532584582470" duration="483000" />
       <workItem from="1532662748152" duration="8955000" />
-      <workItem from="1532941011892" duration="240000" />
+      <workItem from="1532941011892" duration="473000" />
     </task>
     <task id="LOCAL-00001" summary="修复图片网络访问超时崩溃，格式化代码">
       <created>1532346887254</created>
@@ -608,11 +573,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532671095680</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="增加gif性能测试">
+      <created>1532941485456</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1532941485457</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28965000" />
+    <option name="totallyTimeSpent" value="29198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1239" height="777" extended-state="6" />
@@ -668,7 +640,8 @@
     <MESSAGE value="修复图片网络访问超时崩溃，格式化代码" />
     <MESSAGE value="修复gif图片访问错误" />
     <MESSAGE value="增加性能测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加性能测试" />
+    <MESSAGE value="增加gif性能测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加gif性能测试" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Gallop/LWAsyncImageView.h">
@@ -802,6 +775,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2775">
           <caret line="185" column="53" selection-start-line="185" selection-start-column="53" selection-end-line="185" selection-end-column="53" />
+          <folding>
+            <element signature="e#1142#1172#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -868,6 +844,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-151">
           <caret line="138" column="5" lean-forward="true" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+          <folding>
+            <element signature="e#1397#1438#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -882,6 +861,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+          <folding>
+            <element signature="e#1141#1177#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -924,6 +906,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="116" column="30" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
+          <folding>
+            <element signature="e#285#318#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -995,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LWAsyncDisplayViewDemo/Test/TextViewCell.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        <state relative-caret-position="330">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
         </state>
       </provider>
     </entry>
