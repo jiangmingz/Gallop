@@ -14,7 +14,7 @@
 #define LXD_SEMAPHORE_SUCCESS 0
 static BOOL lxd_is_monitoring = NO;
 static dispatch_semaphore_t lxd_semaphore;
-static NSTimeInterval lxd_time_out_interval = 0.5;
+static NSTimeInterval lxd_time_out_interval = 0.2;
 
 
 @implementation LXDAppFluencyMonitor

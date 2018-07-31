@@ -23,8 +23,10 @@
  */
 
 #import "LWTransaction.h"
-#import "LWTransactionGroup.h"
+
 #import <objc/message.h>
+
+#import "LWTransactionGroup.h"
 
 
 @interface LWAsyncDisplayTransactionOperation : NSObject

@@ -68,7 +68,7 @@ static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observ
             &CFRelease,
             NULL
     };
-    observer = CFRunLoopObserverCreate(NULL,
+    observer = CFRunLoopObserverCreate(CFAllocatorGetDefault(),
             activities,
             YES,
             INT_MAX,
@@ -89,14 +89,16 @@ static void _transactionGroupRunLoopObserverCallback(CFRunLoopObserverRef observ
 }
 
 - (void)commit {
-    if ([self.layersContainers count]) {
-        NSHashTable *containerLayersToCommit = self.layersContainers;
-        self.layersContainers = [NSHashTable hashTableWithOptions:NSPointerFunctionsObjectPointerPersonality];
-        for (CALayer *containerLayer in containerLayersToCommit) {
-            LWTransaction *transaction = containerLayer.currentTransaction;
-            containerLayer.currentTransaction = nil;
-            [transaction commit];
-        }
+    if ([self.layersContainers count] == 0) {
+        return;
+    }
+    
+    NSHashTable *containerLayersToCommit = self.layersContainers;
+    self.layersContainers = [NSHashTable hashTableWithOptions:NSPointerFunctionsObjectPointerPersonality];
+    for (CALayer *containerLayer in containerLayersToCommit) {
+        LWTransaction *transaction = containerLayer.currentTransaction;
+        containerLayer.currentTransaction = nil;
+        [transaction commit];
     }
 }
 

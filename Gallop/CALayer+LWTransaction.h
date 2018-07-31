@@ -62,12 +62,20 @@ typedef NS_ENUM(NSUInteger, LWTransactionContainerState) {
  */
 @interface CALayer (LWTransaction) <LWTransactionContainerDelegate>
 
-@property(nonatomic, strong) NSHashTable *transactions; //这个CALayer对象上的操作事务哈希表
-@property(nonatomic, strong) LWTransaction *currentTransaction; //当前正在处理的事务
-@property(nonatomic, readonly, strong) LWTransaction *lw_asyncTransaction; //创建一个LWTransaction并添加到transactions当中
+//这个CALayer对象上的操作事务哈希表
+@property(nonatomic, strong) NSHashTable *transactions;
 
-- (void)lw_transactionContainerWillBeginTransaction:(LWTransaction *)transaction; //即将要开始处理一个LWTransaction
-- (void)lw_transactionContainerrDidCompleteTransaction:(LWTransaction *)transaction; //LWTransaction处理完成
+//当前正在处理的事务
+@property(nonatomic, strong) LWTransaction *currentTransaction;
+
+//创建一个LWTransaction并添加到transactions当中
+@property(nonatomic, readonly, strong) LWTransaction *lw_asyncTransaction;
+
+//即将要开始处理一个LWTransaction
+- (void)lw_transactionContainerWillBeginTransaction:(LWTransaction *)transaction;
+
+//LWTransaction处理完成
+- (void)lw_transactionContainerrDidCompleteTransaction:(LWTransaction *)transaction;
 
 
 @end
