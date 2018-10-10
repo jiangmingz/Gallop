@@ -23,10 +23,11 @@
  */
 
 #import "CALayer+LWTransaction.h"
-#import "LWTransaction.h"
-#import "LWTransactionGroup.h"
+
 #import <objc/runtime.h>
 
+#import "LWTransaction.h"
+#import "LWTransactionGroup.h"
 
 static void *LWTransactionsKey = @"LWTransactionsKey";
 static void *LWCurrentTransacitonKey = @"LWCurrentTransacitonKey";
@@ -104,6 +105,7 @@ static void *LWCurrentTransacitonKey = @"LWCurrentTransacitonKey";
         }
     }
     [[LWTransactionGroup mainTransactionGroup] addTransactionContainer:self];
+    
     return transaction;
 }
 

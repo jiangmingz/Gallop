@@ -91,7 +91,6 @@
     [super setNeedsDisplay];
 }
 
-
 - (void)display {
     [self _hackResetNeedsDisplay];
     [self display:self.displaysAsynchronously];

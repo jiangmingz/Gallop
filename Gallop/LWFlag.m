@@ -24,9 +24,9 @@
 
 
 #import "LWFlag.h"
-#import <libkern/OSAtomic.h>
-#import "objc/runtime.h"
 
+#import <libkern/OSAtomic.h>
+#import <objc/runtime.h>
 
 @implementation LWFlag {
     int32_t _value;

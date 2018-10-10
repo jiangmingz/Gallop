@@ -31,8 +31,6 @@
  *
  */
 
-
-
 typedef NS_ENUM(NSUInteger, LWTransactionContainerState) {
     LWTransactionContainerStateNoTransactions, // 没有操作需要处理
     LWTransactionContainerStatePendingTransactions, // 正在处理操作
